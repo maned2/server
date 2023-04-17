@@ -21,3 +21,8 @@ sudo apt -y install bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu
 #libvirt
 sudo apt install qemu-kvm libvirt-daemon-system
 sudo usermod -a -G libvirt "$USER" # this need restart
+
+# TODO test
+cp cronmy /var/spool/cron/
+touch /var/spool/cron
+sudo restart now

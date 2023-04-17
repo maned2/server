@@ -1,0 +1,1 @@
+@reboot /var/server2/startup.sh
