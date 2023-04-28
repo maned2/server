@@ -1,0 +1,13 @@
+[Unit]
+Description=Swatchdog Eco service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=swatchdog -c '$SERVER2_ROOT_FOLDER/services/swatchdog/eco.conf' -t /var/log/eco/app.log /home/eco/server/Logs/Chat/Channel/Общий/*.log
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
