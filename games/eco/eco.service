@@ -1,0 +1,19 @@
+[Unit]
+Description=Eco Server
+StartLimitIntervalSec=60s
+StartLimitBurst=3
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5
+User=eco
+Group=eco
+ExecStartPre=/usr/games/steamcmd +force_install_dir /home/eco/server/ +login anonymous +app_update 739590 +quit
+ExecStart=/bin/bash -c "cd /home/eco/server && exec /home/eco/server/EcoServer"
+ExecStop=/bin/bash -c "killall -SIGINT srcds_linux"
+StandardOutput=append:/var/log/eco/app.log
+StandardError=append:/var/log/eco/err.log
+
+[Install]
+WantedBy=multi-user.target
