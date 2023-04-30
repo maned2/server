@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  table_games-bot:
+    environment:
+      - TOKEN="${TG_API_KEY}"
+    build: .
+    command: 'python3 tele_bot.py'
+    volumes:
+      - .:/usr/src/app
+

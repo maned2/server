@@ -3,6 +3,7 @@
 is_user_root () { [ "${EUID:-$(id -u)}" -eq 0 ]; }
 
 if is_user_root; then
+  ./eco_backup.sh
   service eco stop
   systemctl disable eco.service
   ufw deny 3000 comment 'game eco'
