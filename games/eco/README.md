@@ -7,7 +7,7 @@
 change stack size
 ---
 ```shell
-sudo su -l eco -s /bin/
+sudo su -l eco -s /bin/bash
 sed -i -- 's/MaxStackSize(10)/MaxStackSize(80)/g' server/Mods/**/*.cs
 ```
 

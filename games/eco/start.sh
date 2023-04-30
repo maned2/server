@@ -6,6 +6,8 @@ if is_user_root; then
   cp increase_hand.sh /home/eco/increase_hand.sh
   chmod +x /home/eco/increase_hand.sh
   chown eco /home/eco/increase_hand.sh
+  cp -R $CONFIG_ROOT_FOLDER/games/eco/Configs/. /home/eco/server/Configs/
+  chown eco /home/eco/server/Configs/ -R
   systemctl daemon-reload
   service eco start
   systemctl enable eco.service
