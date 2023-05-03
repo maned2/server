@@ -29,4 +29,14 @@ tail -f /var/log/eco/err.log
 # Admin
 ```shell
 /skills givepointsto Maned, 1
+
+/rooms repairall
+
+/give PropertyClaimItem,10
+
+/manage setspawn
+
+/ownnone (player) 	Revoke your property 	/ownnone
+/ownnone Ecko 	Revokes all of your property.
+Gives all of your property to Ecko 	USE WITH CAUTION. May crash server / kick player.
 ```
