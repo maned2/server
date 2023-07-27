@@ -4,7 +4,8 @@ today=`date '+%Y.%m.%d-%H:%M:%S'`;
 
 curl -g \
   --data-urlencode "chat_id=$TG_CHAT_ID" \
-  --data-urlencode "text=*${today}* $1\`\`\` $2
+  --data-urlencode "text=*${today}* $1\`\`\`
+$2
 $3
 $4
 $5\`\`\`" \
