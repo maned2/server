@@ -1,1 +1,1 @@
-. ./../../tg_send_msg.sh "ssh" "test send msg relative"
+. ./../../tg_send_msg.sh "ssh" "test send msg relative"  > /dev/null 2>&1
