@@ -53,3 +53,13 @@ cd /var/
 sudo mkdir server
 sudo chown server m
 ```
+
+# call sh script when somebody login
+```shell
+# prepare script
+chmod +x services/ssh/ssh_login.sh
+
+sudo nano /etc/ssh/sshd_config
+ForceCommand /var/server/server2/services/ssh/ssh_login.sh
+sudo service sshd restart
+```
