@@ -1,0 +1,1 @@
+. ./../../tg_send_msg.sh "ssh" "test send msg relative"
