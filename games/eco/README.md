@@ -28,11 +28,32 @@ tail -f /var/log/eco/err.log
 
 # Admin
 ```shell
-/skills givepointsto Maned, 1
+/time set
+
+/skills givepointsto Dattebayo, 1000
+/skills givepointsto H2SO4, 1000
+/skills givepointsto Cripto_Homa, 300
+
+/ban Александр 01
+
+/property unclaim Unclaim the plot you're standing on
+
+/property unclaimabandoned X
+ 	//Unclaim plots across the world where the owner hasn't logged in for X days (Single)
 
 /rooms repairall
 
 /give PropertyClaimItem,10
+
+LargeLumberStockpileItem
+MechanicsSkillBook
+IronConcentrateItem
+
+команда убирания веток и пней?
+/clearrubble (radius)
+как снять приват с тачек?
+
+/property targetowner Dattebayo
 
 /manage setspawn
 
