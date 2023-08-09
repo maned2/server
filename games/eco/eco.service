@@ -1,6 +1,6 @@
 [Unit]
 Description=Eco Server
-StartLimitIntervalSec=60s
+StartLimitIntervalSec=180s
 StartLimitBurst=3
 
 [Service]
@@ -16,6 +16,7 @@ ExecStart=/bin/bash -c "cd /home/eco/server && exec /home/eco/server/EcoServer"
 ExecStop=/bin/bash -c "killall -SIGINT srcds_linux"
 StandardOutput=append:/var/log/eco/app.log
 StandardError=append:/var/log/eco/err.log
+TimeoutStartSec=300
 
 [Install]
 WantedBy=multi-user.target
