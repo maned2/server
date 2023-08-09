@@ -14,5 +14,7 @@ launch.sh - script that run all services (TODO place it in startup)
 - [x] ssh server config
 - [x] send message in tg on ssh login
 - [ ] configure autodeploy
-- [ ] grafana setup
+- [x] grafana setup
+- [ ] mount hdd
+- [ ] nginx setup (grafana web)
 - [ ] game setup
