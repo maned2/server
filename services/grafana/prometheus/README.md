@@ -13,6 +13,12 @@ sudo service prometheus status
 sudo service prometheus-node-exporter status
 ```
 
+Config
+===
+```shell
+sudo nano /lib/systemd/system/prometheus-node-exporter.service
+```
+
 Logs
 ===
 
