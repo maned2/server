@@ -1,5 +1,6 @@
 # installation
 ```shell
+sudo apt install libgdiplus libc6-dev
 sudo useradd -m eco
 sudo usermod -L eco
 
