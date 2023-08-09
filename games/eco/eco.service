@@ -4,7 +4,7 @@ StartLimitIntervalSec=180s
 StartLimitBurst=3
 
 [Service]
-Type=forking
+Type=simple
 WorkingDirectory=/home/eco/
 Restart=on-failure
 RestartSec=5
