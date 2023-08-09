@@ -1,6 +1,11 @@
 
 
 ```commandline
+# create user:
+useradd
+-m - create home directory
+-M - don't create home directory
+
 # list users: 
 cat /etc/passwd
 
@@ -32,6 +37,10 @@ getent group <groupname>
 # create group:
 groupadd <groupname>
 
+# lock user password
+usermod -L <username> 
+Lock a user's password. This puts a '!' in front of the encrypted password, effectively disabling the password. You can't use this
+option with -p or -U.
 ```
 
 

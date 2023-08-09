@@ -1,7 +1,25 @@
 # installation
 ```shell
+sudo useradd -m eco
+sudo usermod -L eco
 
+sudo mkdir /var/log/eco
+
+sudo cp $SERVER2_ROOT_FOLDER/games/eco/increase_hand.sh /home/eco/increase_hand.sh
+sudo chown eco /home/eco/increase_hand.sh
+sudo chmod +x /home/eco/increase_hand.sh
+
+sudo cp $SERVER2_ROOT_FOLDER/games/eco/eco.service /etc/systemd/system/eco.service
+sudo systemctl daemon-reload
+sudo service eco status
+
+# enable autostart
+sudo systemctl enable eco.service
+
+# ports 
+sudo ufw allow 3000,3001
 ```
+
 
 
 change stack size
@@ -16,6 +34,7 @@ sed -i -- 's/MaxStackSize(10)/MaxStackSize(80)/g' server/Mods/**/*.cs
 ```shell
 sudo service eco status
 sudo journalctl -u eco -f
+journalctl -xeu eco.service
 tail -f /var/log/eco/app.log
 tail -f /var/log/eco/err.log
 ```
@@ -49,10 +68,10 @@ LargeLumberStockpileItem
 MechanicsSkillBook
 IronConcentrateItem
 
-команда убирания веток и пней?
+#команда убирания веток и пней?
 /clearrubble (radius)
-как снять приват с тачек?
 
+# как снять приват с тачек? - навестись на неё и ввести команду
 /property targetowner Dattebayo
 
 /manage setspawn
