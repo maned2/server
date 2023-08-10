@@ -24,8 +24,8 @@ sudo ufw allow 3000,3001
 backup install
 ===
 ```shell
-sudo mkdir /var/backups/eco/
-sudo mkdir -p $BACKUP_FOLDER/eco/daily/
+sudo mkdir -p /var/backups/eco/daily/
+sudo mkdir -p $BACKUP_FOLDER/eco/daily/ # not working
 sudo mkdir -p $BACKUP_FOLDER/eco/monthly/
 
 sudo cp $SERVER2_ROOT_FOLDER/games/eco/eco_backup.sh /home/eco/eco_backup.sh
@@ -36,7 +36,8 @@ sudo chmod +x $SERVER2_ROOT_FOLDER/games/eco/eco_backup.sh
 
 sudo /home/eco/eco_backup.sh
 
-crontab -e
+sudo crontab -e
+# 0 7 * * * /home/eco/eco_backup.sh
 ```
 
 # manual
