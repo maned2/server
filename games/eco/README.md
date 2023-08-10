@@ -21,6 +21,23 @@ sudo systemctl enable eco.service
 sudo ufw allow 3000,3001
 ```
 
+backup install
+===
+```shell
+sudo mkdir /var/backups/eco/
+sudo mkdir -p $BACKUP_FOLDER/eco/daily/
+sudo mkdir -p $BACKUP_FOLDER/eco/monthly/
+
+sudo chmod +x $SERVER2_ROOT_FOLDER/games/eco/eco_backup.sh
+
+crontab -e
+```
+
+# manual
+```shell
+sudo service eco stop
+sudo su -l eco -s /bin/bash
+```
 
 
 change stack size
