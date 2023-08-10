@@ -4,7 +4,7 @@ systemctl stop eco.service
 sleep 10
 today=$(date '+%Y_%m_%d-%H-%M');
 folder="$BACKUP_FOLDER/eco";
-tmpfolder='/var/backups/eco/';
+tmpfolder='/var/backups/eco';
 day=$( date +%d );
 filename="4fun4_eco_${today}.tar.gz";
 tar -zcf "${tmpfolder}/daily/${filename}" /home/eco/server
