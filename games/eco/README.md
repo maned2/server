@@ -28,7 +28,13 @@ sudo mkdir /var/backups/eco/
 sudo mkdir -p $BACKUP_FOLDER/eco/daily/
 sudo mkdir -p $BACKUP_FOLDER/eco/monthly/
 
+sudo cp $SERVER2_ROOT_FOLDER/games/eco/eco_backup.sh /home/eco/eco_backup.sh
+
 sudo chmod +x $SERVER2_ROOT_FOLDER/games/eco/eco_backup.sh
+
+# test run:
+
+sudo /home/eco/eco_backup.sh
 
 crontab -e
 ```
@@ -37,6 +43,15 @@ crontab -e
 ```shell
 sudo service eco stop
 sudo su -l eco -s /bin/bash
+
+tar -xf archive.tar.gz
+tar -xvf archive.tar.gz
+tar -xf archive.tar.gz -C /path/to/extract/
+
+cp -r home/eco/server/Storage server/Storage
+cp -R $CONFIG_ROOT_FOLDER/games/eco/Configs/. /home/eco/server/Configs/
+chown eco /home/eco/server/Configs/ -R
+sudo service eco start
 ```
 
 

@@ -7,7 +7,7 @@ folder="$BACKUP_FOLDER/eco";
 tmpfolder='/var/backups/eco/';
 day=$( date +%d );
 filename="4fun4_eco_${today}.tar.gz";
-tar -zcf "${tmpfolder}/daily/${filename}" /home/eco/server/Storage
+tar -zcf "${tmpfolder}/daily/${filename}" /home/eco/server
 systemctl start eco.service
 
 cp "${tmpfolder}/daily/${filename}" "${folder}/daily/${filename}"
