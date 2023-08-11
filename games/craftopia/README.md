@@ -7,38 +7,34 @@ sudo mkdir /var/log/craftopia
 
 sudo su -l craftopia -s /bin/bash
 
-sudo cp $SERVER2_ROOT_FOLDER/games/eco/increase_hand.sh /home/eco/increase_hand.sh
-sudo chown eco /home/eco/increase_hand.sh
-sudo chmod +x /home/eco/increase_hand.sh
-
-sudo cp $SERVER2_ROOT_FOLDER/games/eco/eco.service /etc/systemd/system/eco.service
+sudo cp $SERVER2_ROOT_FOLDER/games/craftopia/craftopia.service /etc/systemd/system/craftopia.service
 sudo systemctl daemon-reload
-sudo service eco status
+sudo service craftopia status
 
 # enable autostart
-sudo systemctl enable eco.service
+sudo systemctl enable craftopia.service
 
 # ports 
-sudo ufw allow 3000,3001
+sudo ufw allow 6587
 ```
 
 backup install
 ===
 ```shell
-sudo mkdir -p /var/backups/eco/daily/
-sudo mkdir -p $BACKUP_FOLDER/eco/daily/ # not working
-sudo mkdir -p $BACKUP_FOLDER/eco/monthly/
+sudo mkdir -p /var/backups/craftopia/daily/
+sudo mkdir -p $BACKUP_FOLDER/craftopia/daily/ # not working
+sudo mkdir -p $BACKUP_FOLDER/craftopia/monthly/
 
-sudo cp $SERVER2_ROOT_FOLDER/games/eco/eco_backup.sh /home/eco/eco_backup.sh
+sudo cp $SERVER2_ROOT_FOLDER/games/craftopia/craftopia_backup.sh /home/craftopia/craftopia_backup.sh
 
-sudo chmod +x $SERVER2_ROOT_FOLDER/games/eco/eco_backup.sh
+sudo chmod +x $SERVER2_ROOT_FOLDER/games/craftopia/craftopia_backup.sh
 
 # test run:
 
-sudo /home/eco/eco_backup.sh
+sudo /home/craftopia/craftopia_backup.sh
 
 sudo crontab -e
-# 0 7 * * * /home/eco/eco_backup.sh
+# 0 7 * * * /home/craftopia/craftopia_backup.sh
 ```
 
 # manual
