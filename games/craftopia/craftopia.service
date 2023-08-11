@@ -1,0 +1,20 @@
+[Unit]
+Description=Craftopia Server
+StartLimitIntervalSec=180s
+StartLimitBurst=3
+
+[Service]
+Type=simple
+WorkingDirectory=/home/craftopia/
+Restart=on-failure
+RestartSec=5
+User=craftopia
+Group=craftopia
+ExecStartPre=/usr/games/steamcmd +force_install_dir /home/craftopia/server/ +login anonymous +app_update 1670340 +quit
+ExecStart=/bin/bash -c "./home/craftopia/server/Craftopia.x86_64"
+StandardOutput=append:/var/log/craftopia/app.log
+StandardError=append:/var/log/craftopia/err.log
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target
