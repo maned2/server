@@ -16,6 +16,9 @@ sudo systemctl enable craftopia.service
 
 # ports 
 sudo ufw allow 6587
+#TCP: 27015, 27036
+#UDP: 6587, 27015, 27031-27036
+https://portforward.com/craftopia/
 ```
 
 backup install

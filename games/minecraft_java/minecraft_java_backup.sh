@@ -1,15 +1,15 @@
 #!/bin/bash
 whoami
-systemctl stop craftopia.service
+systemctl stop minecraft-java.service
 sleep 10
 
 today=$(date '+%Y_%m_%d-%H-%M');
-folder="$BACKUP_FOLDER/craftopia";
-tmpfolder='/var/backups/craftopia';
+folder="$BACKUP_FOLDER/minecraft_java";
+tmpfolder='/var/backups/minecraft_java';
 day=$( date +%d );
-filename="4fun4_craftopia_${today}.tar.gz";
-tar -zcf "${tmpfolder}/daily/${filename}" /home/craftopia/server
-systemctl start craftopia.service
+filename="4fun4_minecraft_java_${today}.tar.gz";
+tar -zcf "${tmpfolder}/daily/${filename}" /home/minecraft/server_java
+systemctl start minecraft-java.service
 
 cp "${tmpfolder}/daily/${filename}" "${folder}/daily/${filename}"
 rm -f "${tmpfolder}/daily/${filename}"
