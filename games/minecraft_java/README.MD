@@ -29,6 +29,8 @@ sed -i -- 's/level-name=Bedrock level/level-name=4fan4/g' *server.properties
 nano server.properties
 exit
 
+sudo mkdir /var/log/minecraft_java
+
 sudo cp $SERVER2_ROOT_FOLDER/games/minecraft_java/minecraft_java.service /etc/systemd/system/minecraft_java.service
 sudo systemctl daemon-reload
 sudo service minecraft_java start
@@ -37,4 +39,23 @@ sudo journalctl -u minecraft_java -f
 
 #ports 25565
 sudo ufw allow 25565
+```
+
+backup install
+===
+```shell
+sudo mkdir -p /var/backups/minecraft_java/daily/
+sudo mkdir -p $BACKUP_FOLDER/minecraft_java/daily/ 
+sudo mkdir -p $BACKUP_FOLDER/minecraft_java/monthly/
+
+sudo cp $SERVER2_ROOT_FOLDER/games/minecraft_java/minecraft_java_backup.sh /home/minecraft/minecraft_java_backup.sh
+
+sudo chmod +x /home/minecraft/minecraft_java_backup.sh
+
+# test run:
+
+sudo /home/minecraft/minecraft_java_backup.sh
+
+sudo crontab -e
+# 0 7 * * * /home/minecraft/minecraft_java_backup.sh
 ```

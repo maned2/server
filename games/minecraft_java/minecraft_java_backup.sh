@@ -1,6 +1,6 @@
 #!/bin/bash
 whoami
-systemctl stop minecraft-java.service
+systemctl stop minecraft_java.service
 sleep 10
 
 today=$(date '+%Y_%m_%d-%H-%M');
@@ -9,7 +9,7 @@ tmpfolder='/var/backups/minecraft_java';
 day=$( date +%d );
 filename="4fun4_minecraft_java_${today}.tar.gz";
 tar -zcf "${tmpfolder}/daily/${filename}" /home/minecraft/server_java
-systemctl start minecraft-java.service
+systemctl start minecraft_java.service
 
 cp "${tmpfolder}/daily/${filename}" "${folder}/daily/${filename}"
 rm -f "${tmpfolder}/daily/${filename}"
