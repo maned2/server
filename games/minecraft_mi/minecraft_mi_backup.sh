@@ -9,7 +9,7 @@ tmpfolder='/var/backups/minecraft_mi';
 day=$( date +%d );
 filename="4fun4_minecraft_mi_${today}.tar.gz";
 tar -zcf "${tmpfolder}/daily/${filename}" /home/minecraft/server_mi
-systemctl start minecraft_java.service
+systemctl start minecraft_mi.service
 
 cp "${tmpfolder}/daily/${filename}" "${folder}/daily/${filename}"
 rm -f "${tmpfolder}/daily/${filename}"

@@ -50,9 +50,9 @@ sudo mkdir /var/log/minecraft_mi
 
 sudo cp $SERVER2_ROOT_FOLDER/games/minecraft_mi/minecraft_mi.service /etc/systemd/system/minecraft_mi.service
 sudo systemctl daemon-reload
-sudo service minecraft_java start
-sudo systemctl enable minecraft_java.service
-sudo journalctl -u minecraft_java -f
+sudo service minecraft_mi start
+sudo systemctl enable minecraft_mi.service
+sudo journalctl -u minecraft_mi -f
 
 #ports 25566
 sudo ufw allow 25566
@@ -61,20 +61,20 @@ sudo ufw allow 25566
 backup install
 ===
 ```shell
-sudo mkdir -p /var/backups/minecraft_java/daily/
-sudo mkdir -p $BACKUP_FOLDER/minecraft_java/daily/ 
-sudo mkdir -p $BACKUP_FOLDER/minecraft_java/monthly/
+sudo mkdir -p /var/backups/minecraft_mi/daily/
+sudo mkdir -p $BACKUP_FOLDER/minecraft_mi/daily/ 
+sudo mkdir -p $BACKUP_FOLDER/minecraft_mi/monthly/
 
-sudo cp $SERVER2_ROOT_FOLDER/games/minecraft_java/minecraft_java_backup.sh /home/minecraft/minecraft_java_backup.sh
+sudo cp $SERVER2_ROOT_FOLDER/games/minecraft_mi/minecraft_mi_backup.sh /home/minecraft/minecraft_mi_backup.sh
 
-sudo chmod +x /home/minecraft/minecraft_java_backup.sh
+sudo chmod +x /home/minecraft/minecraft_mi_backup.sh
 
 # test run:
 
-sudo /home/minecraft/minecraft_java_backup.sh
+sudo /home/minecraft/minecraft_mi_backup.sh
 
 sudo crontab -e
-# 30 7 * * * /home/minecraft/minecraft_java_backup.sh
+# 0 8 * * * /home/minecraft/minecraft_mi_backup.sh
 ```
 
 # client description:
