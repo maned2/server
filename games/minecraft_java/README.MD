@@ -57,5 +57,11 @@ sudo chmod +x /home/minecraft/minecraft_java_backup.sh
 sudo /home/minecraft/minecraft_java_backup.sh
 
 sudo crontab -e
-# 0 7 * * * /home/minecraft/minecraft_java_backup.sh
+# 30 7 * * * /home/minecraft/minecraft_java_backup.sh
+```
+
+# admin commands
+```shell
+/gamerule keepInventory true
+/op username - give admin
 ```

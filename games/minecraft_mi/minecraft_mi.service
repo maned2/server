@@ -1,0 +1,20 @@
+[Unit]
+Description=Minecraft Mi Java Service
+After=network-online.target
+
+[Service]
+User=minecraft
+Group=minecraft
+WorkingDirectory=/home/minecraft/server_mi
+Type=simple
+Restart=always
+ExecStartPre=echo "Starting server..."
+ExecStart=/usr/lib/jvm/java-1.19.0-openjdk-amd64/bin/java -Xmx4048M -Xms4048M -jar fabric-server-launch.jar nogui
+ExecStartPost=echo "Started server (service)"
+ExecStopPost=echo "Stopped server"
+TimeoutStartSec=600
+StandardOutput=append:/var/log/minecraft_mi/app.log
+StandardError=append:/var/log/minecraft_mi/err.log
+
+[Install]
+WantedBy=multi-user.target
