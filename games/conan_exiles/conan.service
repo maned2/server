@@ -1,0 +1,20 @@
+[Unit]
+Description=Conan Exiles Server
+After=network.target
+
+[Service]
+# If you define the environment variables here you can remove them from your .profile
+# but I don't think it'll do any harm to have them defined twice, as long as the definitions
+# are the same
+Environment=WINEARCH=win64
+Environment=WINEPREFIX=/home/steam/.wine64
+# Set the user, group and relative directory
+WorkingDirectory=/home/conan/server/
+User=conan
+Group=conan
+# Run xvfb-run to start the server
+ExecStart=/usr/bin/xvfb-run --auto-servernum --server-args='-screen 0 640x480x24:32' wine /home/conan/server/ConanSandboxServer.exe -log
+
+[Install]
+WantedBy=multi-user.target
+Alias=conan.service
