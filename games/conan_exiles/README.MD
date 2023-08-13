@@ -25,4 +25,10 @@ export WINEPREFIX=/home/steam/.wine64
 xvfb-run --auto-servernum --server-args='-screen 0 640x480x24:32' wine /home/conan/server/ConanSandboxServer.exe -log
 
 # port 7777,7778,27015
+
+sudo cp $SERVER2_ROOT_FOLDER/games/conan_exiles/conan.service /etc/systemd/system/conan.service
+sudo systemctl daemon-reload
+sudo service conan status
+sudo journalctl -u conan -f
+journalctl -xeu conan.service
 ```

@@ -7,7 +7,7 @@ After=network.target
 # but I don't think it'll do any harm to have them defined twice, as long as the definitions
 # are the same
 Environment=WINEARCH=win64
-Environment=WINEPREFIX=/home/steam/.wine64
+Environment=WINEPREFIX=/home/conan/.wine64
 # Set the user, group and relative directory
 WorkingDirectory=/home/conan/server/
 User=conan
