@@ -15,6 +15,7 @@ sudo mkdir  /home/conan/server/
 sudo chown conan:conan /home/conan/server/
 
 sudo su -l conan -s /bin/bash
+cd server/ConanSandbox/Saved/Config/WindowsServer/
 
 steamcmd +force_install_dir /home/conan/server/ +login anonymous +app_update 443030 +quit
 steamcmd +@sSteamCmdForcePlatformType windows +force_install_dir /home/conan/server/ +login anonymous +app_update 443030 +quit

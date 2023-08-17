@@ -1,0 +1,13 @@
+[Unit]
+Description=Swatchdog Minecraft java service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=swatchdog -c '$SERVER2_ROOT_FOLDER/services/swatchdog/minecraft_java.conf' -t /var/log/minecraft_java/*.log
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

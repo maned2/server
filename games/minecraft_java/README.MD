@@ -36,6 +36,7 @@ sudo systemctl daemon-reload
 sudo service minecraft_java start
 sudo systemctl enable minecraft_java.service
 sudo journalctl -u minecraft_java -f
+sudo tail -f /var/log/minecraft_java/app.log
 
 #ports 25565
 sudo ufw allow 25565
