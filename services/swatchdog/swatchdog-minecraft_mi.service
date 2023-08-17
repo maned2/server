@@ -5,7 +5,7 @@ StartLimitIntervalSec=0
 
 [Service]
 Type=simple
-ExecStart=swatchdog -c '/var/server/server2/services/swatchdog/minecraft_java.conf' -t /var/log/minecraft_mi/*.log
+ExecStart=swatchdog -c '/var/server/server2/services/swatchdog/minecraft_mi.conf' -t /var/log/minecraft_mi/*.log
 Restart=always
 RestartSec=1
 
