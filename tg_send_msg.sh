@@ -1,4 +1,8 @@
 #! /bin/bash
+
+export -n TG_CHAT_ID
+export -n TG_API_KEY
+
 # this script send message to my channel
 today=`date '+%Y.%m.%d-%H:%M:%S'`;
 
