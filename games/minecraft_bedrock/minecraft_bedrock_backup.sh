@@ -8,7 +8,7 @@ folder="$BACKUP_FOLDER/minecraft_bedrock";
 tmpfolder='/var/backups/minecraft_bedrock';
 day=$( date +%d );
 filename="4fun4_minecraft_bedrock_${today}.tar.gz";
-tar -zcf "${tmpfolder}/daily/${filename}" /home/minecraft/server_java
+tar -zcf "${tmpfolder}/daily/${filename}" /home/minecraft/server_bedrock
 systemctl start minecraft_bedrock.service
 
 cp "${tmpfolder}/daily/${filename}" "${folder}/daily/${filename}"
