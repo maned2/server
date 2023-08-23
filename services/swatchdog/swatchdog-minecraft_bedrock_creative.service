@@ -1,0 +1,13 @@
+[Unit]
+Description=Swatchdog Minecraft bedrock creative service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=swatchdog -c '/var/server/server2/services/swatchdog/minecraft_bedrock_creative.conf' -t /var/log/minecraft_bedrock_creative/*.log
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
