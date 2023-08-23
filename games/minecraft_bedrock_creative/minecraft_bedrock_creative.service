@@ -1,0 +1,21 @@
+[Unit]
+Description=Minecraft Bedrock creative Service
+After=network-online.target
+
+[Service]
+User=minecraft
+Group=minecraft
+WorkingDirectory=/home/minecraft/server_bedrock_creative
+Type=simple
+Restart=always
+ExecStartPre=echo "Starting server..."
+ExecStart=/bin/bash -c "LD_LIBRARY_PATH=. ./bedrock_server"
+ExecStartPost=echo "Started server (service)"
+ExecStopPost=echo "Stopped server"
+TimeoutStartSec=600
+StandardOutput=append:/var/log/minecraft_bedrock_creative/app.log
+StandardError=append:/var/log/minecraft_bedrock_creative/err.log
+
+
+[Install]
+WantedBy=multi-user.target
