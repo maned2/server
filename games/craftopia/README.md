@@ -59,18 +59,18 @@ sudo service eco start
 change stack size
 ---
 ```shell
-sudo su -l eco -s /bin/bash
+sudo su -l craftopia -s /bin/bash
 sed -i -- 's/MaxStackSize(10)/MaxStackSize(80)/g' server/Mods/**/*.cs
 ```
 
 
 # logs
 ```shell
-sudo service eco status
-sudo journalctl -u eco -f
-journalctl -xeu eco.service
-tail -f /var/log/eco/app.log
-tail -f /var/log/eco/err.log
+sudo service craftopia status
+sudo journalctl -u craftopia -f
+journalctl -xeu craftopia.service
+tail -f /var/log/craftopia/app.log
+tail -f /var/log/craftopia/err.log
 ```
 
 # ports
