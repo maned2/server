@@ -31,11 +31,15 @@ sudo useradd -m minecraft
 sudo usermod -L minecraft
 
 sudo mkdir  /home/minecraft/server_mi/
-sudo cp server_mi.zip /home/minecraft/server_mi/server_mi.zip
+sudo cp server_mi.zip /home/minecraft/server_mi.zip
 
 sudo chown -R minecraft /home/minecraft/server_mi/
 
 sudo su -l minecraft -s /bin/bash
+
+rm -r server_mi
+unzip -d /home/minecraft/server_mi/ server_mi.zip
+
 
 #test run
 java -Xmx4048M -Xms4048M -jar server.jar nogui
