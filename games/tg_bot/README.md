@@ -13,3 +13,5 @@ sudo service tg_bot start
 sudo service tg_bot status
 
 sudo systemctl enable tg_bot
+
+journalctl -xeu tg_bot.service
