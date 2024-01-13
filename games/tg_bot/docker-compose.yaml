@@ -5,7 +5,7 @@ services:
     environment:
       - TOKEN="${TG_API_KEY}"
     build: .
-    command: 'python3 tele_bot.py'
+    command: 'python3 tg_bot.py'
     volumes:
       - .:/usr/src/app
 
