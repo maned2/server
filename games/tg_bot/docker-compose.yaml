@@ -2,8 +2,9 @@ version: "3"
 
 services:
   table_games-bot:
+    env_file: .env
     environment:
-      - TOKEN=${TG_API_KEY}
+      - TOKEN=${TOKEN}
     build: .
     command: 'python3 tg_bot.py'
     volumes:
