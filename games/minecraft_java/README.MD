@@ -21,7 +21,7 @@ sudo chown -R minecraft /home/minecraft/server_java/
 sudo su -l minecraft -s /bin/bash
 
 #test run
-java -Xmx4048M -Xms4048M -jar server.jar nogui
+/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -Xmx4048M -Xms4048M -jar server.jar nogui
 
 # server settings
 sed -i -- 's/server-name=Dedicated Server/server-name=4fan4/g' *server.properties
@@ -66,3 +66,11 @@ sudo crontab -e
 /gamerule keepInventory true
 /op username - give admin
 ```
+
+
+# Troubleshooting
+For older java versions run: 
+```commandline
+sudo update-alternatives --config java
+```
+and select another java version
