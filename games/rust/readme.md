@@ -26,6 +26,9 @@ tail -f /var/log/rust/err.log
 sudo su -l rust -s /bin/bash
 ```
 
+Procedural Map
+Barren # simple Procedural Map
+HapisIsland
 
 # Mods
 ```commandline
@@ -33,11 +36,21 @@ sudo su -l rust -s /bin/bash
 # unzip linux installation file to server folder:
 
 #local:
-scp games/rust/files/Oxide.Rust-linux.zip loc3:Oxide.Rust-linux.zip
+scp games/rust/files/Oxide.Rust-linux.zip loc2:Oxide.Rust-linux.zip
+scp games/rust/files/oxide_mods.zip loc2:oxide_mods.zip
 
 #on server:
-sudo unzip -d /home/rust/server/ /var/server/server2/games/rust/files/Oxide.Rust-linux.zip
+sudo cp Oxide.Rust-linux.zip /home/rust/server/Oxide.Rust-linux.zip
+sudo cp oxide_mods.zip /home/rust/server/oxide_mods.zip
 
+sudo chown rust:rust /home/rust/server/Oxide.Rust-linux.zip
+sudo chown rust:rust /home/rust/server/oxide_mods.zip
+
+sudo su -l rust -s /bin/bash
+
+unzip -d /home/rust/server/ Oxide.Rust-linux.zip
+unzip -d /home/rust/server/oxide/plugins/ oxide_mods.zip
+ 
 
 #install mods
 https://umod.org/plugins/absolut-gifts
