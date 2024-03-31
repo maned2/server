@@ -48,6 +48,8 @@ sudo chown rust:rust /home/rust/server/oxide_mods.zip
 
 sudo su -l rust -s /bin/bash
 
+cd server
+
 unzip -d /home/rust/server/ Oxide.Rust-linux.zip
 unzip -d /home/rust/server/oxide/plugins/ oxide_mods.zip
  
