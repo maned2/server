@@ -1,9 +1,9 @@
 #!/bin/sh
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)
 clear while : do
   exec ./RustDedicated -batchmode \
   +server.port 28015 \
   +rcon.port 28016 \
-  +rcon.password sadFsDh46s4 \
   +rcon.web 1 \
   +server.level "Procedural Map" \
   +server.seed 1483117433 \
