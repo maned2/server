@@ -1,0 +1,13 @@
+[Unit]
+Description=Swatchdog Rust service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=swatchdog -c '$SERVER2_ROOT_FOLDER/services/swatchdog/rust.conf' -t /var/log/rust/app.log
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
