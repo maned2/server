@@ -82,7 +82,7 @@ global.god
 
 oxide.grant user <name><permission>
 oxide.grant user Dattebayo removertool.admin
-oxide.grant user Dattebane removertool.normal
+oxide.grant user BOBR KURWA removertool.normal
 
 oxide.revoke
 
