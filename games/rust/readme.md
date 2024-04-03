@@ -18,6 +18,9 @@ sudo service rust start
 
 sudo journalctl -xeu rust.service
 
+sudo ufw allow 28015
+sudo ufw allow 28083
+
 #logs
 tail -f /var/log/rust/app.log
 tail -f /var/log/rust/err.log

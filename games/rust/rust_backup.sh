@@ -1,7 +1,7 @@
 #!/bin/bash
 whoami
-systemctl stop rust.service
-sleep 10
+#systemctl stop rust.service
+#sleep 10
 
 today=$(date '+%Y_%m_%d-%H-%M');
 folder="$BACKUP_FOLDER/rust";
@@ -9,7 +9,7 @@ tmpfolder='/var/backups/rust';
 day=$( date +%d );
 filename="4fun4_rust_${today}.tar.gz";
 tar -zcf "${tmpfolder}/${filename}" /home/rust/server
-systemctl start rust.service
+#systemctl start rust.service
 
 cp "${tmpfolder}/${filename}" "${folder}/daily/${filename}"
 rm -f "${tmpfolder}/${filename}"
