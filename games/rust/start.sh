@@ -4,9 +4,10 @@ clear while : do
   exec ./RustDedicated -batchmode \
   +server.port 28015 \
   +rcon.port 28016 \
+  +rcon.password 123 \
   +rcon.web 1 \
   +server.level "Procedural Map" \
-  +server.seed 1483117433 \
+  +server.seed 150833912 \
   +server.worldsize 4250 \
   +server.maxplayers 20 \
   +server.hostname "RU 4fun4 friendly PVE" \

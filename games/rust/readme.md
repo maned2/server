@@ -19,6 +19,7 @@ sudo service rust start
 sudo journalctl -xeu rust.service
 
 sudo ufw allow 28015
+sudo ufw allow 28017
 sudo ufw allow 28083
 
 #logs
@@ -51,7 +52,7 @@ sudo chown rust:rust /home/rust/server/oxide_mods.zip
 
 sudo su -l rust -s /bin/bash
 
-cd server
+cd servercd 
 
 unzip -d /home/rust/server/ Oxide.Rust-linux.zip
 unzip -d /home/rust/server/oxide/plugins/ oxide_mods.zip
@@ -70,6 +71,7 @@ https://umod.org/plugins/zlevels-remastered
 https://umod.org/plugins/zone-manager
 ```
 ownerid 76561198341247837
+ownerid 76561198171986467
 removeownerid 76561198341247837
 
 # GAME
@@ -84,10 +86,44 @@ global.god
 
 
 oxide.grant user <name><permission>
-oxide.grant user Dattebayo removertool.admin
+oxide.grant user "BOBR KURWA" removertool.admin
 oxide.grant user BOBR KURWA removertool.normal
 
 oxide.revoke
 
 chat commads:
 /remove
+
+# Update
+```commandline
+sudo service rust stop
+sudo su
+./rust_backup.sh
+exit
+
+sudo su -l rust -s /bin/bash
+cd server
+/usr/games/steamcmd +force_install_dir /home/rust/server/ +login anonymous +app_update 258550 validate +quit
+exit
+exit
+
+scp games/rust/files/Oxide.Rust-linux.zip loc2:Oxide.Rust-linux.zip
+scp games/rust/files/oxide_mods.zip loc2:oxide_mods.zip
+ssh loc2
+
+sudo cp Oxide.Rust-linux.zip /home/rust/server/Oxide.Rust-linux.zip
+sudo cp oxide_mods.zip /home/rust/server/oxide_mods.zip
+
+sudo chown rust:rust /home/rust/server/Oxide.Rust-linux.zip
+sudo chown rust:rust /home/rust/server/oxide_mods.zip
+
+sudo su -l rust -s /bin/bash
+
+cd server 
+
+unzip -d /home/rust/server/ Oxide.Rust-linux.zip
+unzip -d /home/rust/server/oxide/plugins/ oxide_mods.zip
+exit
+sudo service rust start
+
+```
