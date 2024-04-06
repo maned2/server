@@ -21,13 +21,18 @@ sudo journalctl -xeu rust.service
 sudo ufw allow 28015
 sudo ufw allow 28017
 sudo ufw allow 28083
-
+sudo ufw deny 28017
 #logs
 tail -f /var/log/rust/app.log
 tail -f /var/log/rust/err.log
 
 #settings
 sudo su -l rust -s /bin/bash
+
+server/4fun4/cfg/users.cfg
+ownerid 76561198341247837 "unnamed" "no reason"
+ownerid 76561198171986467 "unnamed" "no reason"
+
 ```
 
 Procedural Map
@@ -80,9 +85,9 @@ client.connect ip:28015
 oxide.version
 plugins
 
-god true
-god false
-global.god
+global.god true
+global.god false
+debug.noclip 
 
 
 oxide.grant user <name><permission>
