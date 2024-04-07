@@ -17,4 +17,5 @@ clear while : do
   +server.identity "4fun4" \
   +server.tags "WA,EA,builds,pve"
   -logFile "/var/log/rust/app.log"
+  -logfile gamelog.txt
   echo "\nRestarting server...\n" done
