@@ -15,7 +15,6 @@ clear while : do
 Русский дружественный сервер для веселья! БАН за огонь по другим игрокам, воровство предметов, разрушение чужих построек." \
   +server.url "https://discord.gg/7QnBbwJG4e" \
   +server.identity "4fun4" \
-  +server.tags "WA,EA,builds,pve"
+  +server.tags "WA,EA,builds,pve" \
   -logFile "/var/log/rust/app.log"
-  -logfile gamelog.txt
   echo "\nRestarting server...\n" done
