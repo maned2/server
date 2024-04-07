@@ -16,4 +16,5 @@ clear while : do
   +server.url "https://discord.gg/7QnBbwJG4e" \
   +server.identity "4fun4" \
   +server.tags "WA,EA,builds,pve"
+  -logfile "/var/log/rust/app.log"
   echo "\nRestarting server...\n" done
