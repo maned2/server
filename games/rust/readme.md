@@ -22,9 +22,9 @@ sudo service rust start
 
 sudo journalctl -xeu rust.service
 
-sudo ufw allow 28015
-sudo ufw allow 28017
-sudo ufw allow 28083
+sudo ufw allow 28015 # main port
+sudo ufw allow 28017 # query port
+sudo ufw allow 28083 # rust+ port
 sudo ufw deny 28017
 
 #logs
