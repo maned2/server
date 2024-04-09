@@ -38,6 +38,9 @@ server/4fun4/cfg/users.cfg
 ownerid 76561198341247837 "unnamed" "no reason"
 ownerid 76561198171986467 "unnamed" "no reason"
 
+crontab -e
+#0 9 * * * /var/server/server2/games/rust/rust_backup.sh > /var/log/rust/app.log
+
 ```
 
 Procedural Map
