@@ -33,6 +33,9 @@ curl -L https://umod.org/plugins/TruePVE.cs > oxide/plugins/TruePVE.cs
 curl -L https://umod.org/plugins/ZLevelsRemastered.cs > oxide/plugins/ZLevelsRemastered.cs
 curl -L https://umod.org/plugins/ZoneManager.cs > oxide/plugins/ZoneManager.cs
 curl -L https://umod.org/plugins/SmoothRestarter.cs > oxide/plugins/SmoothRestarter.cs
+curl -L https://umod.org/plugins/PreventLooting.cs > oxide/plugins/PreventLooting.cs
+curl -L https://umod.org/plugins/TimedEvents.cs > oxide/plugins/TimedEvents.cs
+
 echo "[R] Server updating completed"
 EOF
 

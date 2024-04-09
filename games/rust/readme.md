@@ -41,6 +41,10 @@ ownerid 76561198171986467 "unnamed" "no reason"
 crontab -e
 #0 9 * * * /var/server/server2/games/rust/rust_backup.sh > /var/log/rust/app.log
 
+# F1
+# client.connect <ip>:28015
+# decay.upkeep_period_minutes "2880" # уменьшает потребление шкафом ресурсов
+
 ```
 
 Procedural Map
@@ -82,6 +86,8 @@ https://umod.org/plugins/stack-size-controller
 https://umod.org/plugins/true-pve
 https://umod.org/plugins/zlevels-remastered
 https://umod.org/plugins/zone-manager
+https://umod.org/plugins/prevent-looting
+https://umod.org/plugins/timed-events
 ```
 ownerid 76561198341247837
 ownerid 76561198171986467
