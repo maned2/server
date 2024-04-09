@@ -14,6 +14,10 @@ sudo systemctl daemon-reload
 
 sudo chmod +x /var/server/server2/games/rust/start.sh
 
+sudo nano /etc/security/limits.conf
+# rust soft nofile 65535
+# rust hard nofile 65535
+
 sudo service rust start
 
 sudo journalctl -xeu rust.service
@@ -22,6 +26,7 @@ sudo ufw allow 28015
 sudo ufw allow 28017
 sudo ufw allow 28083
 sudo ufw deny 28017
+
 #logs
 tail -f /var/log/rust/app.log
 tail -f /var/log/rust/err.log
@@ -131,4 +136,17 @@ unzip -d /home/rust/server/oxide/plugins/ oxide_mods.zip
 exit
 sudo service rust start
 
+```
+
+# Restore backup:
+```commandline
+sudo cp /mnt/data/backups/rust/daily/4fun4_rust_2024_04_09-09-01.tar.gz /home/rust/backup.tar.gz
+sudo chown rust:rust /home/rust/backup.tar.gz
+
+#list what in archive
+tar -ztvf /home/rust/backup.tar.gz
+
+
+sudo su -l rust -s /bin/bash
+tar -xvzf backup.tar.gz -C /
 ```

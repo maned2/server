@@ -8,7 +8,15 @@ folder="$BACKUP_FOLDER/rust";
 tmpfolder='/var/backups/rust';
 day=$( date +%d );
 filename="4fun4_rust_${today}.tar.gz";
-tar -zcf "${tmpfolder}/${filename}" /home/rust/server
+cd /home/rust
+tar -zcf "${tmpfolder}/${filename}" server
+
+
+su -l rust -s /bin/bash
+cd server
+/usr/games/steamcmd +force_install_dir /home/rust/server/ +login anonymous +app_update 258550 validate +quit
+exit
+
 systemctl start rust.service
 
 cp "${tmpfolder}/${filename}" "${folder}/daily/${filename}"
