@@ -1,0 +1,23 @@
+[Unit]
+Description=Rust Game Service
+After=syslog.target network.target nss-lookup.target network-online.target
+
+[Service]
+Type=forking
+User=rust
+Group=rust
+WorkingDirectory=/home/rust/server/
+ExecStartPre=echo "PreStarting server"
+ExecStartPre=echo "Starting server"
+#ExecStartPre=/usr/games/steamcmd +force_install_dir /home/rust/server/ +login anonymous +app_update 258550 validate +quit
+ExecStartPre=/usr/bin/screen -X -S UbuntuRust kill
+ExecStart=/usr/bin/screen -dmS UbuntuRust /bin/bash -c "/var/server/server2/games/rust/start.sh"
+ExecStop=/usr/bin/screen -Rd UbuntuRust -X 'say "Stopping server in 1 minute..."\r'
+ExecStop=/bin/sleep 60
+ExecStop=/usr/bin/screen -Rd UbuntuRust -X stuff "sv quit\r"
+ExecStopPost=echo "Stopped server"
+GuessMainPID=no
+TimeoutStartSec=15min
+
+[Install]
+WantedBy=multi-user.target

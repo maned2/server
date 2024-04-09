@@ -15,6 +15,18 @@ tar -zcf "${tmpfolder}/${filename}" server
 su -l rust -s /bin/bash
 cd server
 /usr/games/steamcmd +force_install_dir /home/rust/server/ +login anonymous +app_update 258550 validate +quit
+curl -L -o Oxide.Rust-linux.zip https://umod.org/games/rust/download/develop
+unzip -o -d /home/rust/server/ Oxide.Rust-linux.zip
+curl -L https://umod.org/plugins/AbsolutGifts.cs > oxide/plugins/AbsolutGifts.cs
+curl -L https://umod.org/plugins/ConnectMessages.cs > oxide/plugins/ConnectMessages.cs
+curl -L https://umod.org/plugins/DeathNotes.cs > oxide/plugins/DeathNotes.cs
+curl -L https://umod.org/plugins/NoGiveNotices.cs > oxide/plugins/NoGiveNotices.cs
+curl -L https://umod.org/plugins/RemoverTool.cs > oxide/plugins/RemoverTool.cs
+curl -L https://umod.org/plugins/StackSizeController.cs > oxide/plugins/StackSizeController.cs
+curl -L https://umod.org/plugins/TruePVE.cs > oxide/plugins/TruePVE.cs
+curl -L https://umod.org/plugins/ZLevelsRemastered.cs > oxide/plugins/ZLevelsRemastered.cs
+curl -L https://umod.org/plugins/ZoneManager.cs > oxide/plugins/ZoneManager.cs
+curl -L https://umod.org/plugins/SmoothRestarter.cs > oxide/plugins/SmoothRestarter.cs
 exit
 
 systemctl start rust.service

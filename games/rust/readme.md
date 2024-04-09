@@ -131,7 +131,7 @@ sudo su -l rust -s /bin/bash
 
 cd server 
 
-unzip -d /homust/server/ Oxide.Rust-linux.zip
+unzip -d /home/rust/server/ Oxide.Rust-linux.zip
 unzip -d /home/rust/server/oxide/plugins/ oxide_mods.zip
 exit
 sudo service rust start
