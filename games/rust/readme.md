@@ -44,6 +44,7 @@ crontab -e
 # F1
 # client.connect <ip>:28015
 # decay.upkeep_period_minutes "2880" # уменьшает потребление шкафом ресурсов
+# oxide.grant group users removertool.normal
 
 ```
 
@@ -88,6 +89,7 @@ https://umod.org/plugins/zlevels-remastered
 https://umod.org/plugins/zone-manager
 https://umod.org/plugins/prevent-looting
 https://umod.org/plugins/timed-events
+https://umod.org/plugins/zone-manager-auto-zones
 ```
 ownerid 76561198341247837
 ownerid 76561198171986467
@@ -106,7 +108,7 @@ debug.noclip
 
 oxide.grant user <name><permission>
 oxide.grant user "BOBR KURWA" removertool.admin
-oxide.grant user BOBR KURWA removertool.normal
+oxide.grant group users removertool.normal
 
 oxide.revoke
 
