@@ -39,12 +39,13 @@ ownerid 76561198341247837 "unnamed" "no reason"
 ownerid 76561198171986467 "unnamed" "no reason"
 
 crontab -e
-#0 9 * * * /var/server/server2/games/rust/rust_backup.sh > /var/log/rust/app.log
+#0 9 * * * /var/server/server2/games/rust/rust_backup.sh >> /var/log/rust/app.log
 
 # F1
 # client.connect <ip>:28015
 # decay.upkeep_period_minutes "2880" # уменьшает потребление шкафом ресурсов
-# oxide.grant group users removertool.normal
+# relationshipmanager.maxteamsize 3
+# oxide.grant group default removertool.normal
 
 ```
 
