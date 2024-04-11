@@ -7,12 +7,12 @@ exec ./RustDedicated -batchmode \
   +rcon.password 1change2this_3line \
   +rcon.web 1 \
   +server.level "Procedural Map" \
-  +server.seed 150833912 \
-  +server.worldsize 4250 \
+  +server.seed 1672476796 \
+  +server.worldsize 4000 \
   +server.maxplayers 200 \
   +server.gamemode "" \
-  +server.hostname "RU\EN 4fun4 Для новичков for newbies solo duo trio" \
-  +server.description "RU\EN 4fun4 Для новичков for newbies solo duo trio
+  +server.hostname "RU\EN 4fun Для новичков for newbies solo duo trio" \
+  +server.description "RU\EN 4fun Для новичков for newbies solo duo trio
 
 - Rust+
 - 4250 размер карты
@@ -32,5 +32,5 @@ exec ./RustDedicated -batchmode \
 - We wish you a pleasant, fair game!
 - Cupboard resource consumption reduced by 50%" \
   +server.url "https://discord.gg/7QnBbwJG4e" \
-  +server.identity "4fun4" \
-  +server.tags "EU,monthly,vanilla,WA,EA"
+  +server.identity "4fun42" \
+  +server.tags "EU,monthly,vanilla,tut,WA,EA"

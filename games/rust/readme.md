@@ -46,8 +46,10 @@ crontab -e
 # F1
 # client.connect <ip>:28015
 # decay.upkeep_period_minutes "2880" # уменьшает потребление шкафом ресурсов
-# relationshipmanager.maxteamsize 3
+# relationshipmanager.maxteamsize 3 # максимальный размер команды 
 # oxide.grant group default removertool.normal
+
+# server.save
 
 ```
 
