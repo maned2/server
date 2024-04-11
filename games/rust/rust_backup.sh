@@ -19,24 +19,24 @@ sudo -i -u rust bash << EOF
 cd server
 echo "[R] Server updating steam..."
 /usr/games/steamcmd +force_install_dir /home/rust/server/ +login anonymous +app_update 258550 validate +quit
-echo "[R] Server updating oxide..."
-curl -L -o Oxide.Rust-linux.zip https://umod.org/games/rust/download/develop
-unzip -o -d /home/rust/server/ Oxide.Rust-linux.zip
-echo "[R] Server updating oxide plugins..."
-curl -L https://umod.org/plugins/AbsolutGifts.cs > oxide/plugins/AbsolutGifts.cs
-curl -L https://umod.org/plugins/ConnectMessages.cs > oxide/plugins/ConnectMessages.cs
-curl -L https://umod.org/plugins/DeathNotes.cs > oxide/plugins/DeathNotes.cs
-curl -L https://umod.org/plugins/NoGiveNotices.cs > oxide/plugins/NoGiveNotices.cs
-curl -L https://umod.org/plugins/RemoverTool.cs > oxide/plugins/RemoverTool.cs
-curl -L https://umod.org/plugins/StackSizeController.cs > oxide/plugins/StackSizeController.cs
-curl -L https://umod.org/plugins/ZLevelsRemastered.cs > oxide/plugins/ZLevelsRemastered.cs
-curl -L https://umod.org/plugins/SmoothRestarter.cs > oxide/plugins/SmoothRestarter.cs
-curl -L https://umod.org/plugins/TimedEvents.cs > oxide/plugins/TimedEvents.cs
-
-curl -L https://umod.org/plugins/TruePVE.cs > oxide/plugins/TruePVE.cs
-curl -L https://umod.org/plugins/PreventLooting.cs > oxide/plugins/PreventLooting.cs
-curl -L https://umod.org/plugins/ZoneManager.cs > oxide/plugins/ZoneManager.cs
-curl -L https://umod.org/plugins/ZoneManagerAutoZones.cs > oxide/plugins/ZoneManagerAutoZones.cs
+#echo "[R] Server updating oxide..."
+#curl -L -o Oxide.Rust-linux.zip https://umod.org/games/rust/download/develop
+#unzip -o -d /home/rust/server/ Oxide.Rust-linux.zip
+#echo "[R] Server updating oxide plugins..."
+#curl -L https://umod.org/plugins/AbsolutGifts.cs > oxide/plugins/AbsolutGifts.cs
+#curl -L https://umod.org/plugins/ConnectMessages.cs > oxide/plugins/ConnectMessages.cs
+#curl -L https://umod.org/plugins/DeathNotes.cs > oxide/plugins/DeathNotes.cs
+#curl -L https://umod.org/plugins/NoGiveNotices.cs > oxide/plugins/NoGiveNotices.cs
+#curl -L https://umod.org/plugins/RemoverTool.cs > oxide/plugins/RemoverTool.cs
+#curl -L https://umod.org/plugins/StackSizeController.cs > oxide/plugins/StackSizeController.cs
+#curl -L https://umod.org/plugins/ZLevelsRemastered.cs > oxide/plugins/ZLevelsRemastered.cs
+#curl -L https://umod.org/plugins/SmoothRestarter.cs > oxide/plugins/SmoothRestarter.cs
+#curl -L https://umod.org/plugins/TimedEvents.cs > oxide/plugins/TimedEvents.cs
+#
+#curl -L https://umod.org/plugins/TruePVE.cs > oxide/plugins/TruePVE.cs
+#curl -L https://umod.org/plugins/PreventLooting.cs > oxide/plugins/PreventLooting.cs
+#curl -L https://umod.org/plugins/ZoneManager.cs > oxide/plugins/ZoneManager.cs
+#curl -L https://umod.org/plugins/ZoneManagerAutoZones.cs > oxide/plugins/ZoneManagerAutoZones.cs
 
 echo "[R] Server updating completed"
 EOF
