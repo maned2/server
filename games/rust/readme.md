@@ -12,6 +12,8 @@ sudo mkdir /var/log/rust
 sudo cp /var/server/server2/games/rust/rust.service /etc/systemd/system/rust.service
 sudo systemctl daemon-reload
 
+sudo systemctl enable rust
+
 sudo chmod +x /var/server/server2/games/rust/start.sh
 
 sudo nano /etc/security/limits.conf

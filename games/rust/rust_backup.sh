@@ -23,10 +23,11 @@ echo "[R] Server updating steam..."
 #curl -L -o Oxide.Rust-linux.zip https://umod.org/games/rust/download/develop
 #unzip -o -d /home/rust/server/ Oxide.Rust-linux.zip
 #echo "[R] Server updating oxide plugins..."
+#rm oxide/plugins/*
 #curl -L https://umod.org/plugins/AbsolutGifts.cs > oxide/plugins/AbsolutGifts.cs
 #curl -L https://umod.org/plugins/ConnectMessages.cs > oxide/plugins/ConnectMessages.cs
 #curl -L https://umod.org/plugins/DeathNotes.cs > oxide/plugins/DeathNotes.cs
-#curl -L https://umod.org/plugins/NoGiveNotices.cs > oxide/plugins/NoGiveNotices.cs
+
 #curl -L https://umod.org/plugins/RemoverTool.cs > oxide/plugins/RemoverTool.cs
 #curl -L https://umod.org/plugins/StackSizeController.cs > oxide/plugins/StackSizeController.cs
 #curl -L https://umod.org/plugins/ZLevelsRemastered.cs > oxide/plugins/ZLevelsRemastered.cs
@@ -37,6 +38,8 @@ echo "[R] Server updating steam..."
 #curl -L https://umod.org/plugins/PreventLooting.cs > oxide/plugins/PreventLooting.cs
 #curl -L https://umod.org/plugins/ZoneManager.cs > oxide/plugins/ZoneManager.cs
 #curl -L https://umod.org/plugins/ZoneManagerAutoZones.cs > oxide/plugins/ZoneManagerAutoZones.cs
+
+#curl -L https://umod.org/plugins/NoGiveNotices.cs > oxide/plugins/NoGiveNotices.cs
 
 echo "[R] Server updating completed"
 EOF
