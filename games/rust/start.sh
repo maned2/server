@@ -9,7 +9,7 @@ exec ./RustDedicated -batchmode \
   +server.level "Procedural Map" \
   +server.seed 1672476796 \
   +server.worldsize 4000 \
-  +server.maxplayers 200 \
+  +server.maxplayers 100 \
   +server.gamemode "" \
   +server.hostname "RU\EN 4fun Для новичков for newbies solo duo trio" \
   +server.description "RU\EN 4fun Для новичков for newbies solo duo trio
