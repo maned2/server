@@ -10,7 +10,7 @@ exec ./RustDedicated -batchmode \
   +server.seed 1672476796 \
   +server.worldsize 4000 \
   +server.maxplayers 100 \
-  +server.gamemode "" \
+  +server.gamemode "vanilla" \
   +server.hostname "RU\EN 4fun Для новичков for newbies solo duo trio" \
   +server.description "RU\EN 4fun Для новичков for newbies solo duo trio
 
