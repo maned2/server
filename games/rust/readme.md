@@ -85,18 +85,31 @@ unzip -d /home/rust/server/oxide/plugins/ oxide_mods.zip
 
 #install mods
 https://umod.org/plugins/absolut-gifts
-https://umod.org/plugins/active-sort
 https://umod.org/plugins/connect-messages
-https://umod.org/plugins/death-notes
-https://umod.org/plugins/no-give-notices
-https://umod.org/plugins/remover-tool
-https://umod.org/plugins/stack-size-controller
-https://umod.org/plugins/true-pve
+https://umod.org/plugins/simple-kill-feed
+https://umod.org/plugins/smooth-restarter
+
+
+https://umod.org/plugins/building-actions
+
 https://umod.org/plugins/zlevels-remastered
-https://umod.org/plugins/zone-manager
+
+https://umod.org/plugins/true-pve
 https://umod.org/plugins/prevent-looting
-https://umod.org/plugins/timed-events
+
+https://umod.org/plugins/zone-manager
 https://umod.org/plugins/zone-manager-auto-zones
+
+https://umod.org/plugins/automated-events
+https://umod.org/plugins/timed-events
+https://umod.org/plugins/night-zombies
+https://umod.org/plugins/raidable-bases
+https://umod.org/plugins/rain-of-fire
+
+
+какие ещё посмотреть: 
+https://umod.org/plugins/event-manager
+
 ```
 ownerid 76561198341247837
 ownerid 76561198171986467

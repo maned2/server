@@ -22,24 +22,69 @@ echo "[R] Server updating steam..."
 echo "[R] Server updating oxide..."
 curl -L -o Oxide.Rust-linux.zip https://umod.org/games/rust/download/develop
 unzip -o -d /home/rust/server/ Oxide.Rust-linux.zip
-#echo "[R] Server updating oxide plugins..."
-#rm oxide/plugins/*
-#curl -L https://umod.org/plugins/AbsolutGifts.cs > oxide/plugins/AbsolutGifts.cs
-#curl -L https://umod.org/plugins/ConnectMessages.cs > oxide/plugins/ConnectMessages.cs
-#curl -L https://umod.org/plugins/DeathNotes.cs > oxide/plugins/DeathNotes.cs
+echo "[R] Server updating oxide plugins..."
+rm oxide/plugins/*
 
-#curl -L https://umod.org/plugins/RemoverTool.cs > oxide/plugins/RemoverTool.cs
-#curl -L https://umod.org/plugins/StackSizeController.cs > oxide/plugins/StackSizeController.cs
-#curl -L https://umod.org/plugins/ZLevelsRemastered.cs > oxide/plugins/ZLevelsRemastered.cs
-#curl -L https://umod.org/plugins/SmoothRestarter.cs > oxide/plugins/SmoothRestarter.cs
-#curl -L https://umod.org/plugins/TimedEvents.cs > oxide/plugins/TimedEvents.cs
-#
-#curl -L https://umod.org/plugins/TruePVE.cs > oxide/plugins/TruePVE.cs
-#curl -L https://umod.org/plugins/PreventLooting.cs > oxide/plugins/PreventLooting.cs
-#curl -L https://umod.org/plugins/ZoneManager.cs > oxide/plugins/ZoneManager.cs
-#curl -L https://umod.org/plugins/ZoneManagerAutoZones.cs > oxide/plugins/ZoneManagerAutoZones.cs
+curl -L https://umod.org/plugins/AbsolutGifts.cs > oxide/plugins/AbsolutGifts.cs
+curl -L https://umod.org/plugins/ConnectMessages.cs > oxide/plugins/ConnectMessages.cs
+curl -L https://umod.org/plugins/SimpleKillFeed.cs > oxide/plugins/SimpleKillFeed.cs
 
-#curl -L https://umod.org/plugins/NoGiveNotices.cs > oxide/plugins/NoGiveNotices.cs
+curl -L https://umod.org/plugins/SmoothRestarter.cs > oxide/plugins/SmoothRestarter.cs
+
+curl -L https://umod.org/plugins/BuildingActions.cs > oxide/plugins/BuildingActions.cs
+
+curl -L https://umod.org/plugins/ZLevelsRemastered.cs > oxide/plugins/ZLevelsRemastered.cs
+
+curl -L https://umod.org/plugins/TruePVE.cs > oxide/plugins/TruePVE.cs
+curl -L https://umod.org/plugins/PreventLooting.cs > oxide/plugins/PreventLooting.cs
+
+curl -L https://umod.org/plugins/ZoneManager.cs > oxide/plugins/ZoneManager.cs
+curl -L https://umod.org/plugins/ZoneManagerAutoZones.cs > oxide/plugins/ZoneManagerAutoZones.cs
+
+curl -L https://umod.org/plugins/AutomatedEvents.cs > oxide/plugins/AutomatedEvents.cs
+curl -L https://umod.org/plugins/TimedEvents.cs > oxide/plugins/TimedEvents.cs
+curl -L https://umod.org/plugins/NightZombies.cs > oxide/plugins/NightZombies.cs
+curl -L https://umod.org/plugins/RaidableBases.cs > oxide/plugins/RaidableBases.cs
+curl -L https://umod.org/plugins/RainOfFire.cs > oxide/plugins/RainOfFire.cs
+
+
+echo "//Reference: 0Harmony
+//Reference: Facepunch.Ping
+using Facepunch.Rust;
+using Harmony;
+using Oxide.Core;
+using System.Linq;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Reflection.Emit;
+using UnityEngine;
+
+namespace Oxide.Plugins {
+        [Info("stop the ping nonsence", "uknown", "4.2.0")]
+        [Description("figure out the region and stop pinging! The server is not physically moving every 5 minutes")]
+        class StopStupidPings : CovalencePlugin {
+
+                private void Unload() { _harmonyInstance.UnpatchAll(_harmonyInstance.Id); }
+                private void Init() {
+                        _harmonyInstance = HarmonyInstance.Create(Name);
+                        _harmonyInstance.Patch(AccessTools.Method(typeof(Facepunch.Ping.PingEstimater), "RefreshCacheIfExpired"),
+                                prefix: new HarmonyMethod(typeof(StopCacheRefreshing), nameof(StopCacheRefreshing.Prefix)));
+                }
+
+                private HarmonyInstance _harmonyInstance;
+                private static bool HasChecked = false;
+                private class StopCacheRefreshing {
+                        internal static bool Prefix() {
+                                if (!HasChecked) { HasChecked = true; return true; }
+                                return false;
+                        }
+                }
+
+        }
+}
+" > oxide/plugins/StopStupidPings.cs
+
+
 
 echo "[R] Server updating completed"
 EOF
