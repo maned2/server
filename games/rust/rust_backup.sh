@@ -23,7 +23,7 @@ echo "[R] Server updating oxide..."
 curl -L -o Oxide.Rust-linux.zip https://umod.org/games/rust/download/develop
 unzip -o -d /home/rust/server/ Oxide.Rust-linux.zip
 echo "[R] Server updating oxide plugins..."
-rm oxide/plugins/*
+#rm oxide/plugins/*
 
 curl -L https://umod.org/plugins/ConnectMessages.cs > oxide/plugins/ConnectMessages.cs
 curl -L https://umod.org/plugins/SimpleKillFeed.cs > oxide/plugins/SimpleKillFeed.cs
