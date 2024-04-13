@@ -32,7 +32,7 @@ exec ./RustDedicated -batchmode \
 - Wipe twice a month, the next one is 04/18. The previous one - 04/11 was due to technical reasons (the map was laggy)
 - Powerful anti-cheat
 - Cabinet resource consumption reduced by 50%
-- Постройки можно поворачивать, удалять без ограничений по времени" \
+- Buildings can be rotated and deleted without time limits" \
   +server.url "https://discord.gg/NNyGJfqkkA" \
   +server.identity "4fun43" \
   +server.tags "EU,pve,biweekly,tut,WA,EA" \
