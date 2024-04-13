@@ -31,6 +31,6 @@ exec ./RustDedicated -batchmode \
 - Maximum 3 people per team!
 - We wish you a pleasant, fair game!
 - Cupboard resource consumption reduced by 50%" \
-  +server.url "https://discord.gg/7QnBbwJG4e" \
+  +server.url "https://discord.gg/NNyGJfqkkA" \
   +server.identity "4fun42" \
   +server.tags "EU,biweekly,vanilla,tut,WA,EA"

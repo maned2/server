@@ -19,9 +19,9 @@ sudo -i -u rust bash << EOF
 cd server
 echo "[R] Server updating steam..."
 /usr/games/steamcmd +force_install_dir /home/rust/server/ +login anonymous +app_update 258550 validate +quit
-#echo "[R] Server updating oxide..."
-#curl -L -o Oxide.Rust-linux.zip https://umod.org/games/rust/download/develop
-#unzip -o -d /home/rust/server/ Oxide.Rust-linux.zip
+echo "[R] Server updating oxide..."
+curl -L -o Oxide.Rust-linux.zip https://umod.org/games/rust/download/develop
+unzip -o -d /home/rust/server/ Oxide.Rust-linux.zip
 #echo "[R] Server updating oxide plugins..."
 #rm oxide/plugins/*
 #curl -L https://umod.org/plugins/AbsolutGifts.cs > oxide/plugins/AbsolutGifts.cs

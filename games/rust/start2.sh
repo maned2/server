@@ -31,6 +31,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)
 - Maximum 3 people per team!
 - We wish you a pleasant, fair game!
 - Cupboard resource consumption reduced by 50%" \
-  +server.url "https://discord.gg/7QnBbwJG4e" \
+  +server.url "https://discord.gg/NNyGJfqkkA" \
   +server.identity "4fun4" \
   +server.tags "EU,pve,monthly,vanilla,WA,EA,builds"

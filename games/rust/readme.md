@@ -36,19 +36,21 @@ tail -f /var/log/rust/err.log
 #settings
 sudo su -l rust -s /bin/bash
 
-server/4fun4/cfg/users.cfg
-ownerid 76561198341247837 "unnamed" "no reason"
-ownerid 76561198171986467 "unnamed" "no reason"
+mkdir -p server/server/4fun42/cfg/
+
+echo "ownerid 76561198341247837 \"unnamed\" \"no reason\"
+ownerid 76561198171986467 \"unnamed\" \"no reason\"" > server/server/4fun42/cfg/users.cfg
+
+echo "decay.upkeep_period_minutes \"2880\"
+relationshipmanager.maxteamsize 3" > server/server/4fun42/cfg/server.cfg
 
 crontab -e
 #0 9 * * * /var/server/server2/games/rust/rust_backup.sh >> /var/log/rust/app.log
 
 # F1
 # client.connect <ip>:28015
-# decay.upkeep_period_minutes "2880" # уменьшает потребление шкафом ресурсов
-# relationshipmanager.maxteamsize 3 # максимальный размер команды 
-# oxide.grant group default removertool.normal
 
+# oxide.grant group default removertool.normal
 # server.save
 
 ```
