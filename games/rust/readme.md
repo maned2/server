@@ -55,6 +55,55 @@ crontab -e
 
 ```
 
+# Settings:
+
+nano server/oxide/config/PreventLooting.json
+# "UseZoneManager": true,
+
+nano server/oxide/config/SmoothRestarter.json
+# "9:00"
+
+nano server/oxide/config/TruePVE.json
+# "useZones": true,
+
+nano server/oxide/config/SimpleKillFeed.json
+# "Log PvP Kill events": true,
+
+nano server/oxide/config/NightZombies.json
+# "Spawn near players": true,
+# "Min pop for near player spawn": 1,
+
+nano server/oxide/config/TimedEvents.json
+nano server/oxide/config/RainOfFire.json
+
+
+
+nano server/oxide/config/RaidableBases.json
+```commandline
+#"Scheduled Events": {
+#      "Enabled": true,
+#      "Every Min Seconds": 3600.0,
+#      "Every Max Seconds": 7200.0,
+#      "Max Scheduled Events": 1,
+#      "Max To Spawn At Once (0 = Use Max Scheduled Events Amount)": 1,
+#      "Chance To Randomly Spawn PVP Bases (0 = Ignore Setting)": 0.0,
+#      "Include PVE Bases": true,
+#      "Include PVP Bases": true,
+#      "Minimum Required Players Online": 1,
+#      "Maximum Limit Of Players Online": 300,
+#      "Time To Wait Between Spawns": 15.0,
+#      "Convert PVE To PVP": false,
+#      "Convert PVP To PVE": false,
+#      "Ignore Safe Checks": false,
+#      "Ignore Safe Checks In X Radius Only": 0.0,
+#      "Ignore Player Entities At Custom Spawn Locations": false,
+#      "Spawn Bases X Distance Apart": 100.0,
+#      "Spawns Database File (Optional)": "none"
+#
+},
+```
+
+
 Procedural Map
 Barren # simple Procedural Map
 HapisIsland
@@ -84,6 +133,7 @@ unzip -d /home/rust/server/oxide/plugins/ oxide_mods.zip
  
 
 #install mods
+https://umod.org/plugins/image-library
 https://umod.org/plugins/absolut-gifts
 https://umod.org/plugins/connect-messages
 https://umod.org/plugins/simple-kill-feed
@@ -125,6 +175,7 @@ global.god true
 global.god false
 debug.noclip 
 
+oxide.reload <pluginName>
 
 oxide.grant user <name><permission>
 oxide.grant user "BOBR KURWA" removertool.admin

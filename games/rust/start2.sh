@@ -22,6 +22,7 @@ exec ./RustDedicated -batchmode \
 - Вайп дважды в месяц, следующий - 18.04. Прошлый - 11.04 был по техническим причинам (лагала карта)
 - Мощный античит
 - Потребление ресурсов шкафом уменьшено на 50%
+- Постройки можно поворачивать, удалять без ограничений по времени
 
 -Rust+
 - 4000 map size
@@ -30,7 +31,10 @@ exec ./RustDedicated -batchmode \
 - If the admin issues something, you will see a message in the chat (but he will not do this)
 - Wipe twice a month, the next one is 04/18. The previous one - 04/11 was due to technical reasons (the map was laggy)
 - Powerful anti-cheat
-- Cabinet resource consumption reduced by 50%" \
+- Cabinet resource consumption reduced by 50%
+- Постройки можно поворачивать, удалять без ограничений по времени" \
   +server.url "https://discord.gg/NNyGJfqkkA" \
   +server.identity "4fun42" \
-  +server.tags "EU,pve,biweekly,tut,WA,EA"
+  +server.tags "EU,pve,biweekly,tut,WA,EA" \
+  +server.logoimage "https://i.ibb.co/CPGctqj/icon.png" \
+  +server.headerimage "https://i.ibb.co/s3XmLbM/header.png"

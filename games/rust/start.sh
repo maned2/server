@@ -21,16 +21,16 @@ exec ./RustDedicated -batchmode \
 - Вайп дважды в месяц, следующий - 18.04. Прошлый - 11.04 был по техническим причинам (лагала карта)
 - Мощный античит
 - Максимум 3 человека в команде!
-- Желаем приятной, честной игры!
 - Потребление ресурсов шкафом уменьшено на 50%
+- Желаем приятной, честной игры!
 - 4250 card size
 - Classic, no mods, no donations and other crap. You can't buy anything.
 - If the admin gives something, you will see a message in the chat (but he won't do that)
 - Wipe twice a month, the next one is 04/18. The previous one - 11.04 was due to technical reasons (the map was laggy)
 - Powerful anti-cheat
 - Maximum 3 people per team!
-- We wish you a pleasant, fair game!
-- Cupboard resource consumption reduced by 50%" \
+- Cupboard resource consumption reduced by 50%
+- We wish you a pleasant, fair game!" \
   +server.url "https://discord.gg/NNyGJfqkkA" \
   +server.identity "4fun42" \
   +server.tags "EU,biweekly,vanilla,tut,WA,EA"
