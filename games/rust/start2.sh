@@ -24,7 +24,7 @@ exec ./RustDedicated -batchmode \
 - Потребление ресурсов шкафом уменьшено на 50%
 - Постройки можно поворачивать, удалять без ограничений по времени
 
--Rust+
+- Rust+
 - 4250 map size
 - PVE/PVP Zones - you can calmly build up
 - Various events! zombies, etc.

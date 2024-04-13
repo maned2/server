@@ -50,6 +50,9 @@ curl -L https://umod.org/plugins/CopyPaste.cs > oxide/plugins/CopyPaste.cs
 
 curl -L https://umod.org/plugins/RainOfFire.cs > oxide/plugins/RainOfFire.cs
 curl -L https://umod.org/plugins/DangerousTreasures.cs > oxide/plugins/DangerousTreasures.cs
+curl -L https://umod.org/plugins/DiscordLogger.cs > oxide/plugins/DiscordLogger.cs
+curl -L https://umod.org/plugins/AntiSpam.cs > oxide/plugins/AntiSpam.cs
+curl -L https://umod.org/plugins/UFilter.cs > oxide/plugins/UFilter.cs
 
 
 echo "//Reference: 0Harmony
