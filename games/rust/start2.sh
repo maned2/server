@@ -19,7 +19,7 @@ exec ./RustDedicated -batchmode \
 - PVE/PVP Зоны - можно спокойно отстроиться
 - Различные евенты! зомби и т.д.
 - Админ если что то выдаст, вы увидите сообщение в чате (но он этого не будет делать)
-- Вайп дважды в месяц, следующий - 18.04. Прошлый - 11.04 был по техническим причинам (лагала карта)
+- Вайп дважды в месяц, следующий - 18.04. Прошлый - 13.04 был по техническим причинам (лагала карта)
 - Мощный античит
 - Потребление ресурсов шкафом уменьшено на 50%
 - Постройки можно поворачивать, удалять без ограничений по времени
@@ -29,7 +29,7 @@ exec ./RustDedicated -batchmode \
 - PVE/PVP Zones - you can calmly build up
 - Various events! zombies, etc.
 - If the admin issues something, you will see a message in the chat (but he will not do this)
-- Wipe twice a month, the next one is 04/18. The previous one - 04/11 was due to technical reasons (the map was laggy)
+- Wipe twice a month, the next one is 04/18. The previous one - 04/13 was due to technical reasons (the map was laggy)
 - Powerful anti-cheat
 - Cabinet resource consumption reduced by 50%
 - Buildings can be rotated and deleted without time limits" \
