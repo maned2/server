@@ -7,15 +7,15 @@ exec ./RustDedicated -batchmode \
   +rcon.password 1change2this_3line \
   +rcon.web 1 \
   +server.level "Procedural Map" \
-  +server.seed 1672476796 \
-  +server.worldsize 4000 \
+  +server.seed 231390963 \
+  +server.worldsize 4250 \
   +server.maxplayers 100 \
   +server.gamemode "vanilla" \
   +server.hostname "RU\EN 4fun PVE/PVP no donations" \
   +server.description "RU\EN 4fun PVE/PVP no donations
 
 - Rust+
-- 4000 размер карты
+- 4250 размер карты
 - PVE/PVP Зоны - можно спокойно отстроиться
 - Различные евенты! зомби и т.д.
 - Админ если что то выдаст, вы увидите сообщение в чате (но он этого не будет делать)
@@ -25,7 +25,7 @@ exec ./RustDedicated -batchmode \
 - Постройки можно поворачивать, удалять без ограничений по времени
 
 -Rust+
-- 4000 map size
+- 4250 map size
 - PVE/PVP Zones - you can calmly build up
 - Various events! zombies, etc.
 - If the admin issues something, you will see a message in the chat (but he will not do this)
@@ -34,7 +34,7 @@ exec ./RustDedicated -batchmode \
 - Cabinet resource consumption reduced by 50%
 - Постройки можно поворачивать, удалять без ограничений по времени" \
   +server.url "https://discord.gg/NNyGJfqkkA" \
-  +server.identity "4fun42" \
+  +server.identity "4fun43" \
   +server.tags "EU,pve,biweekly,tut,WA,EA" \
   +server.logoimage "https://i.ibb.co/CPGctqj/icon.png" \
   +server.headerimage "https://i.ibb.co/s3XmLbM/header.png"
