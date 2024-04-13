@@ -69,14 +69,20 @@ nano server/oxide/config/TruePVE.json
 nano server/oxide/config/SimpleKillFeed.json
 # "Log PvP Kill events": true,
 
-nano server/oxide/config/NightZombies.json
-# "Spawn near players": true,
-# "Min pop for near player spawn": 1,
-
 nano server/oxide/config/TimedEvents.json
 nano server/oxide/config/RainOfFire.json
 
 
+scp games/rust/files/easyraid1.json loc2:easyraid1.json
+scp games/rust/files/easyraid2.json loc2:easyraid2.json
+scp games/rust/files/easyraid3.json loc2:easyraid3.json
+ssh loc2
+sudo cp easyraid1.json /home/rust/server/oxide/data/copypaste/easyraid1.json
+sudo cp easyraid2.json /home/rust/server/oxide/data/copypaste/easyraid2.json
+sudo cp easyraid3.json /home/rust/server/oxide/data/copypaste/easyraid3.json
+sudo chown rust:rust /home/rust/server/oxide/data/copypaste/easyraid1.json
+sudo chown rust:rust /home/rust/server/oxide/data/copypaste/easyraid2.json
+sudo chown rust:rust /home/rust/server/oxide/data/copypaste/easyraid3.json
 
 nano server/oxide/config/RaidableBases.json
 ```commandline
@@ -102,7 +108,17 @@ nano server/oxide/config/RaidableBases.json
 #
 },
 ```
+nano server/oxide/config/NightZombies.json
+# "Spawn near players": true,
+# "Min pop for near player spawn": 1,
 
+```commandline
+halloween.enabled true
+halloween.murdererpopulation 5
+halloween.scarecrowpopulation 5
+zombie.population 5
+scarecrow.population 5
+```
 
 Procedural Map
 Barren # simple Procedural Map
@@ -149,16 +165,19 @@ https://umod.org/plugins/prevent-looting
 
 https://umod.org/plugins/zone-manager
 https://umod.org/plugins/zone-manager-auto-zones
+https://umod.org/plugins/zone-domes
 
 https://umod.org/plugins/automated-events
 https://umod.org/plugins/timed-events
 https://umod.org/plugins/night-zombies
 https://umod.org/plugins/raidable-bases
+https://umod.org/plugins/copy-paste
 https://umod.org/plugins/rain-of-fire
-
+https://umod.org/plugins/dangerous-treasures
 
 какие ещё посмотреть: 
 https://umod.org/plugins/event-manager
+https://umod.org/plugins/kill-streaks
 
 ```
 ownerid 76561198341247837
