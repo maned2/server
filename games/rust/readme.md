@@ -39,10 +39,9 @@ sudo su -l rust -s /bin/bash
 mkdir -p server/server/4fun42/cfg/
 
 echo "ownerid 76561198341247837 \"unnamed\" \"no reason\"
-ownerid 76561198171986467 \"unnamed\" \"no reason\"" > server/server/4fun42/cfg/users.cfg
+ownerid 76561198171986467 \"unnamed\" \"no reason\"" > server/server/4fun43/cfg/users.cfg
 
-echo "decay.upkeep_period_minutes \"2880\"
-relationshipmanager.maxteamsize 3" > server/server/4fun42/cfg/server.cfg
+echo "decay.upkeep_period_minutes \"2880\"" > server/server/4fun43/cfg/server.cfg
 
 crontab -e
 #0 9 * * * /var/server/server2/games/rust/rust_backup.sh >> /var/log/rust/app.log
@@ -175,10 +174,13 @@ https://umod.org/plugins/copy-paste
 https://umod.org/plugins/rain-of-fire
 https://umod.org/plugins/dangerous-treasures
 
+https://umod.org/plugins/discord-logger
+
 какие ещё посмотреть: 
 https://umod.org/plugins/event-manager
 https://umod.org/plugins/kill-streaks
-
+https://umod.org/plugins/anti-spam
+https://umod.org/plugins/ufilter
 ```
 ownerid 76561198341247837
 ownerid 76561198171986467
