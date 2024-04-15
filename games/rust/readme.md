@@ -41,10 +41,13 @@ mkdir -p server/server/4fun42/cfg/
 echo "ownerid 76561198341247837 \"unnamed\" \"no reason\"
 ownerid 76561198171986467 \"unnamed\" \"no reason\"" > server/server/4fun43/cfg/users.cfg
 
-echo "decay.upkeep_period_minutes \"2880\"" > server/server/4fun43/cfg/server.cfg
+echo "decay.upkeep_period_minutes \"2880\"
+halloween.enabled true
+halloween.murdererpopulation 5
+halloween.scarecrowpopulation 5" > server/server/4fun43/cfg/server.cfg
 
 crontab -e
-#0 9 * * * /var/server/server2/games/rust/rust_backup.sh >> /var/log/rust/app.log
+#0 9 * * * /var/server/server2/games/rust/scripts/cron.sh >> /var/log/rust/app.log
 
 # F1
 # client.connect <ip>:28015
@@ -148,39 +151,12 @@ unzip -d /home/rust/server/oxide/plugins/ oxide_mods.zip
  
 
 #install mods
-https://umod.org/plugins/image-library
-https://umod.org/plugins/absolut-gifts
-https://umod.org/plugins/connect-messages
-https://umod.org/plugins/simple-kill-feed
-https://umod.org/plugins/smooth-restarter
-
-
-https://umod.org/plugins/building-actions
-
-https://umod.org/plugins/zlevels-remastered
-
-https://umod.org/plugins/true-pve
-https://umod.org/plugins/prevent-looting
-
-https://umod.org/plugins/zone-manager
-https://umod.org/plugins/zone-manager-auto-zones
-https://umod.org/plugins/zone-domes
-
-https://umod.org/plugins/automated-events
-https://umod.org/plugins/timed-events
-https://umod.org/plugins/night-zombies
-https://umod.org/plugins/raidable-bases
-https://umod.org/plugins/copy-paste
-https://umod.org/plugins/rain-of-fire
-https://umod.org/plugins/dangerous-treasures
-
-https://umod.org/plugins/discord-logger
 
 какие ещё посмотреть: 
+https://umod.org/plugins/discord-status
 https://umod.org/plugins/event-manager
 https://umod.org/plugins/kill-streaks
-https://umod.org/plugins/anti-spam
-https://umod.org/plugins/ufilter
+
 ```
 ownerid 76561198341247837
 ownerid 76561198171986467
