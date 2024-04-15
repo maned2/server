@@ -9,4 +9,4 @@ filename="4fun4_rust_${today}.tar.gz";
 cd /home/rust
 tar -zcf "${tmpfolder}/${filename}" server
 
-echo "[SCRIPTS] Backup created"
+echo "[SCRIPTS] Backup created ${tmpfolder}/${filename}"

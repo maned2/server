@@ -1,11 +1,18 @@
 #!/bin/bash
 
+cd $RUST_SCRIPTS_FOLDER
+
+sh ./extensions/Discord.sh
+
+sh ./plugins/AdminRadar.sh
+sh ./plugins/ConnectMessages.sh
+sh ./plugins/DiscordStatus.sh
+
 sudo -i -u rust bash << EOF
 cd server
 echo "[SCRIPTS] Server updating oxide plugins..."
 #rm oxide/plugins/*
 
-curl -L https://umod.org/plugins/ConnectMessages.cs > oxide/plugins/ConnectMessages.cs
 curl -L https://umod.org/plugins/SimpleKillFeed.cs > oxide/plugins/SimpleKillFeed.cs
 
 curl -L https://umod.org/plugins/SmoothRestarter.cs > oxide/plugins/SmoothRestarter.cs
@@ -34,5 +41,3 @@ curl -L https://umod.org/plugins/DiscordLogger.cs > oxide/plugins/DiscordLogger.
 curl -L https://umod.org/plugins/AntiSpam.cs > oxide/plugins/AntiSpam.cs
 curl -L https://umod.org/plugins/UFilter.cs > oxide/plugins/UFilter.cs
 EOF
-
-sh ./plugins/discord_status.sh
