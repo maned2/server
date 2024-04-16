@@ -4,7 +4,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:`dirname $0`/RustDedicated_Data/Plugins:
 exec ./RustDedicated -batchmode \
   +server.port 28015 \
   +rcon.port 28016 \
-  +rcon.password "$RUST_RCON_PASSWORD" \
+  +rcon.password $RUST_RCON_PASSWORD \
   +rcon.web 1 \
   +server.level "Procedural Map" \
   +server.seed 231390963 \
