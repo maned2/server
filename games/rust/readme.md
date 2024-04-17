@@ -47,7 +47,8 @@ halloween.murdererpopulation 5
 halloween.scarecrowpopulation 5" > server/server/4fun43/cfg/server.cfg
 
 crontab -e
-#0 9 * * * /var/server/server2/games/rust/scripts/cron.sh >> /var/log/rust/app.log
+#0 1 * * * /var/server/server2/games/rust/scripts/cron.sh >> /var/log/rust/app.log
+#0 19 18 4 * /var/server/server2/games/rust/scripts/wipe.sh >> /var/log/rust/app.log
 
 # F1
 # client.connect <ip>:28015
