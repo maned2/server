@@ -9,7 +9,8 @@ if [ ! -f "$FILE" ]; then
     cp server/oxide/config/DiscordLogger.json FILE
 fi
 
-echo '{
+cat << EAF > server/oxide/config/DiscordLogger.json
+{
   "Global settings": {
     "Log to console?": false,
     "Use AntiSpam plugin on chat messages": true,
@@ -189,5 +190,7 @@ echo '{
     "WebhookURL": "$RUST_DISCORD_WEBHOOK_ADMIN",
     "Enabled?": true
   }
-}' > server/oxide/config/DiscordLogger.json
+}
+EAF
+
 EOF
