@@ -9,7 +9,7 @@ if [ ! -f "$FILE" ]; then
     cp server/oxide/config/DiscordLogger.json FILE
 fi
 
-cat << EAF > server/oxide/config/DiscordLogger.json
+cat <<\EAF > server/oxide/config/DiscordLogger.json
 {
   "Global settings": {
     "Log to console?": false,
@@ -17,7 +17,7 @@ cat << EAF > server/oxide/config/DiscordLogger.json
     "Use UFilter plugin on chat messages": true,
     "Hide admin connect/disconnect messages": false,
     "Hide NPC death messages": true,
-    "Replacement string for tags": "`",
+    "Replacement string for tags": "\`",
     "Queue interval (1 message per ? seconds)": 1.0,
     "Queue cooldown if connection error (seconds)": 60.0,
     "Default WebhookURL": "$RUST_DISCORD_WEBHOOK_ADMIN",
