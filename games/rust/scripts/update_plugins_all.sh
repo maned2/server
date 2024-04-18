@@ -20,6 +20,7 @@ sh ./plugins/RaidableBases.sh
 sh ./plugins/RainOfFire.sh
 sh ./plugins/SimpleKillFeed.sh
 sh ./plugins/SmoothRestarter.sh
+sh ./plugins/StopStupidPings.sh
 sh ./plugins/TimedEvents.sh
 sh ./plugins/TruePVE.sh
 sh ./plugins/UFilter.sh
