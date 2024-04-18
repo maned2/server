@@ -9,7 +9,8 @@ if [ ! -f "$FILE" ]; then
     cp server/oxide/config/AutomatedEvents.json FILE
 fi
 
-echo '{
+cat << EAF > server/oxide/config/AutomatedEvents.json
+{
   "Settings": {
     "Enable Debug Mode": false,
     "Announce On Plugin Loaded": false,
@@ -38,7 +39,7 @@ echo '{
       "Restart Timer On Entity Kill": true,
       "Kill Existing Event On Plugin Loaded": false,
       "Maximum Number On Server": 1,
-      "Exclude Player\'s Entity": true,
+      "Exclude Player's Entity": true,
       "Event Weights": []
     },
     "Cargo Plane Event": {
@@ -54,7 +55,7 @@ echo '{
       "Restart Timer On Entity Kill": true,
       "Kill Existing Event On Plugin Loaded": false,
       "Maximum Number On Server": 1,
-      "Exclude Player\'s Entity": true,
+      "Exclude Player's Entity": true,
       "Event Weights": [
         {
           "Weight": 60,
@@ -93,7 +94,7 @@ echo '{
       "Restart Timer On Entity Kill": true,
       "Kill Existing Event On Plugin Loaded": false,
       "Maximum Number On Server": 1,
-      "Exclude Player\'s Entity": true,
+      "Exclude Player's Entity": true,
       "Event Weights": [
         {
           "Weight": 80,
@@ -124,7 +125,7 @@ echo '{
       "Restart Timer On Entity Kill": true,
       "Kill Existing Event On Plugin Loaded": false,
       "Maximum Number On Server": 1,
-      "Exclude Player\'s Entity": true,
+      "Exclude Player's Entity": true,
       "Event Weights": []
     },
     "Helicopter Event": {
@@ -140,7 +141,7 @@ echo '{
       "Restart Timer On Entity Kill": true,
       "Kill Existing Event On Plugin Loaded": false,
       "Maximum Number On Server": 1,
-      "Exclude Player\'s Entity": true,
+      "Exclude Player's Entity": true,
       "Event Weights": [
         {
           "Weight": 60,
@@ -179,7 +180,7 @@ echo '{
       "Restart Timer On Entity Kill": true,
       "Kill Existing Event On Plugin Loaded": false,
       "Maximum Number On Server": 1,
-      "Exclude Player\'s Entity": true,
+      "Exclude Player's Entity": true,
       "Event Weights": []
     },
     "Christmas Event": {
@@ -195,7 +196,7 @@ echo '{
       "Restart Timer On Entity Kill": true,
       "Kill Existing Event On Plugin Loaded": false,
       "Maximum Number On Server": 1,
-      "Exclude Player\'s Entity": true,
+      "Exclude Player's Entity": true,
       "Event Weights": [
         {
           "Weight": 80,
@@ -240,5 +241,7 @@ echo '{
       "Kill Existing Event On Plugin Loaded": false
     }
   }
-}' > server/oxide/config/AutomatedEvents.json
+}
+EAF
+
 EOF
