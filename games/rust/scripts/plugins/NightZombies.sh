@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "[SCRIPTS] Plugin update NightZombies..."
 
 sudo -i -u rust bash << EOF
 curl -L https://umod.org/plugins/NightZombies.cs > server/oxide/plugins/NightZombies.cs

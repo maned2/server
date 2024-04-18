@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "[SCRIPTS] Plugin update SmoothRestarter..."
 
 sudo -i -u rust bash << EOF
 curl -L https://umod.org/plugins/SmoothRestarter.cs > server/oxide/plugins/SmoothRestarter.cs
@@ -9,4 +10,5 @@ if [ ! -f "$FILE" ]; then
 fi
 
 sed -i -- 's/"0:00"/"1:00"/g' server/oxide/config/SmoothRestarter.json
+sed -i -- 's/"Restart when new Oxide.Rust is out": true,/"Restart when new Oxide.Rust is out": false,/g' server/oxide/config/SmoothRestarter.json
 EOF

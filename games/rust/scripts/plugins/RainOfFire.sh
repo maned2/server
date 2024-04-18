@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "[SCRIPTS] Plugin update RainOfFire..."
 
 sudo -i -u rust bash << EOF
 curl -L https://umod.org/plugins/RainOfFire.cs > server/oxide/plugins/RainOfFire.cs

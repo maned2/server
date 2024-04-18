@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "[SCRIPTS] Plugin update UFilter..."
 
 sudo -i -u rust bash << EOF
 curl -L https://umod.org/plugins/UFilter.cs > server/oxide/plugins/UFilter.cs

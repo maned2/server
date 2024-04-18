@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "[SCRIPTS] Plugin update DiscordLogger..."
 
 sudo -i -u rust bash << EOF
 curl -L https://umod.org/plugins/DiscordLogger.cs > server/oxide/plugins/DiscordLogger.cs

@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "[SCRIPTS] Plugin update DangerousTreasures..."
 
 sudo -i -u rust bash << EOF
 curl -L https://umod.org/plugins/DangerousTreasures.cs > server/oxide/plugins/DangerousTreasures.cs

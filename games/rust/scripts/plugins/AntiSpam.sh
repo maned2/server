@@ -1,5 +1,6 @@
 #!/bin/bash
 # https://umod.org/plugins/anti-spam
+echo "[SCRIPTS] Plugin update AntiSpam..."
 
 sudo -i -u rust bash << EOF
 curl -L https://umod.org/plugins/AntiSpam.cs > server/oxide/plugins/AntiSpam.cs

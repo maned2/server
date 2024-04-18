@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "[SCRIPTS] Plugin update RaidableBases..."
 
 sudo -i -u rust bash << EOF
 curl -L https://umod.org/plugins/RaidableBases.cs > server/oxide/plugins/RaidableBases.cs
@@ -728,6 +729,8 @@ echo '{
   "Remove Locks When Event Is Completed": false,
   "Always Spawn Base Loot Table": false
 }' > server/oxide/data/RaidableBases/Profiles/RaidBases.json
+
+mkdir -p server/oxide/data/copypaste
 
 cp RaidableBases/easyraid12.json server/oxide/data/copypaste/easyraid12.json
 cp RaidableBases/easyraid22.json server/oxide/data/copypaste/easyraid22.json

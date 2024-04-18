@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "[SCRIPTS] Plugin update ZoneManagerAutoZones..."
 
 sudo -i -u rust bash << EOF
 curl -L https://umod.org/plugins/ZoneManagerAutoZones.cs > server/oxide/plugins/ZoneManagerAutoZones.cs

@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "[SCRIPTS] Plugin update PreventLooting..."
 
 sudo -i -u rust bash << EOF
 curl -L https://umod.org/plugins/PreventLooting.cs > server/oxide/plugins/PreventLooting.cs

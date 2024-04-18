@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "[SCRIPTS] Plugin update TimedEvents..."
 
 sudo -i -u rust bash << EOF
 curl -L https://umod.org/plugins/TimedEvents.cs > server/oxide/plugins/TimedEvents.cs

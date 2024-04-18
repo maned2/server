@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "[SCRIPTS] Plugin update DiscordStatus..."
 
 sudo -i -u rust bash << EOF
 curl -L https://umod.org/plugins/DiscordStatus.cs > server/oxide/plugins/DiscordStatus.cs
