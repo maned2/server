@@ -9,7 +9,7 @@ if [ ! -f "$FILE" ]; then
     cp server/oxide/config/AutomatedEvents.json FILE
 fi
 
-echo "{
+echo '{
   "Settings": {
     "Enable Debug Mode": false,
     "Announce On Plugin Loaded": false,
@@ -240,5 +240,5 @@ echo "{
       "Kill Existing Event On Plugin Loaded": false
     }
   }
-}" > server/oxide/config/AutomatedEvents.json
+}' > server/oxide/config/AutomatedEvents.json
 EOF
