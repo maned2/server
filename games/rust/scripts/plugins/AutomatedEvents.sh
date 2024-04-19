@@ -14,8 +14,8 @@ cat << EAF > server/oxide/config/AutomatedEvents.json
   "Settings": {
     "Enable Debug Mode": false,
     "Announce On Plugin Loaded": false,
-    "Announce On Event Triggered": false,
-    "Use GUIAnnouncements Plugin": false
+    "Announce On Event Triggered": true,
+    "Use GUIAnnouncements Plugin": true
   },
   "Chat Settings": {
     "Next Event Command": "nextevent",
@@ -43,9 +43,9 @@ cat << EAF > server/oxide/config/AutomatedEvents.json
       "Event Weights": []
     },
     "Cargo Plane Event": {
-      "Enabled": false,
+      "Enabled": true,
       "Display Name": "Cargo Plane",
-      "Disable Vanilla Event": false,
+      "Disable Vanilla Event": true,
       "Event Start Offset (Minutes)": 0.0,
       "Minimum Time Between (Minutes)": 30.0,
       "Maximum Time Between (Minutes)": 45.0,
@@ -54,7 +54,7 @@ cat << EAF > server/oxide/config/AutomatedEvents.json
       "Announce Next Run Time": false,
       "Restart Timer On Entity Kill": true,
       "Kill Existing Event On Plugin Loaded": false,
-      "Maximum Number On Server": 1,
+      "Maximum Number On Server": 2,
       "Exclude Player's Entity": true,
       "Event Weights": [
         {
@@ -113,9 +113,9 @@ cat << EAF > server/oxide/config/AutomatedEvents.json
       ]
     },
     "Chinook (CH47) Event": {
-      "Enabled": false,
+      "Enabled": true,
       "Display Name": "Chinook",
-      "Disable Vanilla Event": false,
+      "Disable Vanilla Event": true,
       "Event Start Offset (Minutes)": 0.0,
       "Minimum Time Between (Minutes)": 30.0,
       "Maximum Time Between (Minutes)": 45.0,
@@ -124,14 +124,14 @@ cat << EAF > server/oxide/config/AutomatedEvents.json
       "Announce Next Run Time": false,
       "Restart Timer On Entity Kill": true,
       "Kill Existing Event On Plugin Loaded": false,
-      "Maximum Number On Server": 1,
+      "Maximum Number On Server": 2,
       "Exclude Player's Entity": true,
       "Event Weights": []
     },
     "Helicopter Event": {
-      "Enabled": false,
+      "Enabled": true,
       "Display Name": "Helicopter",
-      "Disable Vanilla Event": false,
+      "Disable Vanilla Event": true,
       "Event Start Offset (Minutes)": 0.0,
       "Minimum Time Between (Minutes)": 45.0,
       "Maximum Time Between (Minutes)": 60.0,
@@ -140,7 +140,7 @@ cat << EAF > server/oxide/config/AutomatedEvents.json
       "Announce Next Run Time": false,
       "Restart Timer On Entity Kill": true,
       "Kill Existing Event On Plugin Loaded": false,
-      "Maximum Number On Server": 1,
+      "Maximum Number On Server": 2,
       "Exclude Player's Entity": true,
       "Event Weights": [
         {

@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://umod.org/plugins/timed-events
 echo "[SCRIPTS] Plugin update TimedEvents..."
 
 sudo -i -u rust bash << EOF
@@ -35,7 +36,7 @@ echo '{
     "6. Minimal players to start event": 0
   },
   "4. CH47 settings:": {
-    "1. Disable default spawns": false,
+    "1. Disable default spawns": true,
     "2. Minimal respawn time (in seconds)": 0,
     "3. Maximal respawn time (in seconds)": 7200,
     "4. Minimal amount that spawned by once": 1,
