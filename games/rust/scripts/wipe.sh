@@ -5,11 +5,7 @@ cd $RUST_SCRIPTS_FOLDER
 sh ./stop.sh
 sh ./ports_close.sh
 sh ./backup.sh
-
-echo "[SCRIPTS] Backup creating..."
-filename = $(backupf)
-echo "[SCRIPTS] Backup created"
-sh ./backup_move.sh filename
+sh ./backup_move.sh
 
 sudo -i -u rust bash << EOF
 echo "[SCRIPTS] Remove all..."
