@@ -10,8 +10,7 @@ filename="$1";
 
 echo "[SCRIPTS] Try ${tmpfolder}/${filename} to ${folder}/daily/${filename}"
 
-cp "${tmpfolder}/*.tar.gz" "${folder}/daily/"
-rm -f "${tmpfolder}/*.tar.gz"
+cp "${tmpfolder}/*.tar.gz" "${folder}/daily" && rm -f "${tmpfolder}/*.tar.gz"
 
 find "${tmpfolder}/" -mtime +7 -type f -name "*.gz" -delete
 find "${folder}/daily/" -mtime +7 -type f -name "*.gz" -delete
