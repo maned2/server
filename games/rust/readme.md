@@ -48,7 +48,7 @@ halloween.scarecrowpopulation 5" > server/server/4fun43/cfg/server.cfg
 
 crontab -e
 #0 1 * * * /var/server/server2/games/rust/scripts/cron.sh >> /var/log/rust/app.log
-#0 19 18 4 * /var/server/server2/games/rust/scripts/wipe.sh >> /var/log/rust/app.log
+#0 2 3 5 * /var/server/server2/games/rust/scripts/wipe.sh >> /var/log/rust/app.log
 
 # F1
 # client.connect <ip>:28015
@@ -59,61 +59,6 @@ crontab -e
 ```
 
 # Settings:
-
-nano server/oxide/config/PreventLooting.json
-# "UseZoneManager": true,
-
-nano server/oxide/config/SmoothRestarter.json
-# "9:00"
-
-nano server/oxide/config/TruePVE.json
-# "useZones": true,
-
-nano server/oxide/config/SimpleKillFeed.json
-# "Log PvP Kill events": true,
-
-nano server/oxide/config/TimedEvents.json
-nano server/oxide/config/RainOfFire.json
-
-
-scp games/rust/files/easyraid1.json loc2:easyraid1.json
-scp games/rust/files/easyraid2.json loc2:easyraid2.json
-scp games/rust/files/easyraid3.json loc2:easyraid3.json
-ssh loc2
-sudo cp easyraid1.json /home/rust/server/oxide/data/copypaste/easyraid1.json
-sudo cp easyraid2.json /home/rust/server/oxide/data/copypaste/easyraid2.json
-sudo cp easyraid3.json /home/rust/server/oxide/data/copypaste/easyraid3.json
-sudo chown rust:rust /home/rust/server/oxide/data/copypaste/easyraid1.json
-sudo chown rust:rust /home/rust/server/oxide/data/copypaste/easyraid2.json
-sudo chown rust:rust /home/rust/server/oxide/data/copypaste/easyraid3.json
-
-nano server/oxide/config/RaidableBases.json
-```commandline
-#"Scheduled Events": {
-#      "Enabled": true,
-#      "Every Min Seconds": 3600.0,
-#      "Every Max Seconds": 7200.0,
-#      "Max Scheduled Events": 1,
-#      "Max To Spawn At Once (0 = Use Max Scheduled Events Amount)": 1,
-#      "Chance To Randomly Spawn PVP Bases (0 = Ignore Setting)": 0.0,
-#      "Include PVE Bases": true,
-#      "Include PVP Bases": true,
-#      "Minimum Required Players Online": 1,
-#      "Maximum Limit Of Players Online": 300,
-#      "Time To Wait Between Spawns": 15.0,
-#      "Convert PVE To PVP": false,
-#      "Convert PVP To PVE": false,
-#      "Ignore Safe Checks": false,
-#      "Ignore Safe Checks In X Radius Only": 0.0,
-#      "Ignore Player Entities At Custom Spawn Locations": false,
-#      "Spawn Bases X Distance Apart": 100.0,
-#      "Spawns Database File (Optional)": "none"
-#
-},
-```
-nano server/oxide/config/NightZombies.json
-# "Spawn near players": true,
-# "Min pop for near player spawn": 1,
 
 ```commandline
 halloween.enabled true
