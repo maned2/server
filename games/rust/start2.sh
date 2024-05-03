@@ -34,6 +34,6 @@ exec ./RustDedicated -batchmode \
 - Rust+" \
   +server.url "https://discord.gg/NNyGJfqkkA" \
   +server.identity "4fun43" \
-  +server.tags "EU,monthly,tut,WA,EA" \
+  +server.tags "EU,monthly,tut" \
   +server.logoimage "https://i.ibb.co/CPGctqj/icon.png" \
   +server.headerimage "https://i.ibb.co/s3XmLbM/header.png"
