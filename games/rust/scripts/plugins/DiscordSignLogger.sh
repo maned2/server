@@ -10,5 +10,7 @@ if [ ! -f "$FILE" ]; then
 fi
 
 sed -i -- "s/\"Discord Bot Token\": \"\",/\"Discord Bot Token\": \"${RUST_DISCORD_BOT_TOKEN}\",/g" server/oxide/config/DiscordSignLogger.json
+sed -i -- "s/\"Channel ID\": \"\",/\"Channel ID\": \"${RUST_DISCORD_WEBHOOK_IMAGES}\",/g" server/oxide/config/DiscordSignLogger.json
+sed -i -- "s/\"Discord Channel ID\": \"\",/\"Discord Channel ID\": \"${RUST_DISCORD_WEBHOOK_IMAGES}\",/g" server/oxide/config/DiscordSignLogger.json
 
 EOF
