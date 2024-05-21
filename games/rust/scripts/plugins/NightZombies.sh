@@ -6,7 +6,7 @@ curl -L https://umod.org/plugins/NightZombies.cs > server/oxide/plugins/NightZom
 
 FILE=server/oxide/config/NightZombies.json_original
 if [ ! -f "$FILE" ]; then
-    cp server/oxide/config/NightZombies.json FILE
+    cp server/oxide/config/NightZombies.json "$FILE"
 fi
 
 echo '{

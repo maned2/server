@@ -6,7 +6,7 @@ curl -L https://umod.org/plugins/AutomatedEvents.cs > server/oxide/plugins/Autom
 
 FILE=server/oxide/config/AutomatedEvents.json_original
 if [ ! -f "$FILE" ]; then
-    cp server/oxide/config/AutomatedEvents.json FILE
+    cp server/oxide/config/AutomatedEvents.json "$FILE"
 fi
 
 cat << EAF > server/oxide/config/AutomatedEvents.json

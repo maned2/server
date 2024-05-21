@@ -6,7 +6,7 @@ curl -L https://umod.org/plugins/DiscordLogger.cs > server/oxide/plugins/Discord
 
 FILE=server/oxide/config/DiscordLogger.json_original
 if [ ! -f "$FILE" ]; then
-    cp server/oxide/config/DiscordLogger.json FILE
+    cp server/oxide/config/DiscordLogger.json "$FILE"
 fi
 
 cat <<\EAF > server/oxide/config/DiscordLogger.json

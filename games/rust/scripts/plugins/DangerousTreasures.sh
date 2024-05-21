@@ -6,7 +6,7 @@ curl -L https://umod.org/plugins/DangerousTreasures.cs > server/oxide/plugins/Da
 
 FILE=server/oxide/config/DangerousTreasures.json_original
 if [ ! -f "$FILE" ]; then
-    cp server/oxide/config/DangerousTreasures.json FILE
+    cp server/oxide/config/DangerousTreasures.json "$FILE"
 fi
 
 echo '{

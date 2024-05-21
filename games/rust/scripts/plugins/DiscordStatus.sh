@@ -6,7 +6,7 @@ curl -L https://umod.org/plugins/DiscordStatus.cs > server/oxide/plugins/Discord
 
 FILE=server/oxide/config/DiscordStatus.json_original
 if [ ! -f "$FILE" ]; then
-    cp server/oxide/config/DiscordStatus.json FILE
+    cp server/oxide/config/DiscordStatus.json "$FILE"
 fi
 
 sed -i -- "s/\"Discord Bot Token\": \"\",/\"Discord Bot Token\": \"${RUST_DISCORD_BOT_TOKEN}\",/g" server/oxide/config/DiscordStatus.json

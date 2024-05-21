@@ -30,3 +30,7 @@ sh ./plugins/ZLevelsRemastered.sh
 #sh ./plugins/ZoneDomes.sh
 #sh ./plugins/ZoneManager.sh
 #sh ./plugins/ZoneManagerAutoZones.sh
+
+#https://umod.org/plugins/discord-sign-logger
+#https://umod.org/plugins/welcomer
+#https://umod.org/plugins/smart-chat-bot

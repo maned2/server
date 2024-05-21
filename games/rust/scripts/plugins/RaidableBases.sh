@@ -6,7 +6,7 @@ curl -L https://umod.org/plugins/RaidableBases.cs > server/oxide/plugins/Raidabl
 
 FILE=server/oxide/config/RaidableBases.json_original
 if [ ! -f "$FILE" ]; then
-    cp server/oxide/config/RaidableBases.json FILE
+    cp server/oxide/config/RaidableBases.json "$FILE"
 fi
 
 echo '{

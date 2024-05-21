@@ -7,7 +7,7 @@ curl -L https://umod.org/plugins/TimedEvents.cs > server/oxide/plugins/TimedEven
 
 FILE=server/oxide/config/TimedEvents.json_original
 if [ ! -f "$FILE" ]; then
-    cp server/oxide/config/TimedEvents.json FILE
+    cp server/oxide/config/TimedEvents.json "$FILE"
 fi
 
 echo '{

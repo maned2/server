@@ -6,7 +6,7 @@ curl -L https://umod.org/plugins/SmoothRestarter.cs > server/oxide/plugins/Smoot
 
 FILE=server/oxide/config/SmoothRestarter.json_original
 if [ ! -f "$FILE" ]; then
-    cp server/oxide/config/SmoothRestarter.json FILE
+    cp server/oxide/config/SmoothRestarter.json "$FILE"
 fi
 
 sed -i -- 's/"0:00"/"9:00"/g' server/oxide/config/SmoothRestarter.json
