@@ -6,7 +6,7 @@ sudo usermod -L rust
 sudo mkdir -p /home/rust/server
 sudo chown -R rust:rust /home/rust
 
-sudo mkdir /var/log/rust
+sudo mkdir /var/log/satisfactory
 
 #each update
 sudo cp /var/server/server2/games/rust/rust.service /etc/systemd/system/rust.service
