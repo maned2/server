@@ -16,6 +16,10 @@ sudo apt install libsdl2-2.0-0:i386
 sudo ufw allow 15777
 sudo ufw allow 15000
 sudo ufw allow 7777
+sudo ufw allow 64664
+sudo ufw allow 52385
+
+15777, 15000, 7777, 64664, 52385
 ```
 
 ```shell
@@ -40,7 +44,7 @@ sudo service satisfactory status
 sudo service satisfactory-experimental status
 
 sudo su -l satisfactory -s /bin/bash
-
+nano FactoryGame/Saved/Config/linux/Game.ini
 ```
 
 

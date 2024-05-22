@@ -13,14 +13,24 @@ git checkout -b <branchName>
 #add
 git submodule add <url> <path>
 
+```
+
 # rebase
-git checkout dev
+```commandline
+git checkout task/123
 
 git rebase master
 
+# if conflicts - reslove
+git add path/to/folder/or/file
+git rebase --continue
+
 git push --force origin dev
 
+```
+
 # squash commits
+```commandline
 #show diff with master branch
 git cherry -v master
 
