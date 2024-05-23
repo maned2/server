@@ -9,6 +9,10 @@ sudo mkdir -p /home/satisfactory/SatisfactoryDedicatedServer
 sudo chown -R satisfactory:satisfactory /home/satisfactory
 
 sudo mkdir /var/log/satisfactory
+sudo mkdir "$BACKUP_FOLDER/satisfactory"
+sudo mkdir "$BACKUP_FOLDER/satisfactory/daily"
+sudo mkdir "$BACKUP_FOLDER/satisfactory/monthly"
+sudo mkdir /var/backups/satisfactory
 
 sudo apt install libsdl2-2.0-0:i386
 
