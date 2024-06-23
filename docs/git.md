@@ -25,14 +25,14 @@ git rebase master
 git add path/to/folder/or/file
 git rebase --continue
 
-git push --force origin dev
+git push --force origin task/123
 
 ```
 
 # squash commits
 ```commandline
 #show diff with master branch
-git cherry -v master
+git cherry -v dev
 
 git rebase -i HEAD~4
 # first - pick
@@ -40,5 +40,5 @@ git rebase -i HEAD~4
 
 # edit message on next step
 
-git push --force origin dev
+git push --force origin task/123
 ```
