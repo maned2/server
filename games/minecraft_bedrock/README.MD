@@ -4,7 +4,7 @@ Installation
 # download server file
 https://www.minecraft.net/ru-ru/download/server
 
-scp bedrock-server-1.20.15.01.zip loc3:~/bedrock-server-1.20.15.01.zip
+scp games/minecraft_bedrock/bedrock-server-1.21.1.03.zip loc2:~/bedrock-server.zip
 
 # create user
 sudo useradd -m minecraft
@@ -13,9 +13,9 @@ sudo usermod -L minecraft
 sudo apt-get install unzip
 
 sudo mkdir  /home/minecraft/server_bedrock/
-sudo unzip -d /home/minecraft/server_bedrock/ bedrock-server-1.20.15.01.zip
+sudo unzip -d /home/minecraft/server_bedrock/ bedrock-server.zip
 
-sudo chown -R minecraft /home/minecraft/server_bedrock/
+sudo chown -R minecraft:minecraft /home/minecraft/server_bedrock/
 
 sudo su -l minecraft -s /bin/bash
 
@@ -34,12 +34,13 @@ sudo cp $SERVER2_ROOT_FOLDER/games/minecraft_bedrock/minecraft_bedrock.service /
 sudo systemctl daemon-reload
 sudo service minecraft_bedrock start
 sudo systemctl enable minecraft_bedrock.service
+
 sudo journalctl -u minecraft_bedrock -f
 sudo tail -f /var/log/minecraft_bedrock/app.log
 
 #ports
-sudo ufw allow 19134 //ipv4
-sudo ufw allow 19135 //ipv6
+sudo ufw allow 19132 //ipv4
+sudo ufw allow 19133 //ipv6
 ```
 
 backup install
