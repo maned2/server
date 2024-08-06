@@ -21,7 +21,7 @@ https://www.curseforge.com/minecraft/mc-mods/modern-industrialization
 # place mods file to client and server
 # try launch and connect
 
-scp server_mi.zip loc3:~/server_mi.zip
+scp server_mi.zip loc2:server_mi.zip
 
 # install java
 sudo apt install default-jre
@@ -33,12 +33,12 @@ sudo usermod -L minecraft
 sudo mkdir  /home/minecraft/server_mi/
 sudo cp server_mi.zip /home/minecraft/server_mi.zip
 
-sudo chown -R minecraft /home/minecraft/server_mi/
+sudo chown -R minecraft:minecraft /home/minecraft/server_mi/
 
 sudo su -l minecraft -s /bin/bash
 
 rm -r server_mi
-unzip -d /home/minecraft/server_mi/ server_mi.zip
+unzip -d /home/minecraft/ server_mi.zip
 
 
 #test run
@@ -88,7 +88,6 @@ sudo crontab -e
 Обязательные:
 - modern-industrialization https://www.curseforge.com/minecraft/mc-mods/modern-industrialization
   - основной мод из за которого вся движуха. Все обязательные моды ниже - требуются для его запуска
-- fabric-api https://www.curseforge.com/minecraft/mc-mods/fabric-api
 - cloth-config https://www.curseforge.com/minecraft/mc-mods/cloth-config
 Необязательные:
 - xaeros-minimap https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap
@@ -99,19 +98,17 @@ sudo crontab -e
   - что это за чертовщина? показывает инфо о предмете при наведении на него
 - badpackets https://www.curseforge.com/minecraft/mc-mods/badpackets
   - обязательный аддон для wthit
-- megane https://www.curseforge.com/minecraft/mc-mods/megane
-  - аддон для wthit - показывает доп инфу у каждого элемента
 
 Как играть?
 Запустите лаунчер -> Minecraft Java
-Установите Minecraft v1.19.2
-Скачайте установочник fabric https://fabricmc.net/
+Установите Minecraft v1.21, запустите, закройте игру и лаунчер
+Скачайте установочник NeoForge https://neoforged.net/
 Установите его на своего клиента, нужную версю.
 Зайдите в папку модов (C:\Users\<имя_вашего_пользователя_винды>\AppData\Roaming\.minecraft\mods)
 Скопируйте туда все моды. 
 Вы можете скачать все моды с офф сайтов по ссылкам модов указанных выше, 
 или же, скачать у нас с гугл диска уже заготовленный zip архив: 
-https://drive.google.com/file/d/1FRot0JSDeQzbDTuF3kCNsYwF7XIbcxOR/view?usp=sharing
+https://drive.google.com/file/d/1fZf16-4aDQ2xo8nUHvDT0J4zgJBa4_B5/view?usp=sharing
 ВНИМАНИЕ!
 Не скачивайте моды ни с каких сайтов кроме https://www.curseforge.com/ - есть риск заражения вашего ПК вирусами.
 
