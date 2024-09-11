@@ -24,6 +24,8 @@ sudo ufw allow 64664
 sudo ufw allow 52385
 
 15777, 15000, 7777, 64664, 52385
+
+sudo su -l satisfactory -s /bin/bash
 ```
 
 ```shell
