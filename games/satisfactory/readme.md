@@ -30,7 +30,7 @@ sudo su -l satisfactory -s /bin/bash
 
 ```shell
 # cron
-0 7 * * * games/satisfactory/satisfactory_backup.sh
+0 7 * * * games/satisfactory/scripts/cron.sh
 ```
 
 # running
