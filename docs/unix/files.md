@@ -1,0 +1,1 @@
+grep -Rnw '/path/to/somewhere/' -e 'pattern'
