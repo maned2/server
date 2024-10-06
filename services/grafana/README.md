@@ -32,3 +32,21 @@ Run
 sudo service grafana-server start
 sudo systemctl enable grafana-server.service
 ```
+
+```shell
+# Remove the old key
+sudo apt-key del 4E40DDF6D76E284A4A6780E48C8C34C524098CB6
+
+# Verify that the GPG key was removed. This should return 0.
+sudo apt-key list | grep -i grafana | wc -l
+
+# Download the new key and place it in the right location
+sudo wget -q -O /etc/apt/keyrings/grafana.key https://apt.grafana.com/gpg.key
+
+# Replace the apt source
+# This command will replace the contents of the grafana.list file.
+echo "deb [signed-by=/etc/apt/keyrings/grafana.key] https://apt.grafana.com stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
+
+# Update your repositories list
+sudo apt update
+```

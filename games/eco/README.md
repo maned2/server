@@ -6,12 +6,8 @@ sudo usermod -L eco
 
 sudo mkdir /var/log/eco
 
-sudo cp $SERVER2_ROOT_FOLDER/games/eco/increase_hand.sh /home/eco/increase_hand.sh
-sudo chown eco /home/eco/increase_hand.sh
-sudo chmod +x /home/eco/increase_hand.sh
+sudo $SERVER2_ROOT_FOLDER/games/eco/scripts/redeploy.sh
 
-sudo cp $SERVER2_ROOT_FOLDER/games/eco/eco.service /etc/systemd/system/eco.service
-sudo systemctl daemon-reload
 sudo service eco status
 
 # enable autostart
@@ -24,20 +20,12 @@ sudo ufw allow 3000,3001
 backup install
 ===
 ```shell
-sudo mkdir -p /var/backups/eco/daily/
-sudo mkdir -p $BACKUP_FOLDER/eco/daily/ # not working
-sudo mkdir -p $BACKUP_FOLDER/eco/monthly/
-
-sudo cp $SERVER2_ROOT_FOLDER/games/eco/eco_backup.sh /home/eco/eco_backup.sh
-
-sudo chmod +x $SERVER2_ROOT_FOLDER/games/eco/eco_backup.sh
 
 # test run:
-
-sudo /home/eco/eco_backup.sh
+sudo ./games/eco/eco_backup.sh
 
 sudo crontab -e
-# 0 7 * * * /home/eco/eco_backup.sh
+# 0 7 * * * $SERVER2_ROOT_FOLDER/games/eco/eco_backup.sh
 ```
 
 # manual

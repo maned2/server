@@ -5,14 +5,14 @@ StartLimitBurst=3
 
 [Service]
 Type=simple
-WorkingDirectory=/home/eco/
 Restart=on-failure
 RestartSec=5
 User=eco
 Group=eco
+WorkingDirectory=/home/eco/server
 ExecStartPre=/usr/games/steamcmd +force_install_dir /home/eco/server/ +login anonymous +app_update 739590 +quit
-ExecStartPre=/bin/bash -c "/home/eco/increase_hand.sh"
-ExecStart=/bin/bash -c "cd /home/eco/server && exec /home/eco/server/EcoServer"
+ExecStartPre=/bin/bash -c "/var/server/server2/games/eco/scripts/increase_hand.sh"
+ExecStart=/bin/bash -c "/var/server/server2/games/eco/scripts/run.sh"
 ExecStop=/bin/bash -c "killall -SIGINT srcds_linux"
 StandardOutput=append:/var/log/eco/app.log
 StandardError=append:/var/log/eco/err.log
