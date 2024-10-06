@@ -8,7 +8,7 @@ cp $SERVER2_ROOT_FOLDER/games/eco/scripts/eco/run.sh /home/eco/run.sh
 chown eco /home/eco/run.sh
 chmod +x /home/eco/run.sh
 
-chmod +x $SERVER2_ROOT_FOLDER/games/eco/eco_backup.sh
+chmod +x $SERVER2_ROOT_FOLDER/games/eco/scripts/eco_backup.sh
 
 
 cp $SERVER2_ROOT_FOLDER/games/eco/eco.service /etc/systemd/system/eco.service

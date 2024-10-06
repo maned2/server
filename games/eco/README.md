@@ -6,7 +6,8 @@ sudo usermod -L eco
 
 sudo mkdir /var/log/eco
 
-sudo $SERVER2_ROOT_FOLDER/games/eco/scripts/redeploy.sh
+chmod +x ./games/eco/scripts/redeploy.sh
+sudo ./games/eco/scripts/redeploy.sh
 
 sudo service eco status
 
