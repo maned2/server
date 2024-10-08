@@ -1,4 +1,4 @@
 #!/bin/bash
 
-./increase_hand.sh
-./conf.sh
+/home/eco/increase_hand.sh
+/home/eco/conf.sh
