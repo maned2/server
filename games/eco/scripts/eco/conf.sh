@@ -75,8 +75,8 @@ cat <<EAF > server/Configs/Users.eco
       "UserIDRemovedEvent": {},
       "Collection": {
         "System.String": {
-          "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
-          "$values": []
+          "\$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+          "\$values": []
         }
       }
     },
@@ -85,8 +85,8 @@ cat <<EAF > server/Configs/Users.eco
       "UserIDRemovedEvent": {},
       "Collection": {
         "Eco.Gameplay.Players.TimeUser": {
-          "$type": "System.Collections.Generic.List`1[[Eco.Gameplay.Players.TimeUser, Eco.Gameplay]], System.Private.CoreLib",
-          "$values": []
+          "\$type": "System.Collections.Generic.List`1[[Eco.Gameplay.Players.TimeUser, Eco.Gameplay]], System.Private.CoreLib",
+          "\$values": []
         }
       }
     },
@@ -95,8 +95,8 @@ cat <<EAF > server/Configs/Users.eco
       "UserIDRemovedEvent": {},
       "Collection": {
         "Eco.Gameplay.Players.TimeUser": {
-          "$type": "System.Collections.Generic.List`1[[Eco.Gameplay.Players.TimeUser, Eco.Gameplay]], System.Private.CoreLib",
-          "$values": []
+          "\$type": "System.Collections.Generic.List`1[[Eco.Gameplay.Players.TimeUser, Eco.Gameplay]], System.Private.CoreLib",
+          "\$values": []
         }
       }
     },
@@ -105,15 +105,15 @@ cat <<EAF > server/Configs/Users.eco
       "UserIDRemovedEvent": {},
       "Collection": {
         "System.String": {
-          "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
-          "$values": ["$ECO_ADMIN_1_ID"]
+          "\$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+          "\$values": ["$ECO_ADMIN_1_ID"]
         }
       }
     },
     "QueuePriorities": {
       "Eco.Gameplay.Players.QueuePriority": {
-        "$type": "System.Collections.Generic.List`1[[Eco.Gameplay.Players.QueuePriority, Eco.Gameplay]], System.Private.CoreLib",
-        "$values": [
+        "\$type": "System.Collections.Generic.List`1[[Eco.Gameplay.Players.QueuePriority, Eco.Gameplay]], System.Private.CoreLib",
+        "\$values": [
           {
             "Priority": 0,
             "Title": "Default Priority",
@@ -137,8 +137,8 @@ cat <<EAF > server/Configs/Users.eco
       "UserIDRemovedEvent": {},
       "Collection": {
         "System.String": {
-          "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
-          "$values": []
+          "\$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+          "\$values": []
         }
       }
     }
