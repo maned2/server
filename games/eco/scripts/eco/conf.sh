@@ -5,7 +5,7 @@ cd /home/eco
 cat <<EOF > server/Configs/Difficulty.eco
 {
   "GameSettings": {
-    "DesiredNumberOfPlayers": 4,
+    "DesiredNumberOfPlayers": 10,
     "HoursPlayedPerDay": 3.0,
     "CollaborationLevel": "MediumCollaboration",
     "GameSpeed": "Normal",
