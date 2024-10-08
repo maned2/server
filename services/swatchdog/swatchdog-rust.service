@@ -5,7 +5,7 @@ StartLimitIntervalSec=0
 
 [Service]
 Type=simple
-ExecStart=swatchdog -c '$SERVER2_ROOT_FOLDER/services/swatchdog/rust.conf' -t /var/log/rust/app.log
+ExecStart=swatchdog -c '/var/server/server2/services/swatchdog/rust.conf' -t /var/log/rust/app.log
 Restart=always
 RestartSec=1
 
