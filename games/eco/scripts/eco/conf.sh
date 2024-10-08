@@ -152,9 +152,10 @@ cat <<EAF > server/Configs/Network.eco
   "Playtime": "",
   "DiscordAddress": "$ECO_DISCORD_INVITE_LINK",
   "Password": "",
-  "Name": "4fun4",
-  "DetailedDescription": "",
-  "ServerCategory": "None",
+  "Name": "4fun4 | RU | EN | NoMods | Meteor 90 days | 2.56 km2",
+  "DetailedDescription": "Сервер просто для веселья. Заходите, играйте, наслаждайтесь игрой. Просим только не строиться слишком близко, и не воровать незаприваченные ресурсы.
+The server is just for fun. Come, play, enjoy the game. We just ask that you do not build too close, and do not steal unprivileged resources",
+  "ServerCategory": "Beginner",
   "IPAddress": "Any",
   "RemoteAddress": "",
   "WebServerUrl": "",
@@ -174,3 +175,6 @@ cat <<EAF > server/Configs/Network.eco
   "RelayServerAddress": ""
 }
 EAF
+
+sed -i -- 's/"WorldWidth": 72,/"WorldWidth": 160,/g' server/Configs/WorldGenerator.eco
+sed -i -- 's/"WorldWidth": 72,/"WorldWidth": 160,/g' server/Configs/WorldGenerator.eco
