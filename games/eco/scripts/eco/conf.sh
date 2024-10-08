@@ -2,7 +2,7 @@
 
 cd /home/eco
 
-cat << 'EOF' > server/Configs/Difficulty.eco
+cat <<EOF > server/Configs/Difficulty.eco
 {
   "GameSettings": {
     "DesiredNumberOfPlayers": 4,
@@ -49,7 +49,7 @@ cat << 'EOF' > server/Configs/Difficulty.eco
 }
 EOF
 
-cat << 'EAF' > server/Configs/Users.eco
+cat <<EAF > server/Configs/Users.eco
 {
   "UseWaste": false,
   "ConfigVersion": 1,
@@ -146,7 +146,7 @@ cat << 'EAF' > server/Configs/Users.eco
 }
 EAF
 
-cat << 'EAF' > server/Configs/Network.eco
+cat <<EAF > server/Configs/Network.eco
 {
   "PublicServer": true,
   "Playtime": "",
