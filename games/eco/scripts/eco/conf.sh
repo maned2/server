@@ -177,5 +177,7 @@ The server is just for fun. Come, play, enjoy the game. We just ask that you do 
 }
 EAF
 
+yes | cp -rf server/Configs/WorldGenerator.eco.template server/Configs/WorldGenerator.eco
+
 sed -i -- 's/"WorldWidth": 72,/"WorldWidth": 160,/g' server/Configs/WorldGenerator.eco
 sed -i -- 's/"WorldLength": 72/"WorldLength": 160/g' server/Configs/WorldGenerator.eco
