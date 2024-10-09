@@ -6,8 +6,8 @@ cat <<EOF > server/Configs/Difficulty.eco
 {
   "GameSettings": {
     "DesiredNumberOfPlayers": 10,
-    "HoursPlayedPerDay": 3.0,
-    "CollaborationLevel": "MediumCollaboration",
+    "HoursPlayedPerDay": 10.0,
+    "CollaborationLevel": "LowCollaboration",
     "GameSpeed": "Normal",
     "SimulationLevel": "Normal",
     "ExhaustionEnabled": true,
@@ -139,7 +139,7 @@ cat <<EAF > server/Configs/Users.eco
       "Collection": {
         "System.String": {
           "\$type": "System.Collections.Generic.List\`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
-          "\$values": []
+          "\$values": ["76561198084389237", "76561198076681807"]
         }
       }
     }
@@ -159,7 +159,7 @@ The server is just for fun. Come, play, enjoy the game. We just ask that you do 
   "ServerCategory": "Beginner",
   "IPAddress": "Any",
   "RemoteAddress": "",
-  "WebServerUrl": "",
+  "WebServerUrl": "https://romanm.yonote.ru/share/76b40111-e4c1-4aa6-bf79-df1a5efb1e21",
   "GameServerPort": 3000,
   "WebServerPort": 3001,
   "RconServerPort": 3002,
@@ -167,9 +167,9 @@ The server is just for fun. Come, play, enjoy the game. We just ask that you do 
   "RconIPAddress": "Any",
   "RconPassword": "$ECO_RCON_PASSWORD",
   "Rate": 20,
-  "DefaultSlots": -1,
+  "DefaultSlots": 20,
   "ReservedSlots": 5,
-  "MaxUsersLoadingAtSameTime": 20,
+  "MaxUsersLoadingAtSameTime": 5,
   "ID": "dee5de7f-f836-47a6-9c97-a77cc0477b8c",
   "Passport": "75e29abf-8d87-40c3-ba72-09600954947c",
   "UPnPEnabled": true,
