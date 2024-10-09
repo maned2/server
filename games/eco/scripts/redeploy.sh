@@ -21,3 +21,7 @@ chmod +x $SERVER2_ROOT_FOLDER/games/eco/scripts/backup.sh
 
 cp $SERVER2_ROOT_FOLDER/games/eco/eco.service /etc/systemd/system/eco.service
 systemctl daemon-reload
+
+
+mkdir /home/eco/server
+chown eco:eco /home/eco/server
