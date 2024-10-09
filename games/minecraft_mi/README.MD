@@ -78,7 +78,7 @@ sudo chmod +x /home/minecraft/minecraft_mi_backup.sh
 sudo /home/minecraft/minecraft_mi_backup.sh
 
 sudo crontab -e
-# 0 8 * * * /home/minecraft/minecraft_mi_backup.sh
+# 0 8 * * * /var/server/server2/games/minecraft_mi/minecraft_mi_backup.sh >> /var/log/minecraft_mi/cron.log
 ```
 
 # client description:

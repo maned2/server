@@ -26,7 +26,7 @@ backup install
 sudo ./games/eco/eco_backup.sh
 
 sudo crontab -e
-# 0 7 * * * $SERVER2_ROOT_FOLDER/games/eco/eco_backup.sh
+# 0 7 * * * /var/server/server2/games/eco/scripts/backup.sh >> /var/log/eco/cron.log
 ```
 
 # manual
