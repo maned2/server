@@ -18,7 +18,7 @@ cat <<EOF > server/Configs/Difficulty.eco
       "MeteorImpactInDays": 90.0,
       "MaxProfessionsPerCitizen": 10.0,
       "MaxSpecialtiesPerCitizen": 33.0,
-      "SkillCostMultiplier": 1.0,
+      "SkillCostMultiplier": 0.75,
       "SkillGainMultiplier": 2.0,
       "CraftResourceMultiplier": 1.0,
       "CraftTimeMultiplier": 1.0,
