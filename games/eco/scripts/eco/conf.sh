@@ -154,12 +154,13 @@ cat <<EAF > server/Configs/Network.eco
   "DiscordAddress": "$ECO_DISCORD_INVITE_LINK",
   "Password": "",
   "Name": "4fun4 | RU | EN | NoMods | Meteor 90 days | 2.56 km2",
-  "DetailedDescription": "Сервер просто для веселья. Заходите, играйте, наслаждайтесь игрой. Просим только не строиться слишком близко, и не воровать незаприваченные ресурсы.
-The server is just for fun. Come, play, enjoy the game. We just ask that you do not build too close, and do not steal unprivileged resources",
+  "DetailedDescription": "Сервер просто для веселья. Заходите, играйте, наслаждайтесь игрой. Просим только не строиться слишком близко, и не воровать незаприваченные ресурсы. \\n
+The server is just for fun. Come, play, enjoy the game. We just ask that you do not build too close, and do not steal unprivileged resources. \\n
+Server rules, Правила сервера: $ECO_SITE_LINK",
   "ServerCategory": "Beginner",
   "IPAddress": "Any",
   "RemoteAddress": "",
-  "WebServerUrl": "https://romanm.yonote.ru/share/76b40111-e4c1-4aa6-bf79-df1a5efb1e21",
+  "WebServerUrl": "$ECO_SITE_LINK",
   "GameServerPort": 3000,
   "WebServerPort": 3001,
   "RconServerPort": 3002,
