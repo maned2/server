@@ -14,12 +14,12 @@ cat <<EOF > server/Configs/Difficulty.eco
     "HasMeteor": true,
     "AllowFriendsToJoin": true,
     "GenerateRandomWorld": false,
+    "SkillGainMultiplier": 2.0,
     "AdvancedGameSettings": {
       "MeteorImpactInDays": 90.0,
       "MaxProfessionsPerCitizen": 10.0,
       "MaxSpecialtiesPerCitizen": 33.0,
       "SkillCostMultiplier": 0.75,
-      "SkillGainMultiplier": 2.0,
       "CraftResourceMultiplier": 1.0,
       "CraftTimeMultiplier": 1.0,
       "ClaimStakesGrantedUponSkillscrollConsumed": 0.0,
