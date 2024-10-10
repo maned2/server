@@ -15,11 +15,12 @@ cat <<EOF > server/Configs/Difficulty.eco
     "AllowFriendsToJoin": true,
     "GenerateRandomWorld": false,
     "SkillGainMultiplier": 2.0,
+    "SpecialtyCostMultiplier": 0.5,
     "AdvancedGameSettings": {
       "MeteorImpactInDays": 90.0,
       "MaxProfessionsPerCitizen": 10.0,
       "MaxSpecialtiesPerCitizen": 33.0,
-      "SkillCostMultiplier": 0.75,
+      "SkillCostMultiplier": 0.5,
       "CraftResourceMultiplier": 1.0,
       "CraftTimeMultiplier": 1.0,
       "ClaimStakesGrantedUponSkillscrollConsumed": 0.0,
