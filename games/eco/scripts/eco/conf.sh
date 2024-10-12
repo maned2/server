@@ -182,6 +182,123 @@ Server rules, Правила сервера: $ECO_SITE_LINK",
 }
 EAF
 
+cat <<EAF > server/Configs/Exhaustion.eco
+{
+  "RefreshLocalHours": 0,
+  "RefreshLocalMinutes": 0,
+  "MondayExhaustionRefreshHours": 8.0,
+  "TuesdayExhaustionRefreshHours": 8.0,
+  "WednesdayExhaustionRefreshHours": 8.0,
+  "ThursdayExhaustionRefreshHours": 8.0,
+  "FridayExhaustionRefreshHours": 8.0,
+  "SaturdayExhaustionRefreshHours": 8.0,
+  "SundayExhaustionRefreshHours": 8.0,
+  "AllowPlaytimeSaving": true,
+  "MaxSavedHours": 16.0,
+  "AllowExhaustionPauseOnRest": true,
+  "BonusHoursOnExhaustionEnabled": 3.0,
+  "BonusRetroactiveHoursAfterStart": true,
+  "Vehicles": [
+    {
+      "Name": "Wood Shop Cart",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Crane",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Excavator",
+      "IsExhaustable": true
+    },
+    {
+      "Name": "Hand Plow",
+      "IsExhaustable": true
+    },
+    {
+      "Name": "Industrial Elevator",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Small Wood Cart",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Large Canoe",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Truck",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Medium Fishing Trawler",
+      "IsExhaustable": true
+    },
+    {
+      "Name": "Small Wooden Boat",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Industrial Barge",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Wheelbarrow",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Powered Cart",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Steam Tractor",
+      "IsExhaustable": true
+    },
+    {
+      "Name": "Wood Cart",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Skid Steer",
+      "IsExhaustable": true
+    },
+    {
+      "Name": "Steam Truck",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Wooden Barge",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Small Canoe",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Wooden Elevator",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Trailer Truck",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Wooden Transport Ship",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Egyptian Canoe",
+      "IsExhaustable": false
+    },
+    {
+      "Name": "Norse Canoe",
+      "IsExhaustable": false
+    }
+  ]
+}
+EAF
+
 yes | cp -rf server/Configs/WorldGenerator.eco.template server/Configs/WorldGenerator.eco
 
 sed -i -- 's/"WorldWidth": 72,/"WorldWidth": 160,/g' server/Configs/WorldGenerator.eco
