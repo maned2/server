@@ -37,7 +37,7 @@ cat <<EOF > server/Configs/Difficulty.eco
       "GrowthRateMultiplier": 1.0,
       "ConnectionRangeMultiplier": 1.0,
       "ShelfLifeMultiplier": 1.0,
-      "AllowDeepOceanBuilding": false
+      "AllowDeepOceanBuilding": true
     }
   },
   "EndgameCraftCost": "Normal",
