@@ -29,7 +29,7 @@ cat <<EOF > server/Configs/Difficulty.eco
       "ClaimStakesGrantedUponSkillscrollConsumed": 0.3,
       "ClaimPapersGrantedUponSkillscrollConsumed": 2.0,
       "CanAbandonSpecialties": true,
-      "SpecialtyRefundPercentage": 0.0,
+      "SpecialtyRefundPercentage": 100,
       "GainCharacterExperienceWithSpecialtyExperience": 0.0,
       "StackSizeMultiplier": 4.0,
       "WeightMultiplier": 1.0,
