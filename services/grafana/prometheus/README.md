@@ -17,8 +17,11 @@ Config
 ===
 ```shell
 sudo nano /lib/systemd/system/prometheus-node-exporter.service
+cat /etc/default/prometheus-node-exporter
 
 sudo nano /etc/prometheus/prometheus.yml
+
+sudo su -l prometheus -s /bin/bash
 ```
 
 Logs

@@ -13,9 +13,9 @@ sh ./plugins/BuildingActions.sh
 sh ./plugins/ConnectMessages.sh
 sh ./plugins/CopyPaste.sh
 sh ./plugins/DangerousTreasures.sh
-sh ./plugins/DiscordLogger.sh
-sh ./plugins/DiscordSignLogger.sh
-sh ./plugins/DiscordStatus.sh
+#sh ./plugins/DiscordLogger.sh
+#sh ./plugins/DiscordSignLogger.sh
+#sh ./plugins/DiscordStatus.sh
 sh ./plugins/GUIAnnouncements.sh
 # sh ./plugins/NightZombies.sh
 #sh ./plugins/PreventLooting.sh

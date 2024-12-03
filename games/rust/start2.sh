@@ -10,8 +10,8 @@ exec ./RustDedicated -batchmode \
   +server.worldsize 4250 \
   +server.maxplayers 100 \
   +server.gamemode "vanilla" \
-  +server.hostname "RU\EN 4fun rookie camp" \
-  +server.description "RU\EN 4fun rookie camp
+  +server.hostname "4fun RU\EN Лагерь новичков rookie camp | EVENTS" \
+  +server.description "4fun RU\EN Лагерь новичков rookie camp | EVENTS
 
 - Евенты - хеллоуин, npc-базы, данжи.
 - Админ играет как и все. Будет читерить - сообщение придёт в чат и дискорд.
