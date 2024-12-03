@@ -11,6 +11,7 @@ nginx folder:
 # update
 ```shell
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+sudo nano /etc/nginx/sites-available/default
 sudo nginx -t
 sudo systemctl reload nginx
 sudo systemctl restart nginx

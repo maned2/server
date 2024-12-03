@@ -14,8 +14,8 @@ sudo systemctl daemon-reload
 
 sudo systemctl enable rust
 
-sudo chmod +x /var/server/games/rust/start.sh
-sudo chmod +x /var/server/games/rust/start2.sh
+sudo chmod +x /var/server/games/rust/start_classic.sh
+sudo chmod +x /var/server/games/rust/start_modded.sh
 
 sudo nano /etc/security/limits.conf
 # rust soft nofile 65535
