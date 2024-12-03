@@ -14,13 +14,14 @@ Group=rust
 ExecStartPre=echo "PreStarting server"
 #ExecStartPre=/usr/games/steamcmd +force_install_dir /home/rust/server/ +login anonymous +app_update 258550 validate +quit
 ExecStartPre=echo "Starting server"
-ExecStart=/var/server/games/rust/start2.sh
+ExecStart=/var/server/games/rust/start_classic.sh
 ExecStopPost=echo "Stopped server"
 WorkingDirectory=/home/rust/server/
 #StandardOutput=journal
 StandardOutput=append:/var/log/rust/app.log
 StandardError=append:/var/log/rust/err.log
 TimeoutStartSec=15min
+EnvironmentFile=/etc/environment
 
 [Install]
 WantedBy=multi-user.target
