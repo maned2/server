@@ -8,6 +8,7 @@ Type=simple
 ExecStart=swatchdog -c '/var/server/services/swatchdog/rust.conf' -t /var/log/rust/app.log
 Restart=always
 RestartSec=1
+EnvironmentFile=/etc/environment
 
 [Install]
 WantedBy=multi-user.target
