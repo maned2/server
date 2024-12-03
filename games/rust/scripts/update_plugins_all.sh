@@ -4,7 +4,7 @@ cd $RUST_SCRIPTS_FOLDER
 
 echo "[SCRIPTS] Server updating oxide plugins..."
 
-sh ./extensions/Discord.sh
+#sh ./extensions/Discord.sh
 
 #sh ./plugins/AdminRadar.sh
 sh ./plugins/AntiSpam.sh
