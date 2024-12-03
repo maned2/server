@@ -1,6 +1,49 @@
-# Client
+# installation
+install package
+```shell
+sudo apt install openssh-server
+```
+
+try login
+```shell
+ssh user@server
+exit
+```
+
+copy your ssh key to server
 ```shell
 ssh-copy-id -i path/to/public_key user@server
+```
+
+backup config
+```shell
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.factory-defaults
+sudo chmod a-w /etc/ssh/sshd_config.factory-defaults
+```
+
+edit config
+```shell
+
+sudo nano /etc/ssh/sshd_config
+
+Port # more than 1024
+PubkeyAuthentication yes
+PasswordAuthentication no
+PermitEmptyPasswords no
+PermitRootLogin no
+AllowUsers 
+```
+
+check configurations after making changes
+```shell
+sudo sshd -t -f /etc/ssh/sshd_config
+```
+
+restart service 
+```shell
+sudo systemctl restart ssh
+sudo service sshd status
+sudo service sshd restart
 ```
 
 # Problems
@@ -20,25 +63,6 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/*
 ```
 
-```shell
-sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.factory-defaults
-sudo chmod a-w /etc/ssh/sshd_config.factory-defaults
-
-sudo nano /etc/ssh/sshd_config
-
-# params:
-# Port
-# PasswordAuthentication no
-# AllowUsers
-# PermitEmptyPasswords no
-# ChallengeResponseAuthentication no
-
-#after making changes
-sudo systemctl restart ssh
-sudo service sshd status
-sudo service sshd restart
-```
-
 # logs
 ```shell
 tail -f /var/logs/auth.log
@@ -51,7 +75,8 @@ cat .ssh/id_ed25519.pub
 # paste to repo
 cd /var/
 sudo mkdir server
-sudo chown server m
+sudo chown user server
+git clone
 ```
 
 # call sh script when somebody login

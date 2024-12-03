@@ -2,6 +2,7 @@
 
 useradd -mrd /opt/teamspeak teamspeak -s "$(which bash)"
 
+apt install bzip2
 
 sudo -i -u teamspeak bash << EOF
 

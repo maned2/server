@@ -13,7 +13,7 @@ sudo service teamspeak status
 
 sudo service teamspeak stop
 
-su - teamspeak
+sudo su -l teamspeak -s /bin/bash
 ./ts3server_startscript.sh start serveradmin_password=CHANGEME
 
 nano /opt/teamspeak/query_ip_allowlist.txt

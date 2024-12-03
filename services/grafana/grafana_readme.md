@@ -2,10 +2,9 @@ Native installation
 ===
 
 ```shell
-sudo apt-get install -y apt-transport-https
-sudo apt-get install -y software-properties-common wget
+sudo apt-get install -y apt-transport-https software-properties-common wget
 
-sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
+sudo wget -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
 # not working - empty key
 sudo cat /usr/share/keyrings/grafana.key
 
@@ -13,8 +12,9 @@ echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com st
 sudo apt-get update
 
 # another way 2:
-sudo apt-get install -y adduser libfontconfig1
-wget https://dl.grafana.com/oss/release/grafana_10.0.3_amd64.deb
+sudo apt-get install -y adduser libfontconfig1 musl
+wget https://dl.grafana.com/oss/release/grafana_11.3.1_amd64.deb
+sudo dpkg -i grafana_11.3.1_amd64.deb
 ```
 
 Configure

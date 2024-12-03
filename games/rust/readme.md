@@ -6,15 +6,16 @@ sudo usermod -L rust
 sudo mkdir -p /home/rust/server
 sudo chown -R rust:rust /home/rust
 
-sudo mkdir /var/log/satisfactory
+sudo mkdir /var/log/rust
 
 #each update
-sudo cp /var/server/server2/games/rust/rust.service /etc/systemd/system/rust.service
+sudo cp /var/server/games/rust/rust.service /etc/systemd/system/rust.service
 sudo systemctl daemon-reload
 
 sudo systemctl enable rust
 
-sudo chmod +x /var/server/server2/games/rust/start.sh
+sudo chmod +x /var/server/games/rust/start.sh
+sudo chmod +x /var/server/games/rust/start2.sh
 
 sudo nano /etc/security/limits.conf
 # rust soft nofile 65535
@@ -27,7 +28,7 @@ sudo journalctl -xeu rust.service
 sudo ufw allow 28015 # main port
 sudo ufw allow 28017 # query port
 sudo ufw allow 28083 # rust+ port
-sudo ufw deny 28017
+#sudo ufw deny 28017
 
 #logs
 tail -f /var/log/rust/app.log
