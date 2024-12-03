@@ -58,7 +58,7 @@ serve_from_sub_path = true
 nginx settings:
 ```shell
 location /grafana {
-     proxy_pass         http://localhost:3000;
+     proxy_pass         http://localhost:2500;
      rewrite  ^/grafana/(.*)  /$1 break;
      proxy_set_header   Host $host;
 }

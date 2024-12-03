@@ -10,12 +10,12 @@ exec ./RustDedicated -batchmode \
   +server.worldsize 4250 \
   +server.maxplayers 100 \
   +server.gamemode "vanilla" \
-  +server.hostname "RU\EN 4fun no donations" \
-  +server.description "RU\EN 4fun no donations
+  +server.hostname "RU\EN 4fun rookie camp" \
+  +server.description "RU\EN 4fun rookie camp
 
 - Евенты - хеллоуин, npc-базы, данжи.
 - Админ играет как и все. Будет читерить - сообщение придёт в чат и дискорд.
-- Вайп раз в месяц, следующий - 06.06.
+- Вайп раз в месяц, следующий - 02.01.
 - Мощный античит
 - Потребление ресурсов шкафом уменьшено на 50%
 - Постройки можно поворачивать, удалять без ограничений по времени
@@ -24,7 +24,7 @@ exec ./RustDedicated -batchmode \
 
 - Events - Halloween, NPC bases, dungeons.
 - The admin plays like everyone else. If he cheats, the message will be sent to the chat and discord.
-- Vip once a month, the next one is 06.06.
+- Vip once a month, the next one is 02.01.
 - Powerful anti-cheat
 - Cabinet resource consumption reduced by 50%
 - Buildings can be rotated and deleted without time limits
