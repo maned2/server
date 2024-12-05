@@ -118,6 +118,7 @@ plugins
 global.god true
 global.god false
 debug.noclip 
+debug.debugcamera
 
 oxide.reload <pluginName>
 

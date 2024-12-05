@@ -7,6 +7,7 @@ exec ./RustDedicated -batchmode \
   +rcon.password "$RUST_RCON_PASSWORD" \
   +rcon.web 1 \
   +server.level "Procedural Map" \
+  +server.seed 29364270 \
   +server.worldsize 4250 \
   +server.maxplayers 100 \
   +server.gamemode "vanilla" \
