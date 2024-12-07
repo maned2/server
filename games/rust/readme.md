@@ -43,9 +43,7 @@ echo "ownerid 76561198341247837 \"unnamed\" \"no reason\"
 ownerid 76561198171986467 \"unnamed\" \"no reason\"" > server/server/4fun43/cfg/users.cfg
 
 echo "decay.upkeep_period_minutes \"2880\"
-halloween.enabled true
-halloween.murdererpopulation 5
-halloween.scarecrowpopulation 5" > server/server/4fun43/cfg/server.cfg
+" > server/server/4fun43/cfg/server.cfg
 
 sudo crontab -e
 #0 5 * * * /var/server/games/rust/scripts/cron.sh >> /var/log/rust/cron.log
