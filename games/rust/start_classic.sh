@@ -16,15 +16,17 @@ exec ./RustDedicated -batchmode \
 
 - Rust+
 - 4250 размер карты
-- Классика, без модов, без донатов и прочей херни. Ничего нельзя купить.
+- Классика, без модов, без донатов и прочей херни. Ничего нельзя купить
 - Админ если что то выдаст, вы увидите сообщение в чате (но он этого не будет делать)
-- Вайп раз в месяц, следующий - 02.12.
+- Вайп раз в месяц, следующий - 02.01
 - Желаем приятной, честной игры!
+- По всем вопросам писать админу в общий чат
 - 4250 card size
 - Classic, no mods, no donations and other crap. You can't buy anything.
 - If the admin gives something, you will see a message in the chat (but he won't do that)
-- Wipe once a month, the next one is 12/02.
-- We wish you a pleasant, fair game!" \
+- Wipe once a month, the next one is 01/02.
+- We wish you a pleasant, fair game!
+- For all questions, write to the admin in the global chat" \
   +server.url "https://discord.gg/NNyGJfqkkA" \
   +server.identity "4fun42" \
   +server.tags "EU,monthly,vanilla,WA,EA"
