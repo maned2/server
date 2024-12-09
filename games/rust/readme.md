@@ -110,14 +110,15 @@ removeownerid 76561198341247837
 # GAME
 F1
 client.connect ip:28015
-oxide.version
-plugins
 
 global.god true
 global.god false
 debug.noclip 
 debug.debugcamera
 
+
+oxide.version
+plugins
 oxide.reload <pluginName>
 
 oxide.grant user <name><permission>
