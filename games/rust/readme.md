@@ -115,7 +115,17 @@ global.god true
 global.god false
 debug.noclip 
 debug.debugcamera
+refillvitals
 
+combatlog <Steam64ID>
+
+banid Steam64ID <name> <reason> <duration>
+# banid Steam64ID <name> <reason> 1d
+server.writecfg
+
+heli.call
+heli.calltome
+ent who
 
 oxide.version
 plugins
