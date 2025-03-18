@@ -56,6 +56,7 @@ mkdir -p server/server/4fun42/cfg/
 
 sudo /var/server/games/rust/scripts/cron.sh
 sudo /var/server/games/rust/scripts/install.sh
+sudo /var/server/games/rust/scripts/restart.sh
 
 sudo /var/server/games/rust/scripts/plugins/Welcomer.sh
 
