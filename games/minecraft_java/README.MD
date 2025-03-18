@@ -4,7 +4,7 @@ Installation
 # download server file
 https://www.minecraft.net/ru-ru/download/server
 
-scp games/minecraft_java/minecraft_server.1.21.jar loc2:~/minecraft_server.1.21.jar
+scp games/minecraft_java/minecraft_server.1.21.4.jar loc2:~/minecraft_server.1.21.4.jar
 
 # install java
 sudo apt install default-jre
@@ -14,7 +14,7 @@ sudo useradd -m minecraft
 sudo usermod -L minecraft
 
 sudo mkdir  /home/minecraft/server_java/
-sudo cp minecraft_server.1.21.jar /home/minecraft/server_java/server.jar
+sudo cp minecraft_server.1.21.4.jar /home/minecraft/server_java/server.jar
 
 sudo chown -R minecraft:minecraft /home/minecraft/server_java/
 
@@ -22,13 +22,14 @@ sudo su -l minecraft -s /bin/bash
 
 #test run
 cd server_java
-/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -Xmx4048M -Xms4048M -jar server.jar nogui
+readlink -f $(which java)
+/usr/lib/jvm/java-21-openjdk-amd64/bin/java -Xmx4048M -Xms4048M -jar server.jar nogui
 
 nano eula.txt
 
 # server settings
-sed -i -- 's/server-name=Dedicated Server/server-name=4fan4/g' *server.properties
-sed -i -- 's/level-name=Bedrock level/level-name=4fan4/g' *server.properties
+sed -i -- 's/motd=A Minecraft Server/motd=A Minecraft 4fun4 Server/g' *server.properties
+sed -i -- 's/level-name=world/level-name=4fan4/g' *server.properties
 nano server.properties
 exit
 

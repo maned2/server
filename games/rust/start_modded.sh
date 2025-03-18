@@ -7,15 +7,16 @@ exec ./RustDedicated -batchmode \
   +rcon.password "$RUST_RCON_PASSWORD" \
   +rcon.web 1 \
   +server.level "Procedural Map" \
+  +server.seed 1337 \
   +server.worldsize 4250 \
-  +server.maxplayers 100 \
+  +server.maxplayers 0 \
   +server.gamemode "vanilla" \
   +server.hostname "4fun RU\EN Лагерь новичков rookie camp | EVENTS" \
   +server.description "4fun RU\EN Лагерь новичков rookie camp | EVENTS
 
 - Евенты - хеллоуин, npc-базы, данжи.
-- Админ играет как и все. Будет читерить - сообщение придёт в чат и дискорд.
-- Вайп раз в месяц, следующий - 02.01.
+- Админ следит за сервером. в случае проблем пишите в общий чат
+- Вайп раз в месяц, следующий - 03.04.2025.
 - Мощный античит
 - Потребление ресурсов шкафом уменьшено на 50%
 - Постройки можно поворачивать, удалять без ограничений по времени
@@ -24,7 +25,7 @@ exec ./RustDedicated -batchmode \
 
 - Events - Halloween, NPC bases, dungeons.
 - The admin plays like everyone else. If he cheats, the message will be sent to the chat and discord.
-- Vip once a month, the next one is 02.01.
+- Vip once a month, the next one is 03.04.2025.
 - Powerful anti-cheat
 - Cabinet resource consumption reduced by 50%
 - Buildings can be rotated and deleted without time limits
@@ -32,8 +33,8 @@ exec ./RustDedicated -batchmode \
 - More information and rules in discord (open website)
 
 - Rust+" \
-  +server.url "https://discord.gg/NNyGJfqkkA" \
-  +server.identity "4fun43" \
+  +server.url "https://romanm.yonote.ru/share/5b48feb2-f242-48f6-ba04-7b8337794cda" \
+  +server.identity "4fun4" \
   +server.tags "EU,monthly,tut" \
   +server.logoimage "https://i.ibb.co/CPGctqj/icon.png" \
   +server.headerimage "https://i.ibb.co/s3XmLbM/header.png"
