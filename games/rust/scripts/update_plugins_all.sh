@@ -25,7 +25,7 @@ sh ./plugins/SimpleKillFeed.sh
 sh ./plugins/SmartChatBot.sh
 sh ./plugins/SmoothRestarter.sh
 sh ./plugins/StopStupidPings.sh
-# sh ./plugins/TimedEvents.sh
+sh ./plugins/TimedEvents.sh
 sh ./plugins/TruePVE.sh
 sh ./plugins/UFilter.sh
 sh ./plugins/Welcomer.sh

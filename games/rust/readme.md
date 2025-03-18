@@ -1,12 +1,27 @@
 # INSTALL
 ```shell
+
+scp games/rust/files/easyraid1.json yoga:easyraid12.json
+scp games/rust/files/easyraid2.json yoga:easyraid22.json
+scp games/rust/files/easyraid3.json yoga:easyraid32.json
+
+
+
 # once
 sudo useradd -M rust
 sudo usermod -L rust
 sudo mkdir -p /home/rust/server
 sudo chown -R rust:rust /home/rust
 
+sudo mkdir /home/rust/RaidableBases
+sudo cp easyraid12.json /home/rust/RaidableBases/easyraid12.json
+sudo cp easyraid22.json /home/rust/RaidableBases/easyraid22.json
+sudo cp easyraid32.json /home/rust/RaidableBases/easyraid32.json
+
+sudo chown -R rust:rust /home/rust/RaidableBases
+
 sudo mkdir /var/log/rust
+sudo mkdir /var/backups/rust
 
 #each update
 sudo cp /var/server/games/rust/rust.service /etc/systemd/system/rust.service
@@ -38,6 +53,9 @@ tail -f /var/log/rust/err.log
 sudo su -l rust -s /bin/bash
 
 mkdir -p server/server/4fun42/cfg/
+
+sudo /var/server/games/rust/scripts/cron.sh
+sudo /var/server/games/rust/scripts/install.sh
 
 echo "ownerid 76561198341247837 \"unnamed\" \"no reason\"
 ownerid 76561198171986467 \"unnamed\" \"no reason\"" > server/server/4fun43/cfg/users.cfg

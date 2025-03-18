@@ -399,7 +399,7 @@ echo '{
 
 FILE=server/oxide/data/RaidableBases/Profiles/RaidBases.json_original
 if [ ! -f "$FILE" ]; then
-    cp server/oxide/data/RaidableBases/Profiles/RaidBases.json FILE
+    cp server/oxide/data/RaidableBases/Profiles/RaidBases.json "$FILE"
 fi
 
 echo '{
