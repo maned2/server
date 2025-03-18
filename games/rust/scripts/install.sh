@@ -15,7 +15,7 @@ sh ./start.sh
 
 
 #TOOD: use rcon
-sleep 20m
+sleep 30m
 sh ./stop.sh
 sh ./update_plugins_all.sh
 sh ./start.sh

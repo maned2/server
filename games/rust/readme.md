@@ -57,6 +57,8 @@ mkdir -p server/server/4fun42/cfg/
 sudo /var/server/games/rust/scripts/cron.sh
 sudo /var/server/games/rust/scripts/install.sh
 
+sudo /var/server/games/rust/scripts/plugins/Welcomer.sh
+
 echo "ownerid 76561198341247837 \"unnamed\" \"no reason\"
 ownerid 76561198171986467 \"unnamed\" \"no reason\"" > server/server/4fun43/cfg/users.cfg
 
