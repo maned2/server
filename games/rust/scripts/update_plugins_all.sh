@@ -8,7 +8,7 @@ echo "[SCRIPTS] Server updating oxide plugins..."
 
 #sh ./plugins/AdminRadar.sh
 sh ./plugins/AntiSpam.sh
-sh ./plugins/AutomatedEvents.sh
+#sh ./plugins/AutomatedEvents.sh
 sh ./plugins/BuildingActions.sh
 sh ./plugins/ConnectMessages.sh
 sh ./plugins/CopyPaste.sh
@@ -20,12 +20,12 @@ sh ./plugins/GUIAnnouncements.sh
 # sh ./plugins/NightZombies.sh
 sh ./plugins/PreventLooting.sh
 sh ./plugins/RaidableBases.sh
-sh ./plugins/RainOfFire.sh
+#sh ./plugins/RainOfFire.sh
 sh ./plugins/SimpleKillFeed.sh
-sh ./plugins/SmartChatBot.sh
-sh ./plugins/SmoothRestarter.sh
-sh ./plugins/StopStupidPings.sh
-sh ./plugins/TimedEvents.sh
+#sh ./plugins/SmartChatBot.sh
+#sh ./plugins/SmoothRestarter.sh
+#sh ./plugins/StopStupidPings.sh
+#sh ./plugins/TimedEvents.sh
 sh ./plugins/TruePVE.sh
 sh ./plugins/UFilter.sh
 sh ./plugins/Welcomer.sh
