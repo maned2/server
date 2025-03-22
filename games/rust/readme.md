@@ -151,6 +151,7 @@ ent who
 oxide.version
 plugins
 oxide.reload <pluginName>
+oxide.unload DangerousTreasures
 
 oxide.grant user <name><permission>
 oxide.grant user "BOBR KURWA" removertool.admin
