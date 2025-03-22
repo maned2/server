@@ -10,4 +10,5 @@ if [ ! -f "$FILE" ]; then
 fi
 
 sed -i -- "s/"UseZoneManager": false,/"UseZoneManager": true,/g" server/oxide/config/PreventLooting.json
+sed -i -- "s/"UseCupboard": false,/"UseCupboard": true,/g" server/oxide/config/PreventLooting.json
 EOF
