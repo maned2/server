@@ -18,7 +18,7 @@ sh ./plugins/DangerousTreasures.sh
 #sh ./plugins/DiscordStatus.sh
 #sh ./plugins/GUIAnnouncements.sh
 # sh ./plugins/NightZombies.sh
-sh ./plugins/PreventLooting.sh
+#sh ./plugins/PreventLooting.sh
 sh ./plugins/RaidableBases.sh
 #sh ./plugins/RainOfFire.sh
 #sh ./plugins/SimpleKillFeed.sh
