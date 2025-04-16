@@ -23,5 +23,5 @@ exec ./RustDedicated -batchmode \
 - По всем вопросам писать админу в общий чат
 - Правила сервера можно почитать по ссылке сервера (открыть сайт)" \
   +server.url "https://romanm.yonote.ru/share/5b48feb2-f242-48f6-ba04-7b8337794cda" \
-  +server.identity "4fun42" \
+  +server.identity "4fun4" \
   +server.tags "EU,monthly,vanilla,WA,EA"
