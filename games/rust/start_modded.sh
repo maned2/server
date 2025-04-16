@@ -35,7 +35,7 @@ exec ./RustDedicated -batchmode \
 
 - Rust+" \
   +server.url "https://romanm.yonote.ru/share/5b48feb2-f242-48f6-ba04-7b8337794cda" \
-  +server.identity "4fun4" \
+  +server.identity "4fun42" \
   +server.tags "EU,monthly,tut" \
   +server.logoimage "https://i.ibb.co/CPGctqj/icon.png" \
   +server.headerimage "https://i.ibb.co/s3XmLbM/header.png"
