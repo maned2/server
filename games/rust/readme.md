@@ -80,6 +80,8 @@ sudo crontab -e
 
 # Settings:
 
+softcore
+
 ```commandline
 halloween.enabled true
 halloween.murdererpopulation 5
