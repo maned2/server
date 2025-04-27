@@ -2,17 +2,24 @@
 
 cd $RUST_SCRIPTS_FOLDER
 
-#sh ./stop.sh
-#sh ./ports_close.sh
+day=$( date +%d );
 
-sh ./backup.sh
+if [ "$day" = "01" ]; then
+  sh ./stop.sh
+  sh ./ports_close.sh
 
-#sh ./update_rust.sh
-#sh ./cfg_write.sh
-#sh ./update_oxide.sh
-#sh ./update_plugins_all.sh
-#sh ./cfg_write.sh
+  sh ./backup.sh
 
-#sh ./start.sh
-#sh ./ports_open.sh
-sh ./backup_move.sh
+  #sh ./update_rust.sh
+  #sh ./cfg_write.sh
+  #sh ./update_oxide.sh
+  #sh ./update_plugins_all.sh
+  #sh ./cfg_write.sh
+
+  sh ./start.sh
+  sh ./ports_open.sh
+  sh ./backup_move.sh
+else
+  sh ./backup.sh
+  sh ./backup_move.sh
+fi
