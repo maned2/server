@@ -8,7 +8,7 @@ exec ./RustDedicated -batchmode \
   +rcon.password "$RUST_RCON_PASSWORD" \
   +rcon.web 1 \
   +server.level "Procedural Map" \
-  +server.seed 1538447703 \
+  +server.seed 1337 \
   +server.worldsize 4250 \
   +server.maxplayers 100 \
   +server.gamemode "vanilla" \
@@ -20,7 +20,8 @@ exec ./RustDedicated -batchmode \
 - Вайп раз в месяц
 - Желаем приятной, честной игры!
 - По всем вопросам писать админу в общий чат
-- Правила сервера можно почитать по ссылке сервера (открыть сайт)" \
+- Правила сервера можно почитать по ссылке сервера (открыть сайт)
+- Сервер перезапускается раз в 2 дня, из за этого слетают команды. Разрабы rust в курсе уже давно и ничего не делают." \
   +server.url "https://romanm.yonote.ru/share/5b48feb2-f242-48f6-ba04-7b8337794cda" \
   +server.identity "4fun4" \
   +server.tags "EU,monthly,WA,EA"

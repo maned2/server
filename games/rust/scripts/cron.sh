@@ -2,9 +2,9 @@
 
 cd $RUST_SCRIPTS_FOLDER
 
-day=$( date +%d );
+day=$( date +%u );
 
-if [ "$day" = "01" ]; then
+if [ "$day" = "02" ] ||  [ "$day" = "04" ] || [ "$day" = "06" ]; then
   sh ./stop.sh
   sh ./ports_close.sh
 

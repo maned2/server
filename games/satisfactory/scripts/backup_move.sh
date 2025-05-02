@@ -5,7 +5,7 @@ cd $RUST_SCRIPTS_FOLDER
 
 folder="$BACKUP_FOLDER/satisfactory";
 tmpfolder='/var/backups/satisfactory';
-day=$( date +%d );
+day=$( date +%u );
 filename="$1";
 
 cp "${tmpfolder}/"*.tar.gz "${folder}/daily" && rm -f "${tmpfolder}/"*.tar.gz
