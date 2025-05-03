@@ -12,11 +12,14 @@ exec ./RustDedicated -batchmode \
   +server.worldsize 4250 \
   +server.maxplayers 100 \
   +server.gamemode "vanilla" \
-  +server.hostname "RU\EN 4fun classic" \
-  +server.description "RU\EN 4fun classic
+  +server.hostname "RU\EN 4fun softcore quadro" \
+  +server.description "RU\EN 4fun softcore quadro
+- Размер команды и авторизации в шкафу ограничен до 4 игроков
+- Можно ресаться в мирных таунах
+- 50% лута пропадает, 50% сохраняется
 - Rust+
 - 4250 размер карты
-- Классика, без модов, без донатов и прочей херни. Ничего нельзя купить
+- softcore, без модов, без донатов и прочей херни. Ничего нельзя купить
 - Вайп раз в месяц
 - Желаем приятной, честной игры!
 - По всем вопросам писать админу в общий чат
