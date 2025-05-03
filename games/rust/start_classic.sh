@@ -27,4 +27,4 @@ exec ./RustDedicated -batchmode \
 - Сервер перезапускается раз в 2 дня, из за этого слетают команды. Разрабы rust в курсе уже давно и ничего не делают." \
   +server.url "https://romanm.yonote.ru/share/5b48feb2-f242-48f6-ba04-7b8337794cda" \
   +server.identity "4fun4" \
-  +server.tags "EU,monthly,WA,EA"
+  +server.tags "EU,monthly,softcore,WA,EA"
