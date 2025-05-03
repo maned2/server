@@ -11,7 +11,7 @@ exec ./RustDedicated -batchmode \
   +server.seed 1337 \
   +server.worldsize 4250 \
   +server.maxplayers 100 \
-  +server.gamemode "vanilla" \
+  +server.gamemode "softcore" \
   +server.hostname "RU\EN 4fun softcore quadro" \
   +server.description "RU\EN 4fun softcore quadro
 - Размер команды и авторизации в шкафу ограничен до 4 игроков
