@@ -2,7 +2,9 @@
 
 cd $RUST_SCRIPTS_FOLDER
 
+today=`date '+%Y.%m.%d-%H:%M:%S'`;
 day=$( date +%u );
+echo today
 
 if [ "$day" = "02" ] ||  [ "$day" = "04" ] || [ "$day" = "06" ]; then
   sh ./stop.sh
