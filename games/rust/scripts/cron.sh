@@ -7,7 +7,7 @@ day=$( date +%u );
 echo $today
 echo $day
 
-if [ "$day" = "02" ] ||  [ "$day" = "04" ] || [ "$day" = "06" ]; then
+if [ "$day" = "2" ] ||  [ "$day" = "4" ] || [ "$day" = "6" ]; then
   sh ./stop.sh
   sh ./ports_close.sh
 
