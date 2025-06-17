@@ -1,0 +1,30 @@
+[Unit]
+Description=Foundry Server
+StartLimitIntervalSec=180s
+StartLimitBurst=3
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5
+StartLimitInterval=60s
+StartLimitBurst=3
+TimeoutStartSec=15min
+TimeoutStopSec=15min
+User=eco
+Group=eco
+WorkingDirectory=/home/foundry/server
+EnvironmentFile=/etc/environment
+ExecStartPre=echo "===Reinstalling server"
+ExecStartPre=/usr/games/steamcmd +force_install_dir /home/foundry/server/ +login anonymous +app_update 2915550 +quit
+ExecStartPre=echo "===Run server"
+ExecStart=/var/server/games/foundry/run.sh
+# ExecStop=/bin/bash -c "killall -SIGINT srcds_linux"
+# ExecStop=/bin/kill -s SIGINT -$MAINPID & /bin/kill -s SIGINT -$MAINPID
+ExecStopPost=echo "===Stopped server"
+StandardOutput=append:/var/log/foundry/app.log
+StandardError=append:/var/log/foundry/err.log
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target

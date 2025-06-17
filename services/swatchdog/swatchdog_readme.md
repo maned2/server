@@ -25,6 +25,7 @@ sudo service swatchdog-rust start
 
 sudo systemctl enable swatchdog-eco.service
 sudo systemctl enable swatchdog-minecraft_mi.service
+sudo systemctl enable swatchdog-minecraft_java.service
 sudo systemctl enable swatchdog-minecraft_bedrock.service
 sudo systemctl enable swatchdog-minecraft_bedrock_creative.service
 sudo systemctl enable swatchdog-rust.service

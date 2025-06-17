@@ -4,7 +4,7 @@ Installation
 # download server file
 https://www.minecraft.net/ru-ru/download/server
 
-scp games/minecraft_java/minecraft_server.1.21.4.jar loc2:~/minecraft_server.1.21.4.jar
+scp games/minecraft_java/minecraft_server.1.21.6.jar loc2:~/minecraft_server.1.21.6.jar
 
 # install java
 sudo apt install default-jre
@@ -14,7 +14,7 @@ sudo useradd -m minecraft
 sudo usermod -L minecraft
 
 sudo mkdir  /home/minecraft/server_java/
-sudo cp minecraft_server.1.21.4.jar /home/minecraft/server_java/server.jar
+sudo cp minecraft_server.1.21.6.jar /home/minecraft/server_java/server.jar
 
 sudo chown -R minecraft:minecraft /home/minecraft/server_java/
 
@@ -26,6 +26,10 @@ readlink -f $(which java)
 /usr/lib/jvm/java-21-openjdk-amd64/bin/java -Xmx4048M -Xms4048M -jar server.jar nogui
 
 nano eula.txt
+
+# login to server
+# give admin
+/op username
 
 # server settings
 sed -i -- 's/motd=A Minecraft Server/motd=A Minecraft 4fun4 Server/g' *server.properties
@@ -41,6 +45,7 @@ sudo service minecraft_java start
 sudo systemctl enable minecraft_java.service
 sudo journalctl -u minecraft_java -f
 sudo tail -f /var/log/minecraft_java/app.log
+
 
 #ports 25565
 sudo ufw allow 25565
