@@ -8,6 +8,7 @@ Type=simple
 ExecStart=swatchdog -c '/var/server/services/swatchdog/minecraft_java.conf' -t /var/log/minecraft_java/app.log
 Restart=always
 RestartSec=1
+EnvironmentFile=/etc/environment
 
 [Install]
 WantedBy=multi-user.target
