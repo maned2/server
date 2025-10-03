@@ -8,6 +8,7 @@ Type=simple
 ExecStart=swatchdog -c '/var/server/server2/services/swatchdog/eco.conf' -t "/var/log/eco/app.log"
 Restart=always
 RestartSec=1
+EnvironmentFile=/etc/environment
 
 [Install]
 WantedBy=multi-user.target

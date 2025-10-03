@@ -18,4 +18,3 @@ StandardError=append:/var/log/minecraft_mi/err.log
 
 [Install]
 WantedBy=multi-user.target
-ex

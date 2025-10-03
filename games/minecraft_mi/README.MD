@@ -30,19 +30,20 @@ sudo apt install default-jre
 sudo useradd -m minecraft
 sudo usermod -L minecraft
 
-sudo mkdir  /home/minecraft/server_mi/
 sudo cp server_mi.zip /home/minecraft/server_mi.zip
 
-sudo chown -R minecraft:minecraft /home/minecraft/server_mi/
+sudo chown -R minecraft:minecraft /home/minecraft/server_mi.zip
 
 sudo su -l minecraft -s /bin/bash
 
 rm -r server_mi
 unzip -d /home/minecraft/ server_mi.zip
 
+cd server_mi
+chmod +x run.sh
 
 #test run
-java -Xmx4048M -Xms4048M -jar server.jar nogui
+./run.sh
 
 # server settings
 sed -i -- 's/server-name=Dedicated Server/server-name=4fan4/g' *server.properties
@@ -50,6 +51,8 @@ sed -i -- 's/level-name=Bedrock level/level-name=4fan4/g' *server.properties
 nano server.properties
 exit
 
+
+#logs
 sudo mkdir /var/log/minecraft_mi
 
 sudo cp $SERVER2_ROOT_FOLDER/games/minecraft_mi/minecraft_mi.service /etc/systemd/system/minecraft_mi.service
