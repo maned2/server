@@ -30,14 +30,14 @@ sudo apt install default-jre
 sudo useradd -m minecraft
 sudo usermod -L minecraft
 
-sudo cp server_mi.zip /home/minecraft/server_mi.zip
+sudo cp server_mi2.zip /home/minecraft/server_mi2.zip
 
-sudo chown -R minecraft:minecraft /home/minecraft/server_mi.zip
+sudo chown -R minecraft:minecraft /home/minecraft/server_mi2.zip
 
 sudo su -l minecraft -s /bin/bash
 
 rm -r server_mi
-unzip -d /home/minecraft/ server_mi.zip
+unzip -d /home/minecraft/server_mi/ server_mi2.zip
 
 cd server_mi
 chmod +x run.sh
@@ -137,3 +137,8 @@ Minecraft v1.21.1
 Не воруйте ресурсы,
 Не стройтесь рядом с другими игроками.,
 Мы играем без приватов, на полном доверии друг к другу, так что если будут нарушения правил - сразу перманентный бан, и сервер будет восстановлен из бекапа.
+
+//new 
+скачать curseforge https://www.curseforge.com/download/app -> Download standalone
+Установить, запустить
+Выбрать minecraft
