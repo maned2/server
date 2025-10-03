@@ -81,48 +81,59 @@ sudo chmod +x /home/minecraft/minecraft_mi_backup.sh
 sudo /home/minecraft/minecraft_mi_backup.sh
 
 sudo crontab -e
-# 0 8 * * * /var/server/server2/games/minecraft_mi/minecraft_mi_backup.sh >> /var/log/minecraft_mi/cron.log
+# 0 8 * * * /var/server/games/minecraft_mi/minecraft_mi_backup.sh >> /var/log/minecraft_mi/cron.log
 ```
 
 # client description:
 Сервер Minecraft Modern Industrialization
+Minecraft v1.21.1
 
 Список модов: 
 Обязательные:
 - modern-industrialization https://www.curseforge.com/minecraft/mc-mods/modern-industrialization
-  - основной мод из за которого вся движуха. Все обязательные моды ниже - требуются для его запуска
-- cloth-config https://www.curseforge.com/minecraft/mc-mods/cloth-config
-Необязательные:
-- xaeros-minimap https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap
-  - миникарта
+(основной мод из за которого вся движуха)
+
+- guideme https://www.curseforge.com/minecraft/mc-mods/guideme
+(обязательны мод для modern-industrialization, позволяет создавать книги - руководства с картинками и т.д.)
+
 - emi https://www.curseforge.com/minecraft/mc-mods/emi
-  - Полный список всех доступных рецептов в инвентаре справа
-- wthit https://www.curseforge.com/minecraft/mc-mods/wthit
-  - что это за чертовщина? показывает инфо о предмете при наведении на него
-- badpackets https://www.curseforge.com/minecraft/mc-mods/badpackets
-  - обязательный аддон для wthit
+(вообще этот мод не обязательный, но разработчики настоятельно его рекомендуют, потому что без него будет невозможно играть. Этот мод создаёт в инвентаре справа список всех блоков и позволяет удобно просматривать рецепты к ним)
+
+
+Не обязательные: 
+- Xaero's Minimap https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap
+(добавляет настраиваемую миникарту)
+
+- WTHIT Forge Edition https://www.curseforge.com/minecraft/mc-mods/wthit-forge
+(при наведении на любой объект показывает его название и из какого мода он)
+
+- bad packets https://www.curseforge.com/minecraft/mc-mods/badpackets
+(обязательный аддон для WTHIT)
 
 Как играть?
 Запустите лаунчер -> Minecraft Java
-Установите Minecraft v1.21, запустите, закройте игру и лаунчер
-Скачайте установочник NeoForge https://neoforged.net/
-Установите его на своего клиента, нужную версю.
-Зайдите в папку модов (C:\Users\<имя_вашего_пользователя_винды>\AppData\Roaming\.minecraft\mods)
-Скопируйте туда все моды. 
-Вы можете скачать все моды с офф сайтов по ссылкам модов указанных выше, 
-или же, скачать у нас с гугл диска уже заготовленный zip архив: 
-https://drive.google.com/file/d/1fZf16-4aDQ2xo8nUHvDT0J4zgJBa4_B5/view?usp=sharing
+Установите Minecraft v1.21 (вкладка установки -> новая установка -> название любое -> версия release 1.21.1 ->установить)
+Запустите, закройте игру и лаунчер
+Скачайте лаунчер модов NeoForge https://neoforged.net/ (Minecraft version: 1.21.1 -> Click here to Download Installer)
+Запустите скачанный файл neoforge-xxx-installer.jar
+Установите лаунчер модов (Install client выбрано -> ниже путь до папки с вашим маинкрафтом -> Proceed)
+Запустите лаунчер, выберите вариант запуска Neoforge 21xxx
+Снова запустите маинкрафт, у вас должна внизу появиться надпись о том что он работает с лаунчером модов (NeoForge XXX (Y mods)) и закройте игру 
+
+Скачайте моды с офф сайтов по ссылкам выше или одним архивом отсюда ???
 ВНИМАНИЕ!
 Не скачивайте моды ни с каких сайтов кроме https://www.curseforge.com/ - есть риск заражения вашего ПК вирусами.
 
-Попробуйте запустить Minecraft.
-Если у вас будут какие то ошибки - напишите в канал #minecraft-industrial, мы постараемся помочь как можно скорее
+Зайдите в папку модов (`C:\Users\<имявашегопользователя_винды>\AppData\Roaming\.minecraft\mods`)
+скопируйте туда все моды
+Запустите игру
+Если у вас будут какие то ошибки - напишите в канал ⁠minecraft-industrial, мы постараемся помочь как можно скорее
 
 Что бы подключиться к серверу, добавьте его по адресу:
-89.189.191.76:25566
+5.130.101.81:25565
 
 Правила сервера:
-1. Не уничтожать чужие постройки
-2. Не воруйте ресурсы
-3. Не стройтесь рядом с другими игроками.
+Не уничтожать чужие постройки,
+Не воруйте ресурсы,
+Не стройтесь рядом с другими игроками.,
 Мы играем без приватов, на полном доверии друг к другу, так что если будут нарушения правил - сразу перманентный бан, и сервер будет восстановлен из бекапа.
