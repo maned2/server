@@ -157,7 +157,7 @@ cat <<EAF > server/Configs/Network.eco
   "Playtime": "",
   "DiscordAddress": "$ECO_DISCORD_INVITE_LINK",
   "Password": "",
-  "Name": "4fun4 | RU | EN | NoMods | Meteor 90 days | 2.56 km2",
+  "Name": "4fun4 | RU | EN | NoMods | Meteor 60 days | 2.56 km2",
   "DetailedDescription": "Сервер просто для веселья. Заходите, играйте, наслаждайтесь игрой. Просим только не строиться слишком близко, и не воровать незаприваченные ресурсы. \\n
 The server is just for fun. Come, play, enjoy the game. We just ask that you do not build too close, and do not steal unprivileged resources. \\n
 Server rules, Правила сервера: $ECO_SITE_LINK",

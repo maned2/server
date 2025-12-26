@@ -9,16 +9,30 @@ sudo mkdir /var/log/eco
 chmod +x ./games/eco/scripts/redeploy.sh
 sudo ./games/eco/scripts/redeploy.sh
 
-sudo cp $SERVER2_ROOT_FOLDER/games/minecraft_java/minecraft_java.service /etc/systemd/system/minecraft_java.service
+sudo cp $SERVER2_ROOT_FOLDER/games/eco/scripts/eco/run.sh /home/eco/run.sh &&
+sudo chown eco:eco /home/eco/run.sh && sudo chmod +x /home/eco/run.sh &&
+sudo cp $SERVER2_ROOT_FOLDER/games/eco/scripts/eco/prerun.sh /home/eco/prerun.sh &&
+sudo chown eco:eco /home/eco/prerun.sh && sudo chmod +x /home/eco/prerun.sh 
+
+sudo cp $SERVER2_ROOT_FOLDER/games/eco/eco.service /etc/systemd/system/eco.service
 sudo systemctl daemon-reload
 
 sudo service eco status
+sudo service eco start
 
 # enable autostart
 sudo systemctl enable eco.service
 
 # ports 
 sudo ufw allow 3000,3001
+```
+
+logs
+===
+```shell
+sudo journalctl -xeu eco.service
+tail -f /var/log/eco/app.log
+tail -f /var/log/eco/err.log
 ```
 
 backup install
