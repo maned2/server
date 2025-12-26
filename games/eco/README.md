@@ -9,6 +9,9 @@ sudo mkdir /var/log/eco
 chmod +x ./games/eco/scripts/redeploy.sh
 sudo ./games/eco/scripts/redeploy.sh
 
+sudo cp $SERVER2_ROOT_FOLDER/games/minecraft_java/minecraft_java.service /etc/systemd/system/minecraft_java.service
+sudo systemctl daemon-reload
+
 sudo service eco status
 
 # enable autostart
@@ -22,11 +25,17 @@ backup install
 ===
 ```shell
 
+sudo mkdir -p /var/backups/eco/daily/ && 
+sudo mkdir -p $BACKUP_FOLDER/eco/daily/ &&
+sudo mkdir -p $BACKUP_FOLDER/eco/monthly/
+
+chmod +x games/eco/scripts/backup.sh
+
 # test run:
-sudo ./games/eco/eco_backup.sh
+sudo ./games/eco/scripts/backup.sh
 
 sudo crontab -e
-# 0 7 * * * /var/server/server2/games/eco/scripts/backup.sh >> /var/log/eco/cron.log
+# 0 7 * * * /var/server/games/eco/scripts/backup.sh >> /var/log/eco/cron.log
 ```
 
 # manual

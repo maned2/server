@@ -68,8 +68,8 @@ sudo ufw allow 25566
 backup install
 ===
 ```shell
-sudo mkdir -p /var/backups/minecraft_mi/daily/
-sudo mkdir -p $BACKUP_FOLDER/minecraft_mi/daily/ 
+sudo mkdir -p /var/backups/minecraft_mi/daily/ && 
+sudo mkdir -p $BACKUP_FOLDER/minecraft_mi/daily/ &&
 sudo mkdir -p $BACKUP_FOLDER/minecraft_mi/monthly/
 
 sudo cp $SERVER2_ROOT_FOLDER/games/minecraft_mi/minecraft_mi_backup.sh /home/minecraft/minecraft_mi_backup.sh

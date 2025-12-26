@@ -15,8 +15,8 @@ User=eco
 Group=eco
 WorkingDirectory=/home/eco/server
 EnvironmentFile=/etc/environment
-ExecStartPre=echo "===Reinstalling server"
-ExecStartPre=/usr/games/steamcmd +force_install_dir /home/eco/server/ +login anonymous +app_update 739590 +quit
+# ExecStartPre=echo "===Reinstalling server"
+# ExecStartPre=/usr/games/steamcmd +force_install_dir /home/eco/server/ +login anonymous +app_update 739590 +quit
 ExecStartPre=echo "===Prerun server"
 ExecStartPre=/bin/bash -c "/home/eco/prerun.sh"
 ExecStartPre=echo "===Run server"
