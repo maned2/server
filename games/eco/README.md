@@ -2,7 +2,7 @@
 ```shell
 sudo apt install libgdiplus libc6-dev
 sudo useradd -m eco
-sudo usermod -L eco
+sudo usermod -L eco # lock a user's password
 
 sudo mkdir /var/log/eco
 

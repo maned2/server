@@ -3,11 +3,11 @@ is_user_root () { [ "${EUID:-$(id -u)}" -eq 0 ]; }
 if is_user_root; then
   service eco stop
   cp eco.service /etc/systemd/system/eco.service
-  cp "$SERVER2_ROOT_FOLDER/games/eco/increase_hand.sh" /home/eco/increase_hand.sh
-  chmod +x /home/eco/increase_hand.sh
-  chown eco /home/eco/increase_hand.sh
-  cp -R $CONFIG_ROOT_FOLDER/games/eco/Configs/. /home/eco/server/Configs/
-  chown eco /home/eco/server/Configs/ -R
+  # cp "$SERVER2_ROOT_FOLDER/games/eco/increase_hand.sh" /home/eco/increase_hand.sh
+  # chmod +x /home/eco/increase_hand.sh
+  # chown eco /home/eco/increase_hand.sh
+  # cp -R $CONFIG_ROOT_FOLDER/games/eco/Configs/. /home/eco/server/Configs/
+  # chown eco /home/eco/server/Configs/ -R
   systemctl daemon-reload
   service eco start
   systemctl enable eco.service

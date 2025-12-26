@@ -31,12 +31,13 @@ PubkeyAuthentication yes
 PasswordAuthentication no
 PermitEmptyPasswords no
 PermitRootLogin no
-AllowUsers 
+AllowUsers <username1> <username2>
 ```
 
 check configurations after making changes
 ```shell
 sudo sshd -t -f /etc/ssh/sshd_config
+sudo systemctl edit ssh.socket
 ```
 
 restart service 
@@ -44,6 +45,8 @@ restart service
 sudo systemctl restart ssh
 sudo service sshd status
 sudo service sshd restart
+sudo systemctl daemon-reload
+sudo systemctl restart ssh.socket
 ```
 
 # Problems

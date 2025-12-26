@@ -78,7 +78,7 @@ sudo chmod +x /home/minecraft/minecraft_mi_backup.sh
 
 # test run:
 
-sudo /home/minecraft/minecraft_mi_backup.sh
+sudo /var/server/games/minecraft_mi/minecraft_mi_backup.sh >> /var/log/minecraft_mi/cron.log
 
 sudo crontab -e
 # 0 8 * * * /var/server/games/minecraft_mi/minecraft_mi_backup.sh >> /var/log/minecraft_mi/cron.log

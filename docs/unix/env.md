@@ -31,6 +31,14 @@ complete unset
 unset TEST_VAR
 ```
 
+# for user bash
+```
+nano ~/.profile
+
+ABC="123"; export ABC
+PATH="$PATH:$HOME/go/bin"
+```
+
 # system wide
 ```shell
 sudo nano /etc/environment
