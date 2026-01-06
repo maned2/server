@@ -1,5 +1,17 @@
 # installation
 ```shell
+scp EcoServerLinux_v0.12.0.6-beta.zip yoga:EcoServerLinux_v0.12.0.6-beta.zip
+sudo mv EcoServerLinux_v0.12.0.6-beta.zip /home/eco/EcoServerLinux_v0.12.0.6-beta.zip
+sudo chown eco:eco /home/eco/EcoServerLinux_v0.12.0.6-beta.zip
+
+sudo su -l eco -s /bin/bash
+unzip -d server2 EcoServerLinux_v0.12.0.6-beta.zip
+cd server2
+rm -R Configs
+rm -R Storage
+cd ..
+cp -R server2/* server/
+
 sudo apt install libgdiplus libc6-dev
 sudo useradd -m eco
 sudo usermod -L eco # lock a user's password
@@ -94,6 +106,8 @@ tail -f /var/log/eco/err.log
 # Admin
 ```shell
 /time set
+
+/en 2, Maned
 
 /skills givepointsto Dattebayo, 1000
 /skills givepointsto H2SO4, 1000

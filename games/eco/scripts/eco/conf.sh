@@ -5,39 +5,38 @@ cd /home/eco
 cat <<EOF > server/Configs/Difficulty.eco
 {
   "GameSettings": {
-    "DesiredNumberOfPlayers": 10,
-    "HoursPlayedPerDay": 10.0,
+    "DesiredNumberOfPlayers": 4,
+    "HoursPlayedPerDay": 16.0,
     "CollaborationLevel": "LowCollaboration",
     "GameSpeed": "Normal",
+    "AnimalBehavior": "AttackNormally",
     "SimulationLevel": "Normal",
     "ExhaustionEnabled": true,
     "HasMeteor": true,
     "AllowFriendsToJoin": true,
     "GenerateRandomWorld": false,
-    "SkillCostMultiplier": 0.1,
-    "SkillGainMultiplier": 5.0,
-    "SpecialtyCostMultiplier": 0.1,
     "AdvancedGameSettings": {
-      "MeteorImpactInDays": 90.0,
-      "MaxProfessionsPerCitizen": 10.0,
-      "MaxSpecialtiesPerCitizen": 33.0,
-      "SkillCostMultiplier": 0.1,
-      "SkillGainMultiplier": 5.0,
-      "SpecialtyCostMultiplier": 0.1,
-      "CraftResourceMultiplier": 1.0,
-      "CraftTimeMultiplier": 1.0,
-      "ClaimStakesGrantedUponSkillscrollConsumed": 0.3,
+      "MeteorImpactInDays": 60.0,
+      "MaxProfessionsPerCitizen": 20.0,
+      "MaxSpecialtiesPerCitizen": 40.0,
+      "SkillCostMultiplier": 0.5,
+      "CraftResourceMultiplier": 0.5,
+      "CraftTimeMultiplier": 0.5,
+      "ClaimStakesGrantedUponSkillscrollConsumed": 0.2,
       "ClaimPapersGrantedUponSkillscrollConsumed": 2.0,
       "CanAbandonSpecialties": true,
-      "SpecialtyRefundPercentage": 100,
+      "SpecialtyRefundPercentage": 0.8,
       "GainCharacterExperienceWithSpecialtyExperience": 0.0,
       "StackSizeMultiplier": 4.0,
-      "WeightMultiplier": 1.0,
-      "FuelMultiplier": 1.0,
-      "GrowthRateMultiplier": 1.0,
-      "ConnectionRangeMultiplier": 1.0,
-      "ShelfLifeMultiplier": 1.0,
-      "AllowDeepOceanBuilding": true
+      "WeightMultiplier": 0.5,
+      "FuelEfficiencyMultiplier": 2.0,
+      "GrowthRateMultiplier": 2.0,
+      "ConnectionRangeMultiplier": 4.0,
+      "ShelfLifeMultiplier": 2.0,
+      "AllowDeepOceanBuilding": true,
+      "RequireSkillsToReplaceParts": true,
+      "BrokenPartsWillDisableVehicles": true,
+      "AnimalUnprovokedAttackFrequencyMultiplier": "1.0"
     }
   },
   "EndgameCraftCost": "Normal",
@@ -143,7 +142,7 @@ cat <<EAF > server/Configs/Users.eco
       "Collection": {
         "System.String": {
           "\$type": "System.Collections.Generic.List\`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
-          "\$values": ["76561198084389237", "76561198076681807"]
+          "\$values": ["$ECO_USER_1_ID", "$ECO_USER_2_ID"]
         }
       }
     }
@@ -186,13 +185,13 @@ cat <<EAF > server/Configs/Exhaustion.eco
 {
   "RefreshLocalHours": 0,
   "RefreshLocalMinutes": 0,
-  "MondayExhaustionRefreshHours": 8.0,
-  "TuesdayExhaustionRefreshHours": 8.0,
-  "WednesdayExhaustionRefreshHours": 8.0,
-  "ThursdayExhaustionRefreshHours": 8.0,
-  "FridayExhaustionRefreshHours": 8.0,
-  "SaturdayExhaustionRefreshHours": 8.0,
-  "SundayExhaustionRefreshHours": 8.0,
+  "MondayExhaustionRefreshHours": 5.0,
+  "TuesdayExhaustionRefreshHours": 5.0,
+  "WednesdayExhaustionRefreshHours": 5.0,
+  "ThursdayExhaustionRefreshHours": 5.0,
+  "FridayExhaustionRefreshHours": 12.0,
+  "SaturdayExhaustionRefreshHours": 12.0,
+  "SundayExhaustionRefreshHours": 12.0,
   "AllowPlaytimeSaving": true,
   "MaxSavedHours": 16.0,
   "AllowExhaustionPauseOnRest": true,
@@ -301,5 +300,350 @@ EAF
 
 yes | cp -rf server/Configs/WorldGenerator.eco.template server/Configs/WorldGenerator.eco
 
-sed -i -- 's/"WorldWidth": 72,/"WorldWidth": 160,/g' server/Configs/WorldGenerator.eco
-sed -i -- 's/"WorldLength": 72/"WorldLength": 160/g' server/Configs/WorldGenerator.eco
+# sed -i -- 's/"WorldWidth": 72,/"WorldWidth": 160,/g' server/Configs/WorldGenerator.eco
+# sed -i -- 's/"WorldLength": 72/"WorldLength": 160/g' server/Configs/WorldGenerator.eco
+
+cat <<EAF > server/Configs/Network.eco
+{
+  "PlayerReputationToCultureFormula": {
+    "InputMin": 0.0,
+    "InputHalflife": 5000.0,
+    "OutputAtMin": 0.0,
+    "OutputLimit": 13334.0
+  },
+  "ArtworkReputationToCultureFormula": {
+    "InputMin": 0.0,
+    "InputHalflife": 5000.0,
+    "OutputAtMin": 0.0,
+    "OutputLimit": 13334.0
+  },
+  "CultureValueOnResidentialPropertyToHousingValueMultiplierFormula": {
+    "InputMin": 0.0,
+    "InputHalflife": 500.0,
+    "OutputAtMin": 1.0,
+    "OutputLimit": 2.0
+  },
+  "SettlementClaimsPerCitizen": [
+    10.0,
+    20.0,
+    40.0
+  ],
+  "SettlementClaimsPerAbandonedCitizen": [
+    5.0,
+    5.0,
+    5.0
+  ],
+  "HomesteadSupportClaimsPerCitizen": [
+    5.0,
+    5.0,
+    5.0
+  ],
+  "HomesteadSupportClaimsPerAbandonedCitizen": [
+    3.0,
+    3.0,
+    3.0
+  ],
+  "ClaimStakesPerCitizen": [
+    1.5,
+    1.5,
+    1.5
+  ],
+  "ClaimStakesPerAbandonedCitizen": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "BasePlotsOnClaimStake": [
+    5,
+    5,
+    5
+  ],
+  "BasePlotsOnFoundation": [
+    9,
+    16,
+    25
+  ],
+  "BasePlotsOnHomesteadClaimStake": 16,
+  "BasePlotsOnOutpostClaimStake": 16,
+  "HoursToResolvePropertyCrisis": [
+    24.0,
+    24.0,
+    24.0
+  ],
+  "AllowOptionToPreventSettlementsFromSeceding": false,
+  "CultureDeedLinkPercentRequirement": 30.0,
+  "SettlementFoundationBaseInfluence": [
+    45.0,
+    150.0,
+    400.0
+  ],
+  "SettlementInfluenceMultiplier": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "ScaleInfluenceBasedOnWorldSize": true,
+  "BaseInfluenceRadiusFoundationMovementAllowedAfterFounding": 50,
+  "SettlementMinRequiredPlotCoveragePercentage": 0.2,
+  "HomesteadMinRequiredPlotCoveragePercentage": 0.5,
+  "MinSubSettlementsToFoundSettlement": [
+    2,
+    2
+  ],
+  "MinSubSettlementsToMaintainSettlement": [
+    2,
+    2
+  ],
+  "MinCitizensToFoundSettlement": [
+    2,
+    4,
+    6
+  ],
+  "MinCitizensToMaintainSettlement": [
+    2,
+    4,
+    6
+  ],
+  "MinCultureToFoundSettlement": [
+    0.0,
+    60.0,
+    400.0
+  ],
+  "MinCultureToMaintainSettlement": [
+    0.0,
+    30.0,
+    120.0
+  ],
+  "CultureToInfluenceMappingPerSettlementType": [
+    {
+      "InputMin": 0.0,
+      "InputHalflife": 100.0,
+      "OutputAtMin": 0.0,
+      "OutputLimit": 150.0
+    },
+    {
+      "InputMin": 0.0,
+      "InputHalflife": 140.0,
+      "OutputAtMin": 0.0,
+      "OutputLimit": 350.0
+    },
+    {
+      "InputMin": 0.0,
+      "InputHalflife": 420.0,
+      "OutputAtMin": 0.0,
+      "OutputLimit": 1000.0
+    }
+  ],
+  "MaxGivableReputationThroughLaws": [
+    10.0,
+    20.0,
+    40.0
+  ],
+  "MaxGivableToSinglePartyPerDay": [
+    5.0,
+    10.0,
+    20.0
+  ],
+  "MaxGivableToSinglePartyTotal": [
+    10.0,
+    40.0,
+    100.0
+  ],
+  "MinGivableToSinglePartyTotal": [
+    -10.0,
+    -60.0,
+    -100.0
+  ],
+  "MinCultureOfFoundationSettlements": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "MaxNumberOfCulturalProperties": [
+    3,
+    10,
+    25
+  ],
+  "HoursBeforeInvalidatingCultureDeed": 2.0,
+  "DinnerPartyConfig": {
+    "FreshnessTimeMinutesPreparedFood": 60.0,
+    "FreshnessTimeMinutesRawFood": 720.0,
+    "NutritionToCulturePointsMultiplier": 0.1,
+    "MultiplierForTastiness": [
+      0.0,
+      0.1,
+      0.2,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "SettlementCountMultiplier": [
+      0.1,
+      0.5,
+      1.0,
+      1.2,
+      1.4,
+      1.6,
+      1.8,
+      2.0,
+      2.2,
+      2.4,
+      2.6
+    ],
+    "DinnerPartyMaxDays": 7.0,
+    "DinnerPartyMinutesDuration": 30.0,
+    "MaxCoursesPerPlayer": 3,
+    "MaxDinnerPartiesPerDayCountedForBonus": 1,
+    "DinnerPartyCultureToFoodValue": {
+      "InputMin": 0.0,
+      "InputHalflife": 100.0,
+      "OutputAtMin": 1.0,
+      "OutputLimit": 2.0
+    }
+  },
+  "MayAnnexSameLevel": false,
+  "MayAnnexSubSettlements": true,
+  "CultureAdvantagePercentRequiredToAnnexChildSettlement": [
+    0.25,
+    0.3,
+    0.35,
+    0.4
+  ],
+  "CultureAdvantageAbsoluteRequiredToAnnexChildSettlement": [
+    40.0,
+    180.0,
+    750.0,
+    1000.0
+  ],
+  "CultureAdvantagePercentRequiredToAnnexSiblingSettlement": [
+    1.5,
+    2.0,
+    2.5,
+    3.0
+  ],
+  "CultureAdvantageAbsoluteRequiredToAnnexSiblingSettlement": [
+    20.0,
+    50.0,
+    100.0,
+    200.0
+  ],
+  "ReductionPercentageWhenHomesteadIsAbandoned": 0.9,
+  "WeightCultureByPercentOfNeighboringPlotsChildSettlement": [
+    {
+      "min": 0.3,
+      "max": 0.7
+    },
+    {
+      "min": 0.3,
+      "max": 0.7
+    },
+    {
+      "min": 0.3,
+      "max": 0.7
+    },
+    {
+      "min": 0.3,
+      "max": 1.0
+    }
+  ],
+  "WeightCultureByPercentOfNeighboringPlotsSiblingSettlement": [
+    {
+      "min": 0.3,
+      "max": 1.0
+    },
+    {
+      "min": 0.3,
+      "max": 1.0
+    },
+    {
+      "min": 0.3,
+      "max": 1.0
+    },
+    {
+      "min": 0.3,
+      "max": 1.0
+    }
+  ],
+  "ActiveCitizensRequiredtoAnnexRelative": [
+    1.2,
+    1.2,
+    1.2,
+    1.2
+  ],
+  "PercentOfAnnexationResourcesWasted": [
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "AnnexationResourceRequirementPerCitizen": [
+    [
+      {
+        "TagName": "BasicUpgrade",
+        "Required": 2
+      },
+      {
+        "TagName": "Wood",
+        "Required": 100
+      }
+    ],
+    [
+      {
+        "TagName": "AdvancedUpgrade",
+        "Required": 2
+      },
+      {
+        "TagName": "Wood",
+        "Required": 200
+      },
+      {
+        "TagName": "Metal",
+        "Required": 200
+      }
+    ],
+    [
+      {
+        "TagName": "ModernUpgrade",
+        "Required": 2
+      },
+      {
+        "TagName": "Wood",
+        "Required": 200
+      },
+      {
+        "TagName": "Metal",
+        "Required": 100
+      }
+    ],
+    [
+      {
+        "TagName": "ModernUpgrade",
+        "Required": 2
+      },
+      {
+        "TagName": "Wood",
+        "Required": 200
+      },
+      {
+        "TagName": "Metal",
+        "Required": 200
+      }
+    ]
+  ],
+  "ExtraSettlementPapersToAnnexPerCitizen": [
+    4,
+    3,
+    2,
+    1
+  ],
+  "PostAnnexationSecessionLockDays": [
+    3.0,
+    5.0
+  ],
+  "AnnexTargetBoostWhenHasUnfoundedSettlementParent": 0.1,
+  "AnnexTargetBoostPerAdditionalCitizenInUnfoundedSettlementParent": 0.2,
+  "AnnexTargetBoostPerAdditionalChildSettlementInUnfoundedSettlementParent": 0.5,
+  "ConfigVersion": 1
+}
+EAF

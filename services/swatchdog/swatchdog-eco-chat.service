@@ -5,7 +5,7 @@ StartLimitIntervalSec=0
 
 [Service]
 Type=simple
-ExecStart=swatchdog -c '/var/server/services/swatchdog/eco-chat.conf' -t "/home/eco/server/Logs/Chat/Channel/General/*.log"
+ExecStart=swatchdog -c '/var/server/services/swatchdog/eco-chat.conf' -t "/home/eco/server/Logs/Chat/Channel/General/*.log" --tail-prog=/usr/bin/multitail --tail-args="-Q 1"
 Restart=always
 RestartSec=1
 EnvironmentFile=/etc/environment

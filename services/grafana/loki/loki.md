@@ -34,3 +34,7 @@ pattern_ingester:
 
 sudo nano /etc/promtail/config.yml
 ```
+
+```shell
+sudo usermod -a -G eco promtail
+```

@@ -3,7 +3,7 @@ I used this to watch logs and send messages in tg
 
 # install
 ```shell
-sudo apt install swatch
+sudo apt install swatch multitail
 
 sudo cp services/swatchdog/swatchdog-eco.service /etc/systemd/system/swatchdog-eco.service
 sudo cp services/swatchdog/swatchdog-eco-chat.service /etc/systemd/system/swatchdog-eco-chat.service
