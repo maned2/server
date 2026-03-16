@@ -12,7 +12,7 @@ exit
 
 copy your ssh key to server
 ```shell
-ssh-copy-id -i path/to/public_key user@server
+ssh-copy-id -i path/to/public_key.pub user@server
 ```
 
 backup config
@@ -25,6 +25,7 @@ edit config
 ```shell
 
 sudo nano /etc/ssh/sshd_config
+sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf
 
 Port # more than 1024
 PubkeyAuthentication yes

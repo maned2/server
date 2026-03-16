@@ -34,6 +34,7 @@ sudo service eco start
 
 # enable autostart
 sudo systemctl enable eco.service
+sudo systemctl disable eco.service
 
 # ports 
 sudo ufw allow 3000,3001

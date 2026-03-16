@@ -2,13 +2,13 @@ Difficulty.eco
 ===
 
 DesiredNumberOfPlayers: 4
-HoursPlayedPerDay: 10
+HoursPlayedPerDay: 3 -> 10
 CollaborationLevel: LowCollaboration
 GameSpeed: Normal
 
 AdvancedGameSettings
-MeteorImpactInDays: 60
-MaxProfessionsPerCitizen: 10->20
+MeteorImpactInDays: 30 -> 60
+MaxProfessionsPerCitizen: 10 -> 20
 MaxSpecialtiesPerCitizen: 32 -> 40
 SkillCostMultiplier: 1 -> 0.5 // как быстро получаются звёзды
 CraftResourceMultiplier: 1 -> 0.5

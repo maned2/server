@@ -6,7 +6,7 @@ cat <<EOF > server/Configs/Difficulty.eco
 {
   "GameSettings": {
     "DesiredNumberOfPlayers": 4,
-    "HoursPlayedPerDay": 16.0,
+    "HoursPlayedPerDay": 10.0,
     "CollaborationLevel": "LowCollaboration",
     "GameSpeed": "Normal",
     "AnimalBehavior": "AttackNormally",

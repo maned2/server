@@ -8,6 +8,7 @@ sudo nano /etc/fstab
 
 # 2 option: mount by UUID:
 sudo blkid
+lsblk -f
 sudo nano /etc/fstab
 #UUID=<uuid-of-your-drive>  <mount-point>  <file-system-type>  <mount-option>  <dump>  <pass>
 #UUID=123  /mnt/data  ntfs  defaults  0  2
@@ -20,4 +21,23 @@ sudo mount -a
 ```
 
 
+# Mount ntfs
+
 /dev/sdb1
+
+use gui: 
+
+```
+sudo fdisk -l
+sudo cfdisk /dev/sda
+
+```
+
+# mount for all users
+```
+sudo groupadd ssddata
+sudo usermod -aG ssddata user1
+sudo usermod -aG ssddata user2
+sudo chown -R root:ssddata /mnt/ssddata
+sudo chmod -R 2775 /mnt/ssddata
+```
