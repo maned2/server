@@ -8,4 +8,5 @@ COPY ./data .
 ENV PORT=25565
 EXPOSE $PORT
 RUN java -version
-ENTRYPOINT ["java", "-Xmx4G", "-Xms4G", "-jar", "server.1.21.11.jar", "nogui"]
+RUN chmod a+x /usr/src/app/entrypoint.sh
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]

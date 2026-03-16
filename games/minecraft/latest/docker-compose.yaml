@@ -1,7 +1,7 @@
 services:
-  minecraft-latest:
-    container_name: minecraft-latest
-    command: ["java", "-Xmx4G", "-Xms4G", "-jar", "server.1.21.11.jar", "nogui"]
+  minecraft:
+    container_name: minecraft
+    # command: ["java", "-Xmx5G", "-Xms5G", "-jar", "server.1.21.11.jar", "nogui"]
     build:
       context: .
     ports: 
