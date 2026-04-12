@@ -1,0 +1,14 @@
+services:
+  eco:
+    container_name: eco
+    # command: ["start.sh"]
+    build:
+      context: .
+    ports: 
+      - "3000:3000"
+      - "3001:3001"
+    volumes:
+      - ./data:/usr/src/app/data
+    environment:
+      ECO_SERVER_TOKEN: ${ECO_SERVER_TOKEN}
+    restart: always

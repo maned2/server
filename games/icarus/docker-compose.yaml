@@ -1,0 +1,12 @@
+services:
+  icarus:
+    container_name: icarus
+    # command: ["start.sh"]
+    build:
+      context: .
+    ports: 
+      - "17777:17777"
+      - "27015:27015"
+    volumes:
+      - ./data:/usr/src/app
+    restart: always
