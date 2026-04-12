@@ -5,8 +5,11 @@ services:
     container_name: eco-game-server
     image: strangeloopgames/eco-game-server:latest
     restart: always
-    # command: ["./EcoServer", "--nogui", "--userToken=YOUR_TOKEN"]
-    command: ["./EcoServer", "--nogui", "--offline"]
+    environment:
+      - LD_LIBRARY_PATH=/app
+      - ECO_SERVER_TOKEN=${ECO_SERVER_TOKEN}
+    command: ["./EcoServer", "--nogui", "--userToken=${ECO_SERVER_TOKEN}"]
+    # command: ["./EcoServer", "--nogui", "--offline"]
     volumes:
       - ./mount/Storage/:/app/Storage/
       - ./mount/Configs/:/app/Configs/
