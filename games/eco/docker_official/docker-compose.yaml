@@ -13,6 +13,7 @@ services:
     volumes:
       - ./mount/Storage/:/app/Storage/
       - ./mount/Configs/:/app/Configs/
+      - ./mount/Logs/:/app/Logs/
     ports:
       - "3000:3000/udp"
       - "3001:3001/tcp"
