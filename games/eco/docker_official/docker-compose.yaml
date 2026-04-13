@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   eco-game-server:
     container_name: eco-game-server
