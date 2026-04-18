@@ -1,0 +1,9 @@
+services:
+  windrose:
+    container_name: windrose
+    # command: ["start.sh"]
+    build:
+      context: .
+    volumes:
+      - ./:/usr/src/app
+    restart: always

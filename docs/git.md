@@ -31,7 +31,7 @@ git push --force origin task/123
 
 # squash commits
 ```commandline
-#show diff with master branch
+#show diff with target branch
 git cherry -v dev
 
 git rebase -i HEAD~4
