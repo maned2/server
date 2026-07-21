@@ -1,0 +1,28 @@
+services:
+  rust:
+    container_name: rust
+    build:
+      context: .
+    ports: 
+      - "28015:28015"
+      - "28017:28017"
+      - "28083:28083"
+    volumes:
+      - ./data:/usr/src/app
+    restart: always
+    environment:
+      SERVER_PORT: 28015
+      RCON_PORT: 28016
+      QUERY_PORT: 28017
+      RCON_PASSWORD: ${RUST_RCON_PASSWORD}
+      WEB: 0
+      LEVEL_NAME: "Procedural Map"
+      SEED: 1337
+      WORLD_SIZE: 4250
+      MAX_PLAYERS: 100
+      GAMEMODE: "softcore"
+      HOSTNAME: "RU\\EN 4fun softcore quadro"
+      DESCRIPTION: "${RUST_DESCRIPTION}"
+      URL: "${RUST_URL}"
+      ID: "4fun4"
+      TAGS: "EU,monthly,softcore,WA,EA"

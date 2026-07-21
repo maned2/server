@@ -84,6 +84,8 @@ sudo crontab -e
 # 0 8 * * * /var/server/games/minecraft_mi/minecraft_mi_backup.sh >> /var/log/minecraft_mi/cron.log
 ```
 
+tar -zcf "./minecraft_java_latest.tar.gz" /home/minecraft/server_java
+
 # client description:
 Сервер Minecraft Modern Industrialization
 Minecraft v1.21.1
