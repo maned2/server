@@ -17,3 +17,13 @@ scrape_configs:
       - source_labels: [__meta_docker_container_name]
         regex: /(.*)
         target_label: container_name
+      # Добавляем совместимость со стандартными дашбордами:
+      - source_labels: [__meta_docker_container_name]
+        regex: /(.*)
+        target_label: app
+      - source_labels: [__meta_docker_container_name]
+        regex: /(.*)
+        target_label: job
+      - source_labels: [__meta_docker_container_name]
+        regex: /(.*)
+        target_label: container
