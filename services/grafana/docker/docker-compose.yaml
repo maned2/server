@@ -55,6 +55,19 @@ services:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro 
     devices:
       - /dev/kmsg
+  
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+  
+  promtail:
+    image: grafana/promtail:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/log:/var/log
+    command: -config.file=/etc/promtail/config.yml
 
 volumes:
   prometheus-data:
