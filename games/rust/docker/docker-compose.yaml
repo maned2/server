@@ -4,25 +4,35 @@ services:
     build:
       context: .
     ports: 
-      - "28015:28015"
-      - "28017:28017"
-      - "28083:28083"
+      - "${RUST_PORT}:${RUST_PORT}/udp"
+      - "${RUST_RCON_PORT}:${RUST_RCON_PORT}/tcp"
+      - "${RUST_QUERY_PORT}:${RUST_QUERY_PORT}/udp"
+      - "${RUST_PLUS_PORT}:${RUST_PLUS_PORT}/tcp"
     volumes:
-      - ./data:/usr/src/app
+      - ./data:/usr/src/app/server
+      # - rust_data:/usr/src/app/server
     restart: always
     environment:
-      SERVER_PORT: 28015
-      RCON_PORT: 28016
-      QUERY_PORT: 28017
+      TZ: "${RUST_TZ}"
+      SERVER_PORT: ${RUST_PORT}
+      RCON_PORT: ${RUST_RCON_PORT}
+      QUERY_PORT: ${RUST_QUERY_PORT}
+      PLUS_PORT: ${RUST_PLUS_PORT}
       RCON_PASSWORD: ${RUST_RCON_PASSWORD}
-      WEB: 0
-      LEVEL_NAME: "Procedural Map"
-      SEED: 1337
-      WORLD_SIZE: 4250
-      MAX_PLAYERS: 100
-      GAMEMODE: "softcore"
-      HOSTNAME: "RU\\EN 4fun softcore quadro"
-      DESCRIPTION: "${RUST_DESCRIPTION}"
+      WEB: ${RUST_WEB}
+      LEVEL_NAME: "${RUST_LEVEL_NAME}"
+      SEED: "${RUST_SEED}"
+      WORLD_SIZE: "${RUST_WORLD_SIZE}"
+      MAX_PLAYERS: "${RUST_MAX_PLAYERS}"
+      GAMEMODE: "${RUST_GAMEMODE}"
+      HOSTNAME: "${RUST_HOSTNAME}"
       URL: "${RUST_URL}"
-      ID: "4fun4"
-      TAGS: "EU,monthly,softcore,WA,EA"
+      ID: "${RUST_ID}"
+      TAGS: "${RUST_TAGS}"
+      ADMIN_STEAM_ID_1: "${RUST_ADMIN_STEAM_ID_1}"
+      ADMIN_STEAM_ID_2: "${RUST_ADMIN_STEAM_ID_2}"
+      DESCRIPTION: "${RUST_DESCRIPTION}"
+      
+
+# volumes:
+#   rust_data:

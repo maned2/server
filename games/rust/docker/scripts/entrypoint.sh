@@ -1,8 +1,23 @@
 #!/bin/sh
+echo "entrypoint.sh"
+
 cd /usr/src/app
 
+ls -lah
+
+echo "chown"
+chown -R steam:steam /usr/src/app/server
+
+su - steam
+
+
+sh /scripts/cfg_write.sh
+
+echo "export envs"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:`dirname $0`/RustDedicated_Data/Plugins:`dirname $0`/RustDedicated_Data/Plugins/x86_64
 
+
+echo "Run RustDedicated server"
 exec ./RustDedicated -batchmode \
   +server.port $SERVER_PORT \
   +rcon.port $RCON_PORT \
