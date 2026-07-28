@@ -1,0 +1,11 @@
+services:
+  minecraft_atm10:
+    container_name: minecraft_atm10
+    # command: ["java", "-Xmx5G", "-Xms5G", "-jar", "server.1.21.11.jar", "nogui"]
+    build:
+      context: .
+    ports: 
+      - "25565:25565"
+    volumes:
+      - ./data:/usr/src/app
+    restart: always
