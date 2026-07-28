@@ -1,10 +1,13 @@
+Get link to latest server from https://www.minecraft.net/en-us/download/server
 
 
 ```shell
+curl -o data/server.jar https://piston-data.mojang.com/v1/objects/823e2250d24b3ddac457a60c92a6a941943fcd6a/server.jar
+
 docker build .
 docker build --no-cache .
 
 docker compose up -d
 
-curl -o server.jar https://piston-data.mojang.com/v1/objects/97ccd4c0ed3f81bbb7bfacddd1090b0c56f9bc51/server.jar
+nano data/eula.txt
 ``
