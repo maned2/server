@@ -5,7 +5,7 @@ services:
     build:
       context: .
     ports: 
-      - "25565:25565"
+      - "25566:25565"
     volumes:
       - ./data:/usr/src/app
     restart: always

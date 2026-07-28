@@ -9,5 +9,15 @@ docker build --no-cache .
 
 docker compose up -d
 
-nano data/eula.txt
+sudo nano data/eula.txt
+
+sudo nano server.properties
+sudo nano ops.json
+
+{
+    "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "PlayerName",
+    "level": 4,
+    "bypassesPlayerLimit": true
+}
 ``
