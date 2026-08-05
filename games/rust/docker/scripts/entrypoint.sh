@@ -34,4 +34,4 @@ exec ./RustDedicated -batchmode \
   +server.url "$URL" \
   +server.identity "$ID" \
   +server.tags "$TAGS" \
-  +wipeTimezone "$RUST_TZ"
+  +wipeTimezone "$TZ"
