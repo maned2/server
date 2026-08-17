@@ -21,3 +21,7 @@ sudo nano ops.json
     "bypassesPlayerLimit": true
 }
 ``
+
+```shell
+0 6 * * * cd /var/server/games/minecraft/latest && /usr/bin/docker compose down && /usr/bin/docker compose up -d
+```
