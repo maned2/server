@@ -5,7 +5,7 @@ whoami
 echo "stopping server..."
 # systemctl stop eco.service
 cd /var/server/games/eco/docker_official
-# /usr/bin/docker compose down
+/usr/bin/docker compose down
 sleep 10
 
 
@@ -20,7 +20,7 @@ tar -zcf "${tmpfolder}/daily/${filename}" /var/server/games/eco/docker_official/
 
 echo "starting server back ..."
 # systemctl start eco.service
-# /usr/bin/docker compose up -d
+/usr/bin/docker compose up -d
 
 
 echo "moving backup..."
