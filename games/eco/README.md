@@ -125,6 +125,10 @@ tail -f /var/log/eco/err.log
 
 /give PropertyClaimItem,10
 
+/skills reset <Nickname>
+
+/skills addpointsto <Nickname>, 4
+
 LargeLumberStockpileItem
 MechanicsSkillBook
 IronConcentrateItem
