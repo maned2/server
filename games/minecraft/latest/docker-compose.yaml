@@ -8,4 +8,4 @@ services:
       - "25565:25565"
     volumes:
       - ./data:/usr/src/app
-    restart: always
+    restart: no
