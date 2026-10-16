@@ -155,10 +155,11 @@ FILE_SET="Settlements.eco"
 echo -e "\n=== Обработка файла: $FILE_SET ==="
 
 if prepare_config_file "$FILE_SET"; then
+    # Передаем точные массивы для лимитов граждан из вашего конфига
     SET_FILTER='
       .SettlementFoundationBaseInfluence = [150.0, 400.0, 800.0] |
-      .MinCitizensToFoundSettlement = |
-      .MinCitizensToMaintainSettlement = |
+      .MinCitizensToFoundSettlement = [2, 4, 6] |
+      .MinCitizensToMaintainSettlement = [2, 4, 6] |
       del(.DinnerPartyConfig.MaxDinnerPartiesPerDayPerClaim) |
       del(.DinnerPartyConfig.MaxDinnerPartiesPerDayPerSettlement) |
       del(.DinnerPartyConfig.MaxDinnerPartiesPerDayPerPlayer) |
