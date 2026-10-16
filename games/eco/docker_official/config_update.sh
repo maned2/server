@@ -202,9 +202,9 @@ if prepare_config_file "$FILE_GEN"; then
     MAP_SEED="${ECO_MAP_SEED:-1886474117}"
 
     GEN_FILTER="
-      .MapSizePreset = \"Medium\" |
-      .Dimensions.WorldWidth = 100 |
-      .Dimensions.WorldLength = 100 |
+      .MapSizePreset = \"Large\" |
+      .Dimensions.WorldWidth = 160 |
+      .Dimensions.WorldLength = 160 |
       .HeightmapModule.Source.Config.Seed = $MAP_SEED
     "
     apply_jq_changes "$FILE_GEN" "$GEN_FILTER"
