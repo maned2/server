@@ -1,11 +1,12 @@
 services:
   necesse:
+    user: root
     container_name: necesse
     # command: ["start.sh"]
     ports:
-      - "14159:14159"
+      - "14159:14159/udp"
     build:
       context: .
-    # volumes:
-    #   - ./data:/home/steam/.config/Necesse/
+    volumes:
+      - ./saves:/usr/src/app/saves
     restart: always
