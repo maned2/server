@@ -10,3 +10,14 @@ services:
     volumes:
       - ./saves:/usr/src/app/saves
     restart: always
+    environment:
+      - JVMARGS=${NECESSE_JVMARGS}
+      - WORLD=${NECESSE_WORLD:-MyNecesseWorld}
+      - SLOTS=${NECESSE_SLOTS:-10}
+      - OWNER=${NECESSE_OWNER}
+      - MOTD=${NECESSE_MOTD:-Welcome to 4fun4 Necesse Server!}
+      - PASSWORD=${NECESSE_PASSWORD}
+      - PAUSE=${NECESSE_PAUSE:-true}
+      - GIVE_CLIENTS_POWER=${NECESSE_GIVE_CLIENTS_POWER:-false}
+      - LOGGING=${NECESSE_LOGGING:-true}
+      - ZIP=${NECESSE_ZIP:-true}
