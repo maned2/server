@@ -1,0 +1,11 @@
+services:
+  necesse:
+    container_name: necesse
+    # command: ["start.sh"]
+    ports:
+      - "14159:14159"
+    build:
+      context: .
+    # volumes:
+    #   - ./data:/home/steam/.config/Necesse/
+    restart: always
