@@ -29,3 +29,11 @@ sudo unzip Configs_default.zip -d mount/Configs
 sudo mv mount/Configs/Configs_default/* mount/Configs/
 sudo ./config_update.sh
 ```
+
+Reset server:
+
+```shell
+docker compose down
+sudo rm -R mount/Logs mount/Storage
+docker compose up -d
+```
