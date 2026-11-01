@@ -1,11 +1,13 @@
 services:
   minecraft_atm10:
     container_name: minecraft_atm10
-    # command: ["java", "-Xmx5G", "-Xms5G", "-jar", "server.1.21.11.jar", "nogui"]
-    build:
-      context: .
-    ports: 
-      - "25566:25565"
+    image: eclipse-temurin:21-jre
+    # Передаем ваш ID пользователя и группы с хост-машины
+    user: "1000:1000" 
+    working_dir: /usr/src/app
     volumes:
       - ./data:/usr/src/app
+    ports:
+      - "25566:25565"
+    entrypoint: [ "/bin/bash", "-c", "touch user_jvm_args.txt && chmod a+x startserver.sh && ./startserver.sh" ]
     restart: always
