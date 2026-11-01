@@ -2,12 +2,14 @@
 # download server from https://www.curseforge.com/minecraft/modpacks/all-the-mods-10/files/9190157
 docker compose up -d
 
-scp ServerFiles-8.3.zip server:ServerFiles-8.3.zip
+scp atmserver.zip server:atmserver.zip
 ssh server
-cp ~/ServerFiles-8.3.zip ServerFiles-8.3.zip
+cp ~/atmserver.zip atmserver.zip
 
-unzip ServerFiles-8.3.zip -d data/
+unzip atmserver.zip -d data/
 chmod +x data/startserver.sh
 docker compose up -d
 
+
+docker compose up --build
 ```
