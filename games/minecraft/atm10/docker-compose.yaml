@@ -1,13 +1,16 @@
 services:
   minecraft_atm10:
     container_name: minecraft_atm10
-    image: eclipse-temurin:21-jre
-    # Передаем ваш ID пользователя и группы с хост-машины
+    # ИСПРАВЛЕНИЕ 1: Меняем jre на jdk для успешной работы инсталлятора
+    image: eclipse-temurin:21-jdk
     user: "1000:1000" 
     working_dir: /usr/src/app
+    # ИСПРАВЛЕНИЕ 2: Включаем TTY, чтобы скрипты инициализации не сходили с ума
+    tty: true
+    stdin_open: true
     volumes:
       - ./data:/usr/src/app
     ports:
       - "25566:25565"
-    entrypoint: [ "/bin/bash", "-c", "touch user_jvm_args.txt && chmod a+x startserver.sh && ./startserver.sh" ]
+    entrypoint: [ "/bin/bash", "-c", "cd /usr/src/app && touch user_jvm_args.txt && chmod a+x startserver.sh && ./startserver.sh" ]
     restart: always
